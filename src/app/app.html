@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+		<ion-title>Las Palmas Fútbol</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="goHome()">
+                <ion-icon name="home"></ion-icon>
+            </button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-menu [content]="content">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>Menú</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<ion-list>
+			<ion-list-header>Favoritos</ion-list-header>
+			<button menuClose ion-item *ngFor="let fav of favoriteTeams">{{fav.name}}</button>
+		</ion-list>
+	</ion-content>
+
+</ion-menu>
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

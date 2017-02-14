@@ -1,0 +1,43 @@
+{
+	"teams": [
+		{
+			"name": "A.D. Huracán",
+			"category": "Juvenil",
+			"label": "A",
+			"league": "División de Honor",
+			"pitch": {
+				"name": "Pepe Gonçalves",
+				"address": "Calle Luis Benítez Inglott, 30",
+				"place": "Escaleritas",
+				"long": 28.1182273,
+				"lati": -15.4413154
+			}
+		},
+		{
+			"name": "C.E.F. Puertos de Las Palmas",
+			"category": "Cadete",
+			"label": "A",
+			"league": "Preferente",
+			"pitch": {
+				"name": "Junta de Obras",
+				"address": "Calle el Guinchete, 14",
+				"place": "Junta de Obras",
+				"long": 28.153196,
+				"lati": -15.415526
+			}
+		},
+		{
+			"name": "A.D. Claret",
+			"category": "Regional",
+			"label": "A",
+			"league": "2ª",
+			"pitch": {
+				"name": "Colegio Claret",
+				"address": "Calle Cruz del Ovejero, 115",
+				"place": "Colegio Chivato Claret",
+				"long": 28.153196,
+				"lati": -15.415526
+			}
+		}
+	]
+}

@@ -1,0 +1,20 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Equipos</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card>
+		<ion-list>
+			<ion-list-header>Favoritos</ion-list-header>
+			<button ion-item *ngFor="let team of allTeams" (click)="teamTapped($event, item)">
+                    {{team.name}} {{team.label}}
+                    <p>{{team.category}} {{team.league}}</p>
+            </button>
+		</ion-list>
+	</ion-card>
+</ion-content>

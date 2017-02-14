@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mis Equipos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	
+    <ion-card *ngIf="myFavoriteTeams">
+        <ion-list>
+            <ion-list-header>Favoritos</ion-list-header>
+            <button ion-item *ngFor="let team of myFavoriteTeams" (click)="favouriteTapped($event, item)">
+                    <ion-icon name="star"></ion-icon>
+                    {{team.name}} {{team.label}}
+                    <p>{{team.category}} {{team.league}}</p>
+                </button>
+        </ion-list>
+    </ion-card>
+
+	<button full ion-button (click)="goToAllTeams()">
+		Equipos
+		<ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
+	</button>
+
+</ion-content>

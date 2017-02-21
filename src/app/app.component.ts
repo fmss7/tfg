@@ -1,10 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { Nav, Platform } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { MyTeamsPage, AllTeamsPage } from '../pages/pages';
+import { MyTeamsPage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
@@ -23,7 +22,6 @@ export class MyApp {
 
 	constructor(
 		public platform: Platform,
-		//private navCtrl: NavController,
 		private userSettings: UserSettings) {
 		this.initializeApp();
 	}
@@ -34,10 +32,6 @@ export class MyApp {
 			Splashscreen.hide();
 		});
 		this.favoriteTeams = this.userSettings.getFavoriteTeams();
-	}
-
-	goHome() {
-		//this.navCtrl.popToRoot();
 	}
 
 }

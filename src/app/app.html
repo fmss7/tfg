@@ -1,15 +1,3 @@
-<ion-header>
-	<ion-navbar>
-		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
-		<ion-title>Las Palmas Fútbol</ion-title>
-		<ion-buttons end>
-			<button ion-button icon-only (click)="goHome()">
-                <ion-icon name="home"></ion-icon>
-            </button>
-		</ion-buttons>
-	</ion-navbar>
-</ion-header>
-
 <ion-menu [content]="content">
 	<ion-header>
 		<ion-toolbar>
@@ -20,7 +8,9 @@
 	<ion-content>
 		<ion-list>
 			<ion-list-header>Favoritos</ion-list-header>
-			<button menuClose ion-item *ngFor="let fav of favoriteTeams">{{fav.name}}</button>
+			<button menuClose ion-item *ngFor="let fav of favoriteTeams">
+				{{fav.name}} {{fav.label}} <p>{{fav.category}} {{fav.league}}</p>
+			</button>
 		</ion-list>
 	</ion-content>
 

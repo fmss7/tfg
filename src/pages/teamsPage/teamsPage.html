@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+		<ion-title>Equipos</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-card>
+		<ion-list>
+			<ion-list-header>Equipos</ion-list-header>
+			<button ion-item *ngFor="let team of teams" (click)="teamTapped($event, team)">
+                    {{team.name}} {{team.label}}
+                    <p>{{team.category}} {{team.league}}</p>
+            </button>
+		</ion-list>
+	</ion-card>
+</ion-content>

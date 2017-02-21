@@ -1,28 +1,40 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Mis Equipos</ion-title>
-  </ion-navbar>
-
+	<ion-navbar color="primary">
+		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+		<ion-title>Las Palmas Fútbol</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only><ion-icon name="home"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
+<ion-content>
+	<ion-toolbar color="secondary"><ion-title>Mis Equipos y Ligas</ion-title></ion-toolbar>
+		<ion-card *ngIf="myFavoriteTeams">
+			<ion-list>
+				<ion-list-header>Equipos Favoritos</ion-list-header>
+				<button ion-item *ngFor="let team of myFavoriteTeams" (click)="teamTapped($event, team)">
+				<ion-icon name="star"></ion-icon>
+				{{team.name}} {{team.label}}
+				<p>{{team.category}} {{team.league}}</p>
+			</button>
+			</ion-list>
+			<button full ion-button (click)="goToAllTeams()">
+				Equipos <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
+			</button>
+		</ion-card>
 
-<ion-content padding>
-	
-    <ion-card *ngIf="myFavoriteTeams">
-        <ion-list>
-            <ion-list-header>Favoritos</ion-list-header>
-            <button ion-item *ngFor="let team of myFavoriteTeams" (click)="favouriteTapped($event, item)">
-                    <ion-icon name="star"></ion-icon>
-                    {{team.name}} {{team.label}}
-                    <p>{{team.category}} {{team.league}}</p>
-                </button>
-        </ion-list>
-    </ion-card>
-
-	<button full ion-button (click)="goToAllTeams()">
-		Equipos
-		<ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
-	</button>
-
+		<ion-card *ngIf="myFavoriteLeagues">
+			<ion-list>
+				<ion-list-header>Ligas Favoritas</ion-list-header>
+				<button ion-item *ngFor="let league of myFavoriteLeagues" (click)="leagueTapped($event, team)">
+				<ion-icon name="star"></ion-icon>
+				{{league.name}}
+				<p>{{league.category}}</p>
+			</button>
+			</ion-list>
+			<button full ion-button (click)="goToAllLeagues()">
+				Ligas <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
+			</button>
+		</ion-card>
 </ion-content>

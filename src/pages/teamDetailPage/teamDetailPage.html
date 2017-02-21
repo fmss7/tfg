@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="refreshAll($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-card>
+        <ion-card-content>
+            <ion-row>
+                <ion-col width-45>
+                    <h2></h2>
+                    <p></p>
+                </ion-col>
+                <ion-col width-55 text-right>
+                    <button ion-button (click)="toggleFollow()" *ngIf="!isFollowing">
+                        <ion-icon name="star"></ion-icon>
+                        Add Favourite
+                    </button>
+                    <button ion-button (click)="toggleFollow()" *ngIf="isFollowing">
+                        <ion-icon name="star"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+            <ion-item>
+                <ion-label>Date Filter:</ion-label>
+                <ion-toggle [(ngModel)]="useDateFilter" (ionChange)="dateChange()"></ion-toggle>
+                <ion-datetime displayFormat="D/M/YYYY" pickerFormat="D/M/YYYY" [(ngModel)]="dateFilter" (ionChange)="dateChange()" [(disabled)]="!useDateFilter"></ion-datetime>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-list>
+        <ion-item *ngFor="let game of games" (click)="gameTapped($event, game)">
+            <ion-row>
+                <ion-col width-20>
+
+                </ion-col>
+                <ion-col width-60>
+
+                </ion-col>
+                <ion-col width-20>
+
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+</ion-content>

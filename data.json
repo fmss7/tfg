@@ -4,7 +4,7 @@
 			"name": "A.D. Huracán",
 			"category": "Juvenil",
 			"label": "A",
-			"league": "División de Honor",
+			"league": "Juvenil División de Honor",
 			"pitch": {
 				"name": "Pepe Gonçalves",
 				"address": "Calle Luis Benítez Inglott, 30",
@@ -17,7 +17,7 @@
 			"name": "C.E.F. Puertos de Las Palmas",
 			"category": "Cadete",
 			"label": "A",
-			"league": "Preferente",
+			"league": "Cadete Preferente",
 			"pitch": {
 				"name": "Junta de Obras",
 				"address": "Calle el Guinchete, 14",
@@ -30,7 +30,7 @@
 			"name": "A.D. Claret",
 			"category": "Regional",
 			"label": "A",
-			"league": "2ª",
+			"league": "2ª Regional",
 			"pitch": {
 				"name": "Colegio Claret",
 				"address": "Calle Cruz del Ovejero, 115",
@@ -39,5 +39,205 @@
 				"lati": -15.415526
 			}
 		}
-	]
+	],
+	"categories": [
+		{
+			"name": "Regional",
+			"leagues": [
+				{
+					"id": "reg-ter",
+					"name": "Tercera División"
+				},
+				{
+					"id": "reg-pre",
+					"name": "Regional Preferente"
+				},
+				{
+					"id": "reg-priG1",
+					"name": "Primera Regional G-I"
+				},
+				{
+					"id": "reg-priG2",
+					"name": "Primera Regional G-II"
+				},
+				{
+					"id": "reg-seg",
+					"name": "Segunda Regional"
+				}
+			]
+		},
+		{
+			"name": "Juvenil",
+			"leagues": [
+				{
+					"id": "juv-ddh",
+					"name": "División de Honor"
+				},
+				{
+					"id": "juv-pre",
+					"name": "Juvenil Preferente"
+				},
+				{
+					"id": "juv-priG1",
+					"name": "Primera Juvenil G-I"
+				},
+				{
+					"id": "juv-priG2",
+					"name": "Primera Juvenil G-II"
+				},
+				{
+					"id": "juv-segG1",
+					"name": "Segunda Juvenil G-II"
+				},
+				{
+					"id": "juv-segG2",
+					"name": "Segunda Juvenil G-II"
+				},
+				{
+					"id": "juv-segG2",
+					"name": "Segunda Juvenil G-III"
+				}
+			]
+		},
+		{
+			"name": "Cadete",
+			"leagues": [
+				{
+					"id": "cad-pre",
+					"name": "Cadete Preferente"
+				},
+				{
+					"id": "cad-priG1",
+					"name": "Primera Cadete G-I"
+				},
+				{
+					"id": "cad-priG2",
+					"name": "Primera Cadete G-II"
+				},
+				{
+					"id": "cad-priG3",
+					"name": "Primera Cadete G-III"
+				},
+				{
+					"id": "cad-priG4",
+					"name": "Primera Cadete G-IV"
+				},
+				{
+					"id": "cad-priG5",
+					"name": "Primera Cadete G-V"
+				},
+				{
+					"id": "cad-priG6",
+					"name": "Primera Cadete G-VI"
+				}
+			]
+		}
+	],
+	"leagues-data": {
+		"juv-ddh": {
+			"name": "Juvenil División de Honor",
+			"category": "Juvenil",
+			"teams": [
+				{
+					"name": "U.D. Las Palmas",
+					"label": "A",
+					"pitch": {
+						"name": "Anexo Estadio Gran Canaria",
+						"address": "Calle Addis Abeba",
+						"place": "Siete Palmas",
+						"long": 38.1182273,
+						"lati": -19.4413154
+					}
+				},
+				{
+					"name": "S.D. San José",
+					"label": "A",
+					"pitch": {
+						"name": "Las Delicias",
+						"address": "Calle Kingshasa",
+						"place": "San Pepe",
+						"long": -10.1182273,
+						"lati": 15.4413154
+					}
+				},
+				{
+					"name": "C.D. Tenerife",
+					"label": "A",
+					"pitch": {
+						"name": "Cdad. Dptva. Geneto 2",
+						"address": "Calle Nuakchot",
+						"place": "El Teide",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "Acodetti C.F.",
+					"label": "A",
+					"pitch": {
+						"name": "La Mayordomía 1",
+						"address": "Calle Calle Brazzaville",
+						"place": "Támara",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "A.D. Huracán",
+					"label": "A",
+					"pitch": {
+						"name": "Pepe Gonçalves",
+						"address": "Calle Luis Benítez Inglott, 30",
+						"place": "Escaleritas",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "C.D. Sobradillo",
+					"label": "A",
+					"pitch": {
+						"name": "El Sobradillo",
+						"address": "Calle Pretoria",
+						"place": "El Sobradillo",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "C.D. Juv. Marítima",
+					"label": "A",
+					"pitch": {
+						"name": "Ciudad Deportiva",
+						"address": "Calle Trípoli",
+						"place": "Mordor",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "U.D. Guía",
+					"label": "A",
+					"pitch": {
+						"name": "Guía",
+						"address": "Calle Yamusukro",
+						"place": "Buuff ni idea",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				},
+				{
+					"name": "C.D. Laguna",
+					"label": "A",
+					"pitch": {
+						"name": "A. Fco. Peraza",
+						"address": "Calle Yamusukro",
+						"place": "El Cuadrilátero",
+						"long": 28.1182273,
+						"lati": -15.4413154
+					}
+				}
+			]
+		}
+	}
 }

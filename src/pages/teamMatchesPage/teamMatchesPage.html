@@ -1,0 +1,49 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Partidos</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-refresher (ionRefresh)="refreshAll($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+	<ion-card>
+		<ion-card-content>
+			<ion-row>
+				<ion-col width-45>
+					<h2>{{team?.league}}</h2>
+					<p>Posición: 1º</p>
+				</ion-col>
+				<ion-col width-55 text-right>
+					<button ion-button (click)="toggleFollow()" *ngIf="!isFollowing">
+                        <ion-icon name="star"></ion-icon>Add Favourite
+                    </button>
+					<button ion-button (click)="toggleFollow()" *ngIf="isFollowing">
+                        <ion-icon name="star"></ion-icon>
+                    </button>
+				</ion-col>
+			</ion-row>
+			<ion-item>
+				<ion-label>Date Filter:</ion-label>
+				<ion-toggle [(ngModel)]="useDateFilter" (ionChange)="dateChange()"></ion-toggle>
+				<ion-datetime displayFormat="D/M/YYYY" pickerFormat="D/M/YYYY" [(ngModel)]="dateFilter" (ionChange)="dateChange()" [(disabled)]="!useDateFilter"></ion-datetime>
+			</ion-item>
+		</ion-card-content>
+	</ion-card>
+	<ion-list>
+		<ion-item (click)="gameTapped($event, team)">
+			<ion-row>
+				<ion-col width-20 style="text-align: left">
+					<p>{{date | date: format}}</p>
+				</ion-col>
+				<ion-col width-60 style="text-align: center">
+					<p>en {{team?.pitch.name}}</p>
+					<p>{{team?.pitch.address}}</p>
+				</ion-col>
+				<ion-col width-20 style="text-align: right">
+					<h5>W: 4-2</h5>
+				</ion-col>
+			</ion-row>
+		</ion-item>
+	</ion-list>
+</ion-content>

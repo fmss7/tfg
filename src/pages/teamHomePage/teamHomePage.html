@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+		<ion-title>{{team.name}}</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-tabs>
+		<ion-tab tabTitle="Partidos" [root]="teamMatchesTab" [rootParams]="team" tabIcon="football"></ion-tab>
+		<ion-tab tabTitle="Clasificación" [root]="leagueTableTab" [rootParams]="team" tabIcon="podium"></ion-tab>
+	</ion-tabs>
+</ion-content>

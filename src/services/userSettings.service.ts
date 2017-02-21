@@ -17,16 +17,30 @@ export class UserSettings {
 				"name": "Colegio Claret",
 				"address": "Calle Cruz del Ovejero, 115",
 				"place": "Colegio Chivato Claret",
-				"long": 28.153196,
-				"lati": -15.415526
+				"lati": 28.099270,
+				"long": -15.482702
 			}
+		},
+
+	];
+
+	favoriteLeagues = [
+		{
+			"name": "Juvenil División de Honor",
+			"category": "Juvenil",
+			"teams": []
 		}
+
 	];
 
 	constructor(private http: Http) { }
 
 	getFavoriteTeams() {
 		return this.favoriteTeams;
+	}
+
+	getFavoriteLeagues(){
+		return this.favoriteLeagues;
 	}
 
 }

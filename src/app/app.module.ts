@@ -1,21 +1,24 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { HttpModule } from '@angular/http';
+//import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { MyApp } from './app.component';
-import { MyTeamsPage, TeamsPage, TeamHomePage, TeamMatchesPage, TeamLeagueTablePage, GamePage, MapPage, LeaguesPage } from '../pages/pages';
+import { HomePage, TeamsPage, TeamHomePage, ClubHomePage, LeagueHomePage, TeamGamesPage,
+	TeamLeagueTablePage, GamePage, MapPage, LeaguesPage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
 @NgModule({
 	declarations: [
 		MyApp,
-		MyTeamsPage,
+		HomePage,
 		TeamsPage,
+		ClubHomePage,
 		LeaguesPage,
 		TeamHomePage,
-		TeamMatchesPage,
+		LeagueHomePage,
+		TeamGamesPage,
 		TeamLeagueTablePage,
 		GamePage,
 		MapPage
@@ -27,11 +30,13 @@ import { LPFutbolService } from '../services/lp-futbol.service';
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp,
-		MyTeamsPage,
+		HomePage,
 		TeamsPage,
+		ClubHomePage,
 		LeaguesPage,
 		TeamHomePage,
-		TeamMatchesPage,
+		LeagueHomePage,
+		TeamGamesPage,
 		TeamLeagueTablePage,
 		GamePage,
 		MapPage

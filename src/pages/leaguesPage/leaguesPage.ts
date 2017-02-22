@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
-import { TeamsPage } from '../../pages/pages';
+import { LeagueHomePage }  from '../../pages/pages';
 
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
@@ -31,8 +31,12 @@ export class LeaguesPage {
 		});
 	}
 
-	leagueTapped($event, league){
-		this.navCtrl.push(TeamsPage, league);
+	leagueTapped($event, league) {
+		this.navCtrl.push(LeagueHomePage, league);
+	}
+
+	goHome() {
+		this.navCtrl.popToRoot();
 	}
 
 }

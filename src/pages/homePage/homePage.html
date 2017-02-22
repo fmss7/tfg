@@ -27,7 +27,7 @@
 		<ion-card *ngIf="myFavoriteLeagues">
 			<ion-list>
 				<ion-list-header>Ligas Favoritas</ion-list-header>
-				<button ion-item *ngFor="let league of myFavoriteLeagues" (click)="leagueTapped($event, team)">
+				<button ion-item *ngFor="let league of myFavoriteLeagues" (click)="leagueTapped($event, league)">
 				<ion-icon name="star"></ion-icon>
 				{{league.name}}
 				<p>{{league.category}}</p>

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TeamMatchesPage, TeamLeagueTablePage } from '../pages';
+import { TeamGamesPage, TeamLeagueTablePage } from '../pages';
+
+import { LPFutbolService } from '../../services/lp-futbol.service';
 
 @Component({
 	selector: 'teamHomePage',
@@ -11,14 +13,17 @@ import { TeamMatchesPage, TeamLeagueTablePage } from '../pages';
 export class TeamHomePage {
 
 	team: any;
-	teamMatchesTab = TeamMatchesPage;
+	league: any;
+	teamGamesTab = TeamGamesPage;
 	leagueTableTab = TeamLeagueTablePage;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, private lPFutbolService: LPFutbolService) {
 		this.team = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
+		this.lPFutbolService.getLeagueData(this.team.league.id).subscribe(res => this.league = res);
+		//console.log(this.league);
 	}
 
 	goHome() {

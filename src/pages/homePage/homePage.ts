@@ -1,22 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TeamsPage, TeamHomePage, LeaguesPage } from '../pages';
+import { TeamsPage, TeamHomePage, LeaguesPage, LeagueHomePage } from '../pages';
 import { UserSettings } from '../../services/userSettings.service';
 
 @Component({
-	selector: 'myTeamsPage',
-	templateUrl: 'myTeamsPage.html'
+	selector: 'homePage',
+	templateUrl: 'homePage.html'
 })
-export class MyTeamsPage {
+export class HomePage {
 
 	myFavoriteTeams: any[];
 	myFavoriteLeagues: any[];
 
-	constructor(
-		public navCtrl: NavController,
-		public navParams: NavParams,
-		private userSettings: UserSettings) { }
+	constructor(public navCtrl: NavController, public navParams: NavParams, private userSettings: UserSettings) { }
 
 	ionViewDidLoad() {
 		this.myFavoriteTeams = this.userSettings.getFavoriteTeams();
@@ -36,7 +33,7 @@ export class MyTeamsPage {
 	}
 
 	leagueTapped($event, league){
-		this.navCtrl.push(LeaguesPage, league)
+		this.navCtrl.push(LeagueHomePage, league)
 	}
 
 }

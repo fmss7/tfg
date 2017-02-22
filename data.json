@@ -1,43 +1,81 @@
 {
-	"teams": [
+	"clubs": [
 		{
 			"name": "A.D. Huracán",
-			"category": "Juvenil",
-			"label": "A",
-			"league": "Juvenil División de Honor",
 			"pitch": {
 				"name": "Pepe Gonçalves",
 				"address": "Calle Luis Benítez Inglott, 30",
 				"place": "Escaleritas",
 				"long": 28.1182273,
 				"lati": -15.4413154
-			}
+			},
+			"teams": [
+				{
+					"id": "hur-juvA",
+					"name": "A.D. Huracán",
+					"category": "Juvenil",
+					"league": {
+						"id": "juv-ddh",
+						"name": "División de Honor"
+					}
+				},
+				{
+					"id": "hur-juvB",
+					"name": "Juvenil B"
+				},
+				{
+					"id": "hur-cadA",
+					"name": "Cadete A"
+				}
+			]
 		},
 		{
 			"name": "C.E.F. Puertos de Las Palmas",
-			"category": "Cadete",
-			"label": "A",
-			"league": "Cadete Preferente",
 			"pitch": {
 				"name": "Junta de Obras",
 				"address": "Calle el Guinchete, 14",
 				"place": "Junta de Obras",
 				"long": 28.153196,
 				"lati": -15.415526
-			}
+			},
+			"teams": [
+				{
+					"id": "plp-juvA",
+					"name": "Cadete A"
+				},
+				{
+					"id": "plp-juvB",
+					"name": "Cadete B"
+				},
+				{
+					"id": "plp-cadA",
+					"name": "Infantil A"
+				}
+			]
 		},
 		{
 			"name": "A.D. Claret",
-			"category": "Regional",
-			"label": "A",
-			"league": "2ª Regional",
 			"pitch": {
 				"name": "Colegio Claret",
 				"address": "Calle Cruz del Ovejero, 115",
 				"place": "Colegio Chivato Claret",
 				"long": 28.153196,
 				"lati": -15.415526
-			}
+			},
+			"teams": [
+				{
+					"id": "adc-regA",
+					"name": "Regional A"
+				},
+				{
+					"id": "adc-juvA",
+					"name": "Juvenil A"
+				},
+				{
+					"id": "adc-cadA",
+					"name": "Cadete A"
+				}
+			]
 		}
 	],
 	"categories": [
@@ -176,7 +214,7 @@
 					"label": "A",
 					"pitch": {
 						"name": "La Mayordomía 1",
-						"address": "Calle Calle Brazzaville",
+						"address": "Calle Brazzaville",
 						"place": "Támara",
 						"long": 28.1182273,
 						"lati": -15.4413154

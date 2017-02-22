@@ -8,15 +8,15 @@
 	</ion-navbar>
 </ion-header>
 
-
 <ion-content>
-	<ion-card>
-		<ion-list>
-			<ion-list-header>Equipos</ion-list-header>
-			<button ion-item *ngFor="let team of teams" (click)="teamTapped($event, team)">
-                    {{team.name}} {{team.label}}
-                    <p>{{team.category}} {{team.league}}</p>
+	<ion-list>
+		<ion-item-group *ngFor="let club of clubs">
+			<ion-item-divider color="secondary" (click)="clubTapped($event, club)">
+				{{club?.name}}
+			</ion-item-divider>
+			<button ion-item *ngFor="let team of club?.teams" (click)="teamTapped($event, team)">
+                {{team.name}} - {{team?.league?.name}}
             </button>
-		</ion-list>
-	</ion-card>
+		</ion-item-group>
+	</ion-list>
 </ion-content>

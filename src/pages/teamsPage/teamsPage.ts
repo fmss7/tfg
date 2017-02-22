@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { LoadingController, NavController, NavParams, Nav } from 'ionic-angular';
+import { LoadingController, NavController, NavParams } from 'ionic-angular';
 
-import { TeamHomePage } from '../pages';
+import { TeamHomePage, ClubHomePage } from '../pages';
 
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
@@ -12,7 +12,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 })
 export class TeamsPage {
 
-	teams: any[]
+	clubs: any[];
 
 	constructor(
 		public navCtrl: NavController,
@@ -28,7 +28,7 @@ export class TeamsPage {
 			spinner: 'bubbles'
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getLeagueData(leagueID).subscribe(res => this.teams = res);
+			this.lPFutbolService.getAllClubs().subscribe(res => this.clubs = res);
 			loader.dismiss();
 		});
 	}
@@ -39,6 +39,10 @@ export class TeamsPage {
 
 	teamTapped($event, team) {
 		this.navCtrl.push(TeamHomePage, team);
+	}
+
+	clubTapped($event, club) {
+		this.navCtrl.push(ClubHomePage, club);
 	}
 
 }

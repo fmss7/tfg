@@ -26,6 +26,10 @@ export class LPFutbolService {
 		return this.http.get(this.baseUrl+'/categories.json')
 			.map(res => res.json());
 	}
+	getAllClubs(): Observable<any> {
+		return this.http.get(this.baseUrl+'/clubs.json')
+			.map(res => res.json());
+	}
 /*
 	getCategoryData(categoryID): Observable<any> {
 		return this.http.get(this.baseUrl+'/categories-data/'+categoryID+'.json')

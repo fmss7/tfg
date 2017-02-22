@@ -1,28 +1,23 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, LoadingController, Events } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { MyTeamsPage } from '../pages/pages';
+import { HomePage, TeamHomePage, LeagueHomePage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
-import { LPFutbolService } from '../services/lp-futbol.service';
+//import { LPFutbolService } from '../services/lp-futbol.service';
 
 @Component({
-	templateUrl: 'app.html',
-	providers: [
-		UserSettings,
-		HttpModule
-	]
+	templateUrl: 'app.html', providers: [UserSettings, HttpModule]
 })
 export class MyApp {
 	@ViewChild(Nav) nav: Nav;
 
 	favoriteTeams: any[];
-	rootPage: any = MyTeamsPage;
+	favoriteLeagues: any[];
+	rootPage: any = HomePage;
 
-	constructor(
-		public platform: Platform,
-		private userSettings: UserSettings) {
+	constructor(public platform: Platform, private userSettings: UserSettings, private loadingController: LoadingController) {
 		this.initializeApp();
 	}
 
@@ -32,6 +27,25 @@ export class MyApp {
 			Splashscreen.hide();
 		});
 		this.favoriteTeams = this.userSettings.getFavoriteTeams();
+		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
+	}
+
+	teamTapped($event, fav) {
+		let loader = this.loadingController.create({
+			content: 'Obteniendo datos...',
+			dismissOnPageChange: true
+		});
+		loader.present();
+		this.nav.push(TeamHomePage, fav);
+	}
+	
+	leagueTapped($event, fav) {
+		let loader = this.loadingController.create({
+			content: 'Obteniendo datos...',
+			dismissOnPageChange: true
+		});
+		loader.present();
+		this.nav.push(LeagueHomePage, fav);
 	}
 
 }

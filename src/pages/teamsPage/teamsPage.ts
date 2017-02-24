@@ -13,6 +13,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 export class TeamsPage {
 
 	clubs: any[];
+	queryText: string = '';
 
 	constructor(
 		public navCtrl: NavController,
@@ -21,8 +22,6 @@ export class TeamsPage {
 		private loadingController: LoadingController) { }
 
 	ionViewDidLoad() {
-		let leagueID = this.navParams.data.id;
-		
 		let loader = this.loadingController.create({
 			content: 'Obteniendo equipos...',
 			spinner: 'bubbles'

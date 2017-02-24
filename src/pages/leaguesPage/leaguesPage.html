@@ -6,6 +6,11 @@
 			<button ion-button icon-only (click)="goHome()"><ion-icon name="home"></ion-icon></button>
 		</ion-buttons>
 	</ion-navbar>
+
+	<ion-toolbar>
+		<ion-searchbar placeholder="Search" [(ngModel)]="queryText" (ionInput)="updateLeagues()"></ion-searchbar>
+	</ion-toolbar>
+
 </ion-header>
 
 <ion-content>

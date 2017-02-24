@@ -7,6 +7,12 @@
 
 	<ion-content>
 		<ion-list>
+			<ion-list-header>Cuenta</ion-list-header>
+			<button menuClose ion-item><ion-icon name="log-in"></ion-icon> Entra</button>
+			<button menuClose ion-item><ion-icon name="person-add"></ion-icon> Regístrate</button>
+		</ion-list>
+
+		<ion-list>
 			<ion-list-header>Favoritos</ion-list-header>
 			<button menuClose ion-item *ngFor="let fav of favoriteTeams" (click)="teamTapped($event, fav)">
 				{{fav.name}} {{fav.label}} <p>{{fav.category}} {{fav.league}}</p>
@@ -15,6 +21,7 @@
 				{{fav.name}} <p>{{fav.category}}</p>
 			</button>
 		</ion-list>
+
 	</ion-content>
 
 </ion-menu>

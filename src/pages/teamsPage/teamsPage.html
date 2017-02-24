@@ -6,16 +6,21 @@
 			<button ion-button icon-only (click)="goHome()"><ion-icon name="home"></ion-icon></button>
 		</ion-buttons>
 	</ion-navbar>
+
+	<ion-toolbar>
+		<ion-searchbar placeholder="Search" [(ngModel)]="queryText" (ionInput)="updateTeams()"></ion-searchbar>
+	</ion-toolbar>
+
 </ion-header>
 
 <ion-content>
 	<ion-list>
 		<ion-item-group *ngFor="let club of clubs">
 			<ion-item-divider color="secondary" (click)="clubTapped($event, club)">
-				{{club?.name}}
+				<h2>{{club?.name}}</h2>
 			</ion-item-divider>
 			<button ion-item *ngFor="let team of club?.teams" (click)="teamTapped($event, team)">
-                {{team.name}} - {{team?.league?.name}}
+                 {{team?.league?.name}} <p>{{team.name}}</p>
             </button>
 		</ion-item-group>
 	</ion-list>

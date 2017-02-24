@@ -12,6 +12,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 export class LeaguesPage {
 
 	categories: any;
+	queryText: string = '';
 
 	constructor(
 		public navCtrl: NavController,

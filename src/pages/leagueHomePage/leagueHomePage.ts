@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { TeamGamesPage, FixturesPage, LeagueTablePage } from '../pages';
+
 @Component({
 	selector: 'leagueHomePage',
 	templateUrl: 'leagueHomePage.html'
@@ -8,6 +10,8 @@ import { NavController, NavParams } from 'ionic-angular';
 export class LeagueHomePage {
 
 	league: any;
+	fixturesTab = FixturesPage;
+	leagueTableTab = LeagueTablePage;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
 		this.league = this.navParams.data;

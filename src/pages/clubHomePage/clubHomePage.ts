@@ -16,4 +16,8 @@ export class ClubHomePage {
 	ionViewDidLoad() {
 	}
 
+	goHome() {
+		this.navCtrl.popToRoot();
+	}
+
 }

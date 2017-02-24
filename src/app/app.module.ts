@@ -5,7 +5,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { MyApp } from './app.component';
 import { HomePage, TeamsPage, TeamHomePage, ClubHomePage, LeagueHomePage, TeamGamesPage,
-	TeamLeagueTablePage, GamePage, MapPage, LeaguesPage } from '../pages/pages';
+	LeagueTablePage, GamePage, MapPage, LeaguesPage, FixturesPage, LogInPage} from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
@@ -13,13 +13,15 @@ import { LPFutbolService } from '../services/lp-futbol.service';
 	declarations: [
 		MyApp,
 		HomePage,
+		LogInPage,
 		TeamsPage,
 		ClubHomePage,
 		LeaguesPage,
 		TeamHomePage,
 		LeagueHomePage,
 		TeamGamesPage,
-		TeamLeagueTablePage,
+		LeagueTablePage,
+		FixturesPage,
 		GamePage,
 		MapPage
 	],
@@ -31,13 +33,15 @@ import { LPFutbolService } from '../services/lp-futbol.service';
 	entryComponents: [
 		MyApp,
 		HomePage,
+		LogInPage,
 		TeamsPage,
 		ClubHomePage,
 		LeaguesPage,
 		TeamHomePage,
 		LeagueHomePage,
 		TeamGamesPage,
-		TeamLeagueTablePage,
+		LeagueTablePage,
+		FixturesPage,
 		GamePage,
 		MapPage
 	],

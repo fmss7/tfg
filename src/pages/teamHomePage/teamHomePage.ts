@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TeamGamesPage, TeamLeagueTablePage } from '../pages';
+import { TeamGamesPage, LeagueTablePage } from '../pages';
 
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
@@ -15,7 +15,7 @@ export class TeamHomePage {
 	team: any;
 	league: any;
 	teamGamesTab = TeamGamesPage;
-	leagueTableTab = TeamLeagueTablePage;
+	leagueTableTab = LeagueTablePage;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, private lPFutbolService: LPFutbolService) {
 		this.team = this.navParams.data;

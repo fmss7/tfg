@@ -3,7 +3,7 @@ import { Nav, Platform, LoadingController, Events } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HomePage, TeamHomePage, LeagueHomePage } from '../pages/pages';
+import { HomePage, TeamHomePage, LeagueHomePage, LogInPage} from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 //import { LPFutbolService } from '../services/lp-futbol.service';
 
@@ -46,6 +46,10 @@ export class MyApp {
 		});
 		loader.present();
 		this.nav.push(LeagueHomePage, fav);
+	}
+
+	logInTapped(){
+		this.nav.push(LogInPage);
 	}
 
 }

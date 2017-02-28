@@ -2,6 +2,8 @@ export * from './homePage/homePage';
 export * from './logInPage/logInPage';
 export * from './teamsPage/teamsPage';
 export * from './clubHomePage/clubHomePage';
+export * from './clubSheetPage/clubSheetPage';
+export * from './clubTeamsPage/clubTeamsPage';
 export * from './leaguesPage/leaguesPage';
 export * from './teamHomePage/teamHomePage';
 export * from './leagueHomePage/leagueHomePage';

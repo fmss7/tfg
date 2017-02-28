@@ -10,6 +10,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 	selector: 'teamsPage',
 	templateUrl: 'teamsPage.html'
 })
+
 export class TeamsPage {
 
 	clubs: any[];
@@ -43,5 +44,12 @@ export class TeamsPage {
 	clubTapped($event, club) {
 		this.navCtrl.push(ClubHomePage, club);
 	}
+
+	toggleGroup(group) {
+		group.show = !group.show;
+	};
+	isGroupShown(group) {
+		return group.show;
+	};
 
 }

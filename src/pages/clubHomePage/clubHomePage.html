@@ -8,7 +8,7 @@
 	</ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
-
-</ion-content>
+<ion-tabs>
+	<ion-tab tabTitle="Ficha" [root]="clubSheetTab" [rootParams]="club" tabIcon="clipboard"></ion-tab>
+	<ion-tab tabTitle="Equipos" [root]="clubTeamsTab" [rootParams]="club" tabIcon="list-box"></ion-tab>
+</ion-tabs>

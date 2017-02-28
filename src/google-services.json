@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "651803406465",
+    "firebase_url": "https://lp-futbol.firebaseio.com",
+    "project_id": "lp-futbol",
+    "storage_bucket": "lp-futbol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651803406465:android:610ea4ea0d4b4c61",
+        "android_client_info": {
+          "package_name": "com.ionicframework.tfg112398"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651803406465-8ldt2a27spks01vbgoc9tgun8b494rg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDlUn9I4FCFS44yrlzb0_pCBooa4qsC3Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

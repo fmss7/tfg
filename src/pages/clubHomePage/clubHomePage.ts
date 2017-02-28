@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { ClubSheetPage, ClubTeamsPage } from '../pages';
+
 @Component({
 	selector: 'clubHomePage',
 	templateUrl: 'clubHomePage.html'
@@ -8,6 +10,8 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ClubHomePage {
 
 	club: any;
+	clubSheetTab = ClubSheetPage;
+	clubTeamsTab = ClubTeamsPage;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
 		this.club = this.navParams.data;

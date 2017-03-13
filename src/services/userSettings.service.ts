@@ -9,10 +9,11 @@ export class UserSettings {
 
 	favoriteTeams = [
 		{
-			"name": "A.D. Claret",
+			"name": "CLARET, A.D.",
 			"category": "Regional",
 			"label": "A",
 			"league": "2ª Regional",
+			"leagueId": "reg-seg",
 			"pitch": {
 				"name": "Colegio Claret",
 				"address": "Calle Cruz del Ovejero, 115",

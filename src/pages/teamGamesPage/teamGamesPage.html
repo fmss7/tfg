@@ -33,17 +33,17 @@
 		</ion-card-content>
 	</ion-card>
 	<ion-list>
-		<ion-item (click)="gameTapped($event, team)">
+		<ion-item (click)="gameTapped($event, team)" *ngFor="let game of games">
 			<ion-row>
 				<ion-col width-20 style="text-align: left">
-					<p>{{date | date: format}}</p>
+					<p>{{game?.date}}</p>
+					<p>{{game?.time}}</p>
 				</ion-col>
 				<ion-col width-60 style="text-align: center">
-					<p>en {{team?.pitch?.name}}</p>
-					<p>{{team?.pitch?.address}}</p>
+					<p>{{game?.host}} {{game?.hostGoals}}-{{game?.guestGoals}} {{game?.guest}}</p>
 				</ion-col>
 				<ion-col width-20 style="text-align: right">
-					<h5>W: 4-2</h5>
+					<h5>{{game?.scoreDisplay}}</h5>
 				</ion-col>
 			</ion-row>
 		</ion-item>

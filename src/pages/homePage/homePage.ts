@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { TeamsPage, TeamHomePage, LeaguesPage, LeagueHomePage } from '../pages';
 import { UserSettings } from '../../services/userSettings.service';
+import { LPFutbolService } from '../../services/lp-futbol.service';
 
 @Component({
 	selector: 'homePage',
@@ -13,7 +14,12 @@ export class HomePage {
 	myFavoriteTeams: any[];
 	myFavoriteLeagues: any[];
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private userSettings: UserSettings) { }
+	constructor(
+		public navCtrl: NavController,
+		private userSettings: UserSettings,
+		private lPFutbolService: LPFutbolService) {
+		this.lPFutbolService.fireLogin();
+	}
 
 	ionViewDidLoad() {
 		this.myFavoriteTeams = this.userSettings.getFavoriteTeams();
@@ -23,16 +29,16 @@ export class HomePage {
 	goToAllTeams() {
 		this.navCtrl.push(TeamsPage);
 	}
-	
+
 	teamTapped($event, team) {
 		this.navCtrl.push(TeamHomePage, team);
 	}
 
-	goToAllLeagues(){
+	goToAllLeagues() {
 		this.navCtrl.push(LeaguesPage);
 	}
 
-	leagueTapped($event, league){
+	leagueTapped($event, league) {
 		this.navCtrl.push(LeagueHomePage, league)
 	}
 

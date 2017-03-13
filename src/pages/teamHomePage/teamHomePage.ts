@@ -23,7 +23,6 @@ export class TeamHomePage {
 
 	ionViewDidLoad() {
 		this.lPFutbolService.getLeagueData(this.team.league.id).subscribe(res => this.league = res);
-		//console.log(this.league);
 	}
 
 	goHome() {

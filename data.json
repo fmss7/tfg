@@ -172,9 +172,9 @@
 		}
 	],
 	"leagues-data": {
-		"juv-ddh": {
-			"name": "Juvenil División de Honor",
-			"category": "Juvenil",
+		"reg-seg": {
+			"name": "Segunda Regional",
+			"category": "Regional",
 			"teams": [
 				{
 					"name": "U.D. Las Palmas",
@@ -274,6 +274,67 @@
 						"long": 28.1182273,
 						"lati": -15.4413154
 					}
+				}
+			],
+			"fixtures": [
+				{
+					"fixture": 1,
+					"date": "16/09/2016",
+					"hour": "20:30",
+					"host": "SARDINA C.F.",
+					"hostGoals": 1,
+					"guestGoals": 3,
+					"guest": "CASABLANCA, C.D.",
+					"location": "SARDINA"
+				},
+				{
+					"fixture": 1,
+					"date": "",
+					"hour": "",
+					"host": "FONTANALES, C.D.",
+					"hostGoals": 5,
+					"guestGoals": 5,
+					"guest": "CERCADOS DE ESPINO, CD",
+					"location": "Local expulsado"
+
+					"fixture": 1,
+					"date": "17/09/2016",
+					"hour": "20:00",
+					"host": "SAN GREGORIO ",
+					"hostGoals": 0,
+					"guestGoals": 0,
+					"guest": "CLARET, A.D.",
+					"location": "EL CALERO"
+				},
+				{
+					"fixture": 1,
+					"date": "18/09/2016",
+					"hour": "16:00",
+					"host": "CD SAUCILLO",
+					"hostGoals": 1,
+					"guestGoals": 4,
+					"guest": "REMUDAS, U.D. LAS",
+					"location": "SAUCILLO"
+				},
+				{
+					"fixture": 2,
+					"date": "23/09/2016",
+					"hour": "20:30",
+					"host": "VENEGUERA, C.F.",
+					"hostGoals": 3,
+					"guestGoals": 5,
+					"guest": "UD LOS VELEZ",
+					"location": "VENEGUERA"
+				},
+				{
+					"fixture": 2,
+					"date": "",
+					"hour": "",
+					"host": "CLARET, A.D.",
+					"hostGoals": 3,
+					"guestGoals": 5,
+					"guest": "FONTANALES, C.D.",
+					"location": "Visitante expulsado"
 				}
 			]
 		}

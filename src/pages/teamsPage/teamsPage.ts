@@ -13,6 +13,8 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 
 export class TeamsPage {
 
+	aux: boolean = true;
+	clubsShow: boolean[];
 	clubs: any[];
 	queryText: string = '';
 
@@ -28,7 +30,13 @@ export class TeamsPage {
 			spinner: 'bubbles'
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getAllClubs().subscribe(res => this.clubs = res);
+			this.lPFutbolService.getAllClubs().subscribe(res => {
+				this.clubs = res;
+				for(let club of this.clubs){
+					club["showTeams"] = false;
+				}
+				console.log(this.clubs);
+			});
 			loader.dismiss();
 		});
 	}
@@ -45,11 +53,12 @@ export class TeamsPage {
 		this.navCtrl.push(ClubHomePage, club);
 	}
 
-	toggleGroup(group) {
-		group.show = !group.show;
-	};
-	isGroupShown(group) {
-		return group.show;
-	};
+	toogleShowTeams(club){
+		club.showTeams = !club.showTeams;
+	}
+	showTeams(club){
+		return club.showTeams;
+	}
+
 
 }

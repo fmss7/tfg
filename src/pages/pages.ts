@@ -1,5 +1,4 @@
 export * from './homePage/homePage';
-export * from './logInPage/logInPage';
 export * from './teamsPage/teamsPage';
 export * from './clubHomePage/clubHomePage';
 export * from './clubSheetPage/clubSheetPage';

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 import { TeamsPage, TeamHomePage, LeaguesPage, LeagueHomePage } from '../pages';
 import { UserSettings } from '../../services/userSettings.service';
@@ -18,7 +18,6 @@ export class HomePage {
 		public navCtrl: NavController,
 		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService) {
-		this.lPFutbolService.fireLogin();
 	}
 
 	ionViewDidLoad() {

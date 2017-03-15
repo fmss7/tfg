@@ -6,18 +6,18 @@ import { AngularFireModule, AuthProviders, AuthMethods } from "angularfire2";
 import { MyApp, LogIn } from './app.component';
 import {
 	HomePage, TeamsPage, TeamHomePage, GamePage, LeaguesPage, ClubHomePage, ClubSheetPage, ClubTeamsPage,
-	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage, LogInPage
+	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage
 } from '../pages/pages';
 
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
-var config = {
-	apiKey: "AIzaSyDDt1G4J74EwBJ5kkCI_bfP0lD3KYwuqI4",
-	authDomain: "lp-futbol.firebaseapp.com",
-	databaseURL: "https://lp-futbol.firebaseio.com",
-	storageBucket: "lp-futbol.appspot.com",
-	messagingSenderId: "651803406465"
+export const firebaseConfig = {
+    apiKey: "AIzaSyA5y-qruOF0GUHQ9rKmTSK1cYHy2tkf9vA",
+    authDomain: "lp-futbol-777.firebaseapp.com",
+    databaseURL: "https://lp-futbol-777.firebaseio.com",
+    storageBucket: "lp-futbol-777.appspot.com",
+    messagingSenderId: "438579790140"
 };
 const myFirebaseAuthConfig = {
 	provider: AuthProviders.Password,
@@ -30,7 +30,6 @@ const myFirebaseAuthConfig = {
 		MyApp,
 		LogIn,
 		HomePage,
-		LogInPage,
 		TeamsPage,
 		ClubHomePage,
 		ClubSheetPage,
@@ -46,6 +45,7 @@ const myFirebaseAuthConfig = {
 	],
 	imports: [
 		IonicModule.forRoot(MyApp),
+		AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
 		AgmCoreModule.forRoot()
 	],
 	bootstrap: [IonicApp],
@@ -53,7 +53,6 @@ const myFirebaseAuthConfig = {
 		MyApp,
 		LogIn,
 		HomePage,
-		LogInPage,
 		TeamsPage,
 		ClubHomePage,
 		ClubSheetPage,

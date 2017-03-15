@@ -13,13 +13,6 @@ export class LPFutbolService {
 
 	constructor(private http: Http, private af: AngularFire) { }
 
-	fireLogin() {
-		this.af.auth.login({
-			email: "dawtest@test.com",
-			password: 'foobar'
-		});
-	}
-
 	getAllTeams(): Observable<any> {
 		return this.http.get(this.baseUrl + '/teams.json')
 			.map(res => res.json());

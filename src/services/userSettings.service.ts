@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http/*, Response*/ } from '@angular/http';
+import { AngularFire, FirebaseListObservable } from "angularfire2";
 //import { Observable } from 'rxjs/Observable';
 //import 'rxjs';
 
@@ -34,13 +35,13 @@ export class UserSettings {
 
 	];
 
-	constructor(private http: Http) { }
+	constructor(private http: Http, private af: AngularFire) { }
 
 	getFavoriteTeams() {
 		return this.favoriteTeams;
 	}
 
-	getFavoriteLeagues(){
+	getFavoriteLeagues() {
 		return this.favoriteLeagues;
 	}
 

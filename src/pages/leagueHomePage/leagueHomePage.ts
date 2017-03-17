@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TeamGamesPage, FixturesPage, LeagueTablePage } from '../pages';
+import { FixturesPage, LeagueTablePage } from '../pages';
 
 @Component({
 	selector: 'leagueHomePage',

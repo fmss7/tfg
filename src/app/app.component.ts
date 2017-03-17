@@ -1,13 +1,13 @@
 import { Component, ViewChild, NgZone } from '@angular/core';
-import { Nav, Platform, LoadingController, ModalController, ViewController } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
-import { Facebook } from 'ionic-native';
+import { Nav, Platform, LoadingController, ModalController, ViewController } from 'ionic-angular';
+import firebase from 'firebase';
+import { AngularFire, AngularFireAuth } from "angularfire2";
+import { Facebook, TwitterConnect} from 'ionic-native';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
-import { ModalModule } from 'ng2-bootstrap/modal';
-import { AngularFire, FirebaseListObservable, AuthProviders, AuthMethods, AngularFireAuth, FirebaseAuthState } from "angularfire2";
-import firebase from 'firebase';
+
 import { HomePage, TeamHomePage, LeagueHomePage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 
@@ -137,7 +137,6 @@ export class LogIn {
 		private auth: AngularFireAuth) {
 		//this.auth.subscribe(auth => console.log("login: ", auth.google.email));
 		this.zone = new NgZone({});
-		/*
 		firebase.auth().onAuthStateChanged(user => {
 			this.zone.run(() => {
 				if (user) {
@@ -147,7 +146,6 @@ export class LogIn {
 				}
 			});
 		});
-		*/
 	}
 
 	closeModal() {
@@ -162,19 +160,10 @@ export class LogIn {
 			})
 			.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
 	}
-	/*
-		loginWithGoogle() {
-			this.auth.login({ provider: AuthProviders.Google, method: AuthMethods.Popup })
-				.then(success => {
-					this.login = success;
-					console.log(this.login.auth.email);
-				})
-				.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
-		}
-	*/
-	loginWithGoogle(){
+
+	loginWithGoogle() {
 		GooglePlus.login({
-			'webClientId': "438579790140-f2siu7a7l6vvu3lch1brcmo4cn1tikas.apps.googleusercontent.com",
+			'webClientId': "679651523148-i663pj9qdb53c8a94qlu6inbnnp4542j.apps.googleusercontent.com",
 			'offline': true
 		}).then(res => {
 			firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
@@ -208,9 +197,19 @@ export class LogIn {
 	}
 
 	loginWithTwitter() {
-		return this.auth.login({
-			provider: AuthProviders.Twitter,
-			method: AuthMethods.Popup,
+		TwitterConnect.login().then(response => {
+			const twitterCredential = firebase.auth.TwitterAuthProvider.credential(response.token, response.secret);
+
+			firebase.auth().signInWithCredential(twitterCredential)
+				.then((success) => {
+					console.log("Firebase success: " + JSON.stringify(success));
+					this.userProfile = success;
+				})
+				.catch((error) => {
+					console.log("Firebase failure: " + JSON.stringify(error));
+				});
+		}, error => {
+			console.log("Error connecting to twitter: ", error);
 		});
 	}
 

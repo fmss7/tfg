@@ -46,7 +46,9 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <preference name="TwitterConsumerKey" value="lupU7XK3s5KGvDZUUzPgEgNNG" />
+    <preference name="TwitterConsumerSecret" value="pi1jyQc5WZQBZRZilP2YWZAjl8ziAVnqfe29XqQ2EgK2H6ShFI" />
     <plugin name="cordova-plugin-googleplus" spec="~5.1.1">
-        <variable name="REVERSED_CLIENT_ID" value="438579790140-f2siu7a7l6vvu3lch1brcmo4cn1tikas.apps.googleusercontent.com" />
+        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.679651523148-i663pj9qdb53c8a94qlu6inbnnp4542j" />
     </plugin>
 </widget>

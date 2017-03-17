@@ -13,11 +13,11 @@ import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyA5y-qruOF0GUHQ9rKmTSK1cYHy2tkf9vA",
-    authDomain: "lp-futbol-777.firebaseapp.com",
-    databaseURL: "https://lp-futbol-777.firebaseio.com",
-    storageBucket: "lp-futbol-777.appspot.com",
-    messagingSenderId: "438579790140"
+    apiKey: "AIzaSyC1LaYV7V3YafjF5SIMbGbSBxFazR22dbM",
+    authDomain: "lp-futbol-cfeff.firebaseapp.com",
+    databaseURL: "https://lp-futbol-cfeff.firebaseio.com",
+    storageBucket: "lp-futbol-cfeff.appspot.com",
+    messagingSenderId: "679651523148"
 };
 const myFirebaseAuthConfig = {
 	provider: AuthProviders.Password,

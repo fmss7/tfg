@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { LoadingController, NavController, NavParams } from 'ionic-angular';
 
 import { FixturesPage, LeagueTablePage } from '../pages';
+import { LPFutbolService } from '../../services/lp-futbol.service';
 
 @Component({
 	selector: 'leagueHomePage',
@@ -13,11 +14,24 @@ export class LeagueHomePage {
 	fixturesTab = FixturesPage;
 	leagueTableTab = LeagueTablePage;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
-		this.league = this.navParams.data;
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		private loadingController: LoadingController,
+		private lPFutbolService: LPFutbolService) {
 	}
 
 	ionViewDidLoad() {
+		let loader = this.loadingController.create({
+			content: 'Obteniendo datos...',
+			spinner: 'bubbles'
+		});
+		loader.present().then(() => {
+			this.lPFutbolService.getLeagueData(this.navParams.data.id).subscribe(res => {
+				this.league = res;
+			});
+			loader.dismiss();
+		});
 	}
 
 	goHome() {

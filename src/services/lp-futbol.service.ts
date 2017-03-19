@@ -9,7 +9,7 @@ import { AngularFire } from "angularfire2";
 
 export class LPFutbolService {
 
-	baseUrl: string = "https://lp-futbol.firebaseio.com";
+	baseUrl: string = "https://lp-futbol-cfeff.firebaseio.com/";
 
 	constructor(private http: Http, private af: AngularFire) { }
 

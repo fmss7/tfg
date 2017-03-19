@@ -1,10 +1,34 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>fixtures</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>fixtures</ion-title>
+	</ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+	<ion-item>
+		<ion-row>
+			<ion-col>Fecha</ion-col>
+			<ion-col>Local</ion-col>
+			<ion-col>Visitante</ion-col>
+		</ion-row>
+		<ion-slides>
+			<ion-slide *ngFor="let fixture of fixtures">
+				<ion-row *ngFor="let game of fixture">
+					<!--
+					<ion-col>
+						<ion-row>{{game.date}}</ion-row>
+						<ion-row>{{game.time}}</ion-row>
+					</ion-col>
+					-->
+					<ion-col>{{game.host}}</ion-col>
+					<ion-col>{{game.hostGoals}}</ion-col>
+					<ion-col>{{game.guestGoals}}</ion-col>
+					<ion-col>{{game.guest}}</ion-col>
+				</ion-row>
+			</ion-slide>
+		</ion-slides>
+	</ion-item>
 
 </ion-content>

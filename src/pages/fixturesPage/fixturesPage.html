@@ -4,31 +4,26 @@
 	</ion-navbar>
 </ion-header>
 
-
 <ion-content>
-
 	<ion-item>
-		<ion-row>
-			<ion-col>Fecha</ion-col>
-			<ion-col>Local</ion-col>
-			<ion-col>Visitante</ion-col>
-		</ion-row>
 		<ion-slides>
-			<ion-slide *ngFor="let fixture of fixtures">
+			<ion-slide *ngFor="let fixture of fixtures; let i = index;">
+				<p>Jornada {{i+1}}</p>
 				<ion-row *ngFor="let game of fixture">
-					<!--
 					<ion-col>
-						<ion-row>{{game.date}}</ion-row>
-						<ion-row>{{game.time}}</ion-row>
+						<ion-row>{{game?.date}}</ion-row>
+						<ion-row>{{game?.time}}</ion-row>
 					</ion-col>
-					-->
-					<ion-col>{{game.host}}</ion-col>
-					<ion-col>{{game.hostGoals}}</ion-col>
-					<ion-col>{{game.guestGoals}}</ion-col>
-					<ion-col>{{game.guest}}</ion-col>
+					<ion-col>
+						<ion-row>{{game?.host | customPipe}}</ion-row>
+						<ion-row>{{game?.guest | customPipe}}</ion-row>
+					</ion-col>
+					<ion-col>
+						<ion-row>{{game?.hostGoals}}</ion-row>
+						<ion-row>{{game?.guestGoals}}</ion-row>
+					</ion-col>
 				</ion-row>
 			</ion-slide>
 		</ion-slides>
 	</ion-item>
-
 </ion-content>

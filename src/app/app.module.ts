@@ -8,6 +8,7 @@ import {
 	HomePage, TeamsPage, TeamHomePage, GamePage, LeaguesPage, ClubHomePage, ClubSheetPage, ClubTeamsPage,
 	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage
 } from '../pages/pages';
+import { CustomPipe } from '../pages/fixturesPage/customPipe.pipe';
 
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
@@ -40,6 +41,7 @@ const myFirebaseAuthConfig = {
 		TeamGamesPage,
 		LeagueTablePage,
 		FixturesPage,
+		CustomPipe,
 		GamePage,
 		MapPage
 	],

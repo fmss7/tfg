@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController, NavController, NavParams } from 'ionic-angular';
+import { LoadingController, NavController, NavParams, Events } from 'ionic-angular';
 
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
@@ -16,26 +16,22 @@ export class FixturesPage {
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
+		public events: Events,
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
 	}
 
 	ionViewDidLoad() {
-		let loader = this.loadingController.create({
-			content: 'Obteniendo datos...',
-			spinner: 'bubbles'
-		});
-		loader.present().then(() => {
-			this.lPFutbolService.getLeagueData("reg-pref").subscribe(res => {
-				this.fixtures =
-					_.chain(res.games)
-						.groupBy("fixture")
-						.toPairs()
-						.map(g => { return g[1] })
-						.value();
-				console.log(this.fixtures);
-			});
-			loader.dismiss();
+		this.events.subscribe('league:getted', games => {
+			this.fixtures =
+				_.chain(games)
+					.groupBy("fixture")
+					.toPairs()
+					.map(g => { 
+						return g[1];
+					})
+					.value();
+			//console.log(this.fixtures);
 		});
 	}
 

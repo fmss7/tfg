@@ -6,9 +6,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class CustomPipe implements PipeTransform {
 
-	transform(teamName: string): string {
-		teamName == "C.E.F. Puertos Las Palmas" ? teamName = "C.E.F. Puertos LP" : teamName = teamName;
-		return teamName;
+	transform(string: string): string {
+		if (string == "C.E.F. Puertos Las Palmas") {
+			string = "C.E.F. Puertos LP";
+		} else if (string == "NULL") {
+			string = "";
+		}
+		return string;
 	}
-
+	
 }

@@ -21,7 +21,7 @@
 				<ion-icon id="showIcon" [name]="showTeams(club) ? 'remove' : 'add'" (click)="toogleShowTeams(club)"></ion-icon>
 			</ion-item-divider>
 			<button ion-item class="item-accordion" [hidden]="!showTeams(club)" *ngFor="let team of club?.teams" (click)="teamTapped($event, team)">
-                 {{team?.league?.name}} <p>{{team.name}}</p>
+                 {{team.category}} {{team.label}}<p>{{team?.league?.name}}</p>
             </button>
 		</ion-item-group>
 	</ion-list>

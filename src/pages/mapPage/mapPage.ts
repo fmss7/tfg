@@ -1,36 +1,52 @@
 import { Component } from '@angular/core';
-import { NavParams, NavController } from 'ionic-angular';
+import { NavParams, NavController, LoadingController } from 'ionic-angular';
+import { LPFutbolService } from '../../services/lp-futbol.service';
 //import { AgmCoreModule } from 'angular2-google-maps/core';
 
 declare var window: any;
 
 @Component({
-    selector: 'mapPage',
-    templateUrl: 'mapPage.html',
+	selector: 'mapPage',
+	templateUrl: 'mapPage.html',
 
 })
 export class MapPage {
 
-    map: any;
-    constructor(public navParams: NavParams, public navCtrl: NavController) { }
+	map: any;
+	location: any;
 
-    ionViewDidLoad() {
-        let team = this.navParams.data;
+	constructor(
+		public navParams: NavParams,
+		public navCtrl: NavController,
+		private loadingController: LoadingController,
+		private lPFutbolService: LPFutbolService) { }
 
-        this.map = {
-            lati: team.pitch.lati,
-            long: team.pitch.long,
-            zoom: 16,
-            markerLabel: team.pitch.address
-        };
-    }
+	ionViewDidLoad() {
+		let loader = this.loadingController.create({
+			content: 'Obteniendo coordenadas...',
+			spinner: 'bubbles'
+		});
+		loader.present().then(() => {
+			this.lPFutbolService.getLocation(this.navParams.data).subscribe(res => {
+				this.location = res;
+				this.map = {
+					lati: this.location.lati,
+					long: this.location.long,
+					zoom: 16,
+					markerLabel: this.location.address
+				};
+
+			});
+			loader.dismiss();
+		});
+	}
 
 	goHome() {
 		this.navCtrl.popToRoot();
 	}
 
-    getDirections() {
-        window.location = `geo:${this.map.lat},${this.map.lng};u=35`;
-    }
+	getDirections() {
+		window.location = `geo:${this.map.lati},${this.map.long};u=35`;
+	}
 
 }

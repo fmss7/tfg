@@ -35,7 +35,6 @@ export class TeamsPage {
 				for(let club of this.clubs){
 					club["showTeams"] = false;
 				}
-				console.log(this.clubs);
 			});
 			loader.dismiss();
 		});

@@ -31,7 +31,6 @@ export class FixturesPage {
 						return g[1];
 					})
 					.value();
-			//console.log(this.fixtures);
 		});
 	}
 

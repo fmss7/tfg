@@ -33,17 +33,25 @@
 		</ion-card-content>
 	</ion-card>
 	<ion-list>
-		<ion-item (click)="gameTapped($event, team)" *ngFor="let game of games">
+		<ion-item *ngFor="let game of games" (click)="gameTapped($event, game)">
+			<p>Jornada {{game?.fixture}}</p>
 			<ion-row>
-				<ion-col width-20 style="text-align: left">
+				<ion-col width-30>
 					<p>{{game?.date}}</p>
 					<p>{{game?.time}}</p>
 				</ion-col>
-				<ion-col width-60 style="text-align: center">
-					<p>{{game?.host}} {{game?.hostGoals}}-{{game?.guestGoals}} {{game?.guest}}</p>
+				<ion-col>
+					<ion-row width-40>{{game?.host | customPipe}}</ion-row>
+					<ion-row>{{game?.guest | customPipe}}</ion-row>
 				</ion-col>
-				<ion-col width-20 style="text-align: right">
-					<h5>{{game?.scoreDisplay}}</h5>
+				<ion-col width-10>
+					<ion-row>{{game?.hostGoals | customPipe}}</ion-row>
+					<ion-row>{{game?.guestGoals | customPipe}}</ion-row>
+				</ion-col>
+				<ion-col width-10>
+					<ion-row>
+						<ion-badge [color]="getGoalsDisplayBadgeClass(game)">{{game?.goalsDisplay}}</ion-badge>
+					</ion-row>
 				</ion-col>
 			</ion-row>
 		</ion-item>

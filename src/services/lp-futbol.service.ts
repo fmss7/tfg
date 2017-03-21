@@ -13,34 +13,25 @@ export class LPFutbolService {
 
 	constructor(private http: Http, private af: AngularFire) { }
 
-	getAllTeams(): Observable<any> {
-		return this.http.get(this.baseUrl + '/teams.json')
-			.map(res => res.json());
-	}
-
-	getAllLeagues(): Observable<any> {
-		return this.http.get(this.baseUrl + '/leagues.json')
-			.map(res => res.json());
-	}
-
 	getAllCategories(): Observable<any> {
 		return this.http.get(this.baseUrl + '/categories.json')
 			.map(res => res.json());
 	}
+
 	getAllClubs(): Observable<any> {
 		return this.http.get(this.baseUrl + '/clubs.json')
 			.map(res => res.json());
 	}
-	/*
-		getCategoryData(categoryID): Observable<any> {
-			return this.http.get(this.baseUrl+'/categories-data/'+categoryID+'.json')
-				.map(res => res.json());
-		}
-	*/
-	getLeagueData(leagueId): Observable<any> {
-		return this.http.get(this.baseUrl + '/leagues-data/' + leagueId + '.json')
+
+	getLeagueData(id_league): Observable<any> {
+		return this.http.get(this.baseUrl + '/leagues-data/' + id_league + '.json')
 			.map(res => res.json());
 	};
+
+	getLocation(id_location) {
+		return this.http.get(this.baseUrl + '/locations/' + id_location + '.json')
+			.map(res => res.json());
+	}
 
 }
 

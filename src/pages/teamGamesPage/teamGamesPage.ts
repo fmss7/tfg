@@ -30,13 +30,16 @@ export class TeamGamesPage {
 					let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
 					return {
 						fixture: g.fixture,
+						id_host: g.id_host,
 						host: g.host,
 						hostGoals: g.hostGoals,
 						guestGoals: g.guestGoals,
 						guest: g.guest,
+						id_guest: g.id_guest,
 						opponent: opponentName,
 						date: g.date,
 						time: g.time,
+						pitch: g.pitch,
 						id_location: g.id_location,
 						goalsDisplay: goalsDisplay,
 					}

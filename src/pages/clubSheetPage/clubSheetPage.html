@@ -1,12 +1,32 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>ClubSheet</ion-title>
-  </ion-navbar>
-
+	<ion-navbar>
+		<ion-title>ClubSheet</ion-title>
+	</ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
+	<ion-list>
+		<p>{{club?.information}}</p>
+		<ion-item-group>
+			<ion-item>
+				<ion-label>Sede: </ion-label>
+				<p>{{club?.head_office}}</p>
+			</ion-item>
+			<ion-item>
+				<!--<ion-label>Teléfono: </ion-label>-->
+				<p>{{club?.phone_number}}</p>
+			</ion-item>
+			<ion-item>
+				<!--<ion-label>Campo de fútbol: </ion-label>-->
+				<p>{{location?.name}}</p>
+			</ion-item>
+			<ion-item>
+				<!--<ion-label>Lugar: </ion-label>-->
+				<p>{{location?.addres}} {{location?.place}}</p>
+			</ion-item>
+		</ion-item-group>
+	</ion-list>
 
 </ion-content>

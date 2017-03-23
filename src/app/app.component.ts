@@ -69,7 +69,7 @@ export class MyApp {
 			<ion-navbar color="primary">
 				<ion-title>Entra</ion-title>
 				<ion-buttons end>
-					<button ion-button (click)="closeModal()"><ion-icon name="close"></ion-icon></button>
+					<button ion-button (click)="closeModal()"><ion-icon name="close-circle"></ion-icon></button>
 				</ion-buttons>
 			</ion-navbar>
 		</ion-header>
@@ -135,7 +135,6 @@ export class LogIn {
 		private userSettings: UserSettings,
 		private af: AngularFire,
 		private auth: AngularFireAuth) {
-		//this.auth.subscribe(auth => console.log("login: ", auth.google.email));
 		this.zone = new NgZone({});
 		firebase.auth().onAuthStateChanged(user => {
 			this.zone.run(() => {

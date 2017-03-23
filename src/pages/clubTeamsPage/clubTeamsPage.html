@@ -1,12 +1,17 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>ClubTeams</ion-title>
-  </ion-navbar>
-
+	<ion-navbar>
+		<ion-title>ClubTeams</ion-title>
+	</ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-
+	<ion-list>
+		<ion-item-group *ngFor="let team of teams">
+			<ion-item-divider class="item-stable" (click)="teamTapped($event, team)">
+				{{team.category}} {{team.label}}
+				<p>{{team?.league?.name}}</p>
+			</ion-item-divider>
+		</ion-item-group>
+	</ion-list>
 </ion-content>

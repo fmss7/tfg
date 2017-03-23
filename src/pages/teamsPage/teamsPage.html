@@ -18,7 +18,7 @@
 		<ion-item-group *ngFor="let club of clubs">
 			<ion-item-divider class="item-stable" color="secondary">
 				<span (click)="clubTapped($event, club)">{{club?.name}}</span>
-				<ion-icon id="showIcon" [name]="showTeams(club) ? 'remove' : 'add'" (click)="toogleShowTeams(club)"></ion-icon>
+				<ion-icon id="showIcon" [name]="showTeams(club) ? 'arrow-round-up' : 'arrow-round-down'" (click)="toogleShowTeams(club)"></ion-icon>
 			</ion-item-divider>
 			<button ion-item class="item-accordion" [hidden]="!showTeams(club)" *ngFor="let team of club?.teams" (click)="teamTapped($event, team)">
                  {{team.category}} {{team.label}}<p>{{team?.league?.name}}</p>

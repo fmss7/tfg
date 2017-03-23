@@ -9,46 +9,51 @@
 </ion-header>
 
 <ion-content>
-    <ion-row>
-        <ion-col width-50 text-center class="divider-col">
-            <button ion-button clear full >Local</button>
-        </ion-col>
-        <ion-col width-50 text-center>
-            <button ion-button clear full>Visitante</button>
-        </ion-col>
-    </ion-row>
-    <ion-row center>
-        <ion-col width-50 text-center class="divider-col">
-            <h4>{{game?.host}}</h4>
-        </ion-col>
-        <ion-col width-50 text-center>
-            <h4>{{game?.guest}}</h4>
-        </ion-col>
-    </ion-row>
-    <ion-row baseline class="top-bottom-border">
-        <ion-col text-center>
-            <h1 ion-text>{{game?.hostGoals}}</h1>
-        </ion-col>
+	<ion-row>
+		<ion-col width-50 text-center>
+			<button ion-button clear full>Local</button>
+		</ion-col>
+		<ion-col width-50 text-center>
+			<button ion-button clear full>Visitante</button>
+		</ion-col>
+	</ion-row>
+	<ion-row center>
+		<ion-col width-40 text-center>
+			<h4>{{game?.host}} </h4>
+		</ion-col>
+		<ion-col width-20 text-center>
+			<h2>{{game?.hostGoals}} - {{game?.guestGoals}}</h2>
+		</ion-col>
+		<ion-col width-40 text-center>
+			<h4>{{game?.guest}}</h4>
+		</ion-col>
+	</ion-row>
+	<ion-row>
+		<ion-col width-50 text-center>
+			<ion-avatar><img name="hostImg" [alt]="game?.host" [src]='hostBadgeUrl' (error)="updateHostUrl($event)" /></ion-avatar>
+		</ion-col>
+		<ion-col width-50 text-center>
+			<ion-avatar><img name="guestImg" [alt]="game?.guest" [src]='guestBadgeUrl' (error)="updateGuestUrl($event)" /></ion-avatar>
+		</ion-col>
+	</ion-row>
 
-        <ion-col text-center>
-            <h1 ion-text>{{game?.guestGoals}}</h1>            
-        </ion-col>
-    </ion-row>
-
-    <ion-card>
-        <ion-row>
-            <ion-col width-60>
-                <ion-label></ion-label>
-            </ion-col>
-            <ion-col width-40 text-right>
-                <button ion-button icon-only outline (click)="goToMap()">
+	<ion-card>
+		<ion-item>
+			<ion-icon name="calendar" item-left></ion-icon>
+			{{game?.date}} {{game?.time}}
+		</ion-item>
+		<ion-row>
+			<ion-col width-60>
+				En el campo {{game?.pitch}}
+			</ion-col>
+			<ion-col width-40 text-right>
+				<button ion-button icon-only outline (click)="goToMap()">
                     <ion-icon name="map"></ion-icon>
                 </button>
-                <button ion-button icon-only outline (click)="goToDirections()">
+				<button ion-button icon-only outline (click)="goToDirections()">
                     <ion-icon name="navigate"></ion-icon>
                 </button>
-            </ion-col>
-        </ion-row>
-    </ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-card>
 </ion-content>
-

@@ -2,7 +2,10 @@
 	"clubs": [
 		{
 			"name": "A.D. Huracán",
-			"location_id": "loc-5",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-5",
 			"teams": [
 				{
 					"id": "adhuracan@reg-pref",

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events} from 'ionic-angular';
 
 import { TeamsPage, TeamHomePage, LeaguesPage, LeagueHomePage } from '../pages';
 import { UserSettings } from '../../services/userSettings.service';
@@ -17,10 +17,16 @@ export class HomePage {
 	constructor(
 		public navCtrl: NavController,
 		private userSettings: UserSettings,
+		private events: Events,
 		private lPFutbolService: LPFutbolService) {
 	}
 
 	ionViewDidLoad() {
+		this.refreshFavorites();
+		this.events.subscribe('favorites:changed', () => this.refreshFavorites());
+	}
+
+	refreshFavorites() {
 		this.myFavoriteTeams = this.userSettings.getFavoriteTeams();
 		this.myFavoriteLeagues = this.userSettings.getFavoriteLeagues();
 	}

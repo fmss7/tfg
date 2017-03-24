@@ -27,7 +27,7 @@ export class FixturesPage {
 				_.chain(games)
 					.groupBy("fixture")
 					.toPairs()
-					.map(g => { 
+					.map(g => {
 						return g[1];
 					})
 					.value();

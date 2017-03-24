@@ -1,9 +1,9 @@
 import { Component, ViewChild, NgZone } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { Nav, Platform, LoadingController, ModalController, ViewController } from 'ionic-angular';
+import { Nav, Platform, LoadingController, ModalController, ViewController, Events } from 'ionic-angular';
 import firebase from 'firebase';
 import { AngularFire, AngularFireAuth } from "angularfire2";
-import { Facebook, TwitterConnect} from 'ionic-native';
+import { Facebook, TwitterConnect } from 'ionic-native';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
@@ -25,9 +25,11 @@ export class MyApp {
 	constructor(
 		public platform: Platform,
 		private userSettings: UserSettings,
+		private events: Events,
 		private loadingController: LoadingController,
 		public modalCtrl: ModalController) {
 		this.initializeApp();
+
 	}
 
 	initializeApp() {
@@ -35,6 +37,13 @@ export class MyApp {
 			StatusBar.styleDefault();
 			Splashscreen.hide();
 		});
+		this.refreshFavorites();
+		this.events.subscribe('favorites:changed', () => this.refreshFavorites());
+		this.favoriteTeams = this.userSettings.getFavoriteTeams();
+		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
+	}
+
+	refreshFavorites() {
 		this.favoriteTeams = this.userSettings.getFavoriteTeams();
 		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
 	}

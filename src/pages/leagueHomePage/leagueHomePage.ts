@@ -24,15 +24,16 @@ export class LeagueHomePage {
 
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
-			content: 'Obteniendo datos...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			dismissOnPageChange: true,
+			content: 'Obteniendo datos...'
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getLeagueData(this.navParams.data.id).subscribe(res => {
+			this.lPFutbolService.getLeagueData(this.navParams.data.id_league).subscribe(res => {
 				this.league = res;
 				this.events.publish('league:getted', this.league.games);
+				loader.dismiss();
 			});
-			loader.dismiss();
 		});
 	}
 

@@ -13,11 +13,11 @@ declare var window: any;
 export class GamePage {
 
 	game: any;
-	flag: boolean = false;
 	storage: any;
 	badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
 	hostBadgeUrl: string;
 	guestBadgeUrl: string;
+	urls: number = 0;
 
 	constructor(
 		public navCtrl: NavController,
@@ -26,7 +26,6 @@ export class GamePage {
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService,
 		@Inject(FirebaseApp) private firebaseApp: any) {
-
 	}
 
 	ionViewDidLoad() {
@@ -48,19 +47,27 @@ export class GamePage {
 				this.guestBadgeUrl = url;
 				this.events.publish('guestImg:getted');
 			});
-			loader.dismiss();
+			this.events.subscribe('hostImg:getted', () => loader.dismiss());
 		});
 	}
 
 	updateHostUrl($event) {
 		this.events.subscribe('hostImg:getted', () => {
 			$event.target.src = this.hostBadgeUrl;
+			this.urls++;
+			if (this.urls == 2) {
+				this.events.publish('loader:dismiss');
+			}
 		});
 	}
 	updateGuestUrl($event) {
 		this.events.subscribe('guestImg:getted', () => {
 			$event.target.src = this.guestBadgeUrl;
 		});
+		this.urls++;
+		if (this.urls == 2) {
+			this.events.publish('loader:dismiss');
+		}
 	}
 
 	goToMap() {

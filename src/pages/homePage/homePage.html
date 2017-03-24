@@ -15,10 +15,10 @@
 			<ion-list>
 				<ion-list-header>Equipos Favoritos</ion-list-header>
 				<button ion-item *ngFor="let team of myFavoriteTeams" (click)="teamTapped($event, team)">
-				<ion-icon name="star"></ion-icon>
-				{{team.name}} {{team.label}}
-				<p>{{team.category}} {{team.league}}</p>
-			</button>
+					<ion-icon name="star"></ion-icon>
+					{{team?.name}} {{team?.label}}
+					<p>{{team?.league?.name}}</p>
+				</button>
 			</ion-list>
 			<button full ion-button (click)="goToAllTeams()">
 				Equipos <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
@@ -30,8 +30,8 @@
 				<ion-list-header>Ligas Favoritas</ion-list-header>
 				<button ion-item *ngFor="let league of myFavoriteLeagues" (click)="leagueTapped($event, league)">
 				<ion-icon name="star"></ion-icon>
-				{{league.name}}
-				<p>{{league.category}}</p>
+				{{league?.name}}
+				<p>{{league?.category}}</p>
 			</button>
 			</ion-list>
 			<button full ion-button (click)="goToAllLeagues()">

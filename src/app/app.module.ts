@@ -2,12 +2,11 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AngularFireModule, AuthProviders, AuthMethods } from "angularfire2";
-
+import { Storage } from '@ionic/storage';
 import { MyApp, LogIn } from './app.component';
 import {
 	HomePage, TeamsPage, TeamHomePage, GamePage, LeaguesPage, ClubHomePage, ClubSheetPage, ClubTeamsPage,
-	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage
-} from '../pages/pages';
+	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage } from '../pages/pages';
 import { CustomPipe } from '../pages/fixturesPage/customPipe.pipe';
 
 import { UserSettings } from '../services/userSettings.service';
@@ -71,7 +70,8 @@ const myFirebaseAuthConfig = {
 	providers:
 	[{ provide: ErrorHandler, useClass: IonicErrorHandler },
 		UserSettings,
-		LPFutbolService
+		LPFutbolService,
+		Storage
 	]
 })
 export class AppModule { }

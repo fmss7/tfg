@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Events } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, Events } from 'ionic-angular';
 import { TeamGamesPage, LeagueTablePage } from '../pages';
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
@@ -19,15 +19,21 @@ export class TeamHomePage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public events: Events,
+		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
 	}
 
 	ionViewDidLoad() {
 		this.team = this.navParams.data;
+		let loader = this.loadingController.create({
+			content: 'Obteniendo equipos...',
+			spinner: 'bubbles'
+		});
 		this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
 			this.league = res;
 			this.events.publish('league:getted', this.league, this.team);
 		});
+		loader.dismiss();
 	}
 
 	goHome() {

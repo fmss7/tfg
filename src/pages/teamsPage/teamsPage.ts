@@ -32,11 +32,11 @@ export class TeamsPage {
 		loader.present().then(() => {
 			this.lPFutbolService.getAllClubs().subscribe(res => {
 				this.clubs = res;
-				for(let club of this.clubs){
+				for (let club of this.clubs) {
 					club["showTeams"] = false;
 				}
+				loader.dismiss();
 			});
-			loader.dismiss();
 		});
 	}
 
@@ -52,10 +52,10 @@ export class TeamsPage {
 		this.navCtrl.push(ClubHomePage, club);
 	}
 
-	toogleShowTeams(club){
+	toogleShowTeams(club) {
 		club.showTeams = !club.showTeams;
 	}
-	showTeams(club){
+	showTeams(club) {
 		return club.showTeams;
 	}
 

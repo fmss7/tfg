@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController, Events } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, AlertController, ToastController, Events } from 'ionic-angular';
 import { GamePage } from '../../pages/pages';
-
+import { UserSettings } from '../../services/userSettings.service';
 import * as _ from 'lodash';
+import * as moment from 'moment';
 
 @Component({
 	selector: 'teamGamesPage',
@@ -12,40 +13,99 @@ export class TeamGamesPage {
 
 	team: any;
 	games: any;
+	allGames: any;
+	dateFilter: string;
+	isFollowing: boolean = false;
+	useDateFilter = false;
 
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public events: Events,
-		private loadingController: LoadingController) { }
+		private userSettings: UserSettings,
+		private loadingController: LoadingController,
+		private alertController: AlertController,
+		private toastController: ToastController) { }
 
 	ionViewDidLoad() {
-		this.events.subscribe('league:getted', (league, team) => {
-			this.team = team;
-			this.games = _.chain(league.games)
-				.filter(g => g.host == this.team.name || g.guest == this.team.name)
-				.map(g => {
-					let isTeam1 = (g.host === this.team.name);
-					let opponentName = isTeam1 ? g.guest : g.host;
-					let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
-					return {
-						fixture: g.fixture,
-						id_host: g.id_host,
-						host: g.host,
-						hostGoals: g.hostGoals,
-						guestGoals: g.guestGoals,
-						guest: g.guest,
-						id_guest: g.id_guest,
-						opponent: opponentName,
-						date: g.date,
-						time: g.time,
-						pitch: g.pitch,
-						id_location: g.id_location,
-						goalsDisplay: goalsDisplay,
-					}
-				})
-				.value();
+		let loader = this.loadingController.create({
+			content: 'Obteniendo equipos...',
+			spinner: 'bubbles'
 		});
+		loader.present().then(() => {
+			this.events.subscribe('league:getted', (league, team) => {
+				this.team = team;
+				this.games = _.chain(league.games)
+					.filter(g => g.host == this.team.name || g.guest == this.team.name)
+					.map(g => {
+						let isTeam1 = (g.host === this.team.name);
+						let opponentName = isTeam1 ? g.guest : g.host;
+						let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
+						return {
+							fixture: g.fixture,
+							id_host: g.id_host,
+							host: g.host,
+							hostGoals: g.hostGoals,
+							guestGoals: g.guestGoals,
+							guest: g.guest,
+							id_guest: g.id_guest,
+							opponent: opponentName,
+							date: g.date,
+							time: g.time,
+							pitch: g.pitch,
+							id_location: g.id_location,
+							goalsDisplay: goalsDisplay,
+						}
+					})
+					.value();
+				this.allGames = this.games;
+				this.userSettings.isFavouriteTeam(this.team.id).then(value => this.isFollowing = value);
+				loader.dismiss();
+			});
+		});
+	}
+
+	toggleFollow() {
+		if (this.isFollowing) {
+			let confirm = this.alertController.create({
+				title: this.team.name,
+				message: '¿Quieres dejar de seguir a este equipo?',
+				buttons: [
+					{
+						text: 'Si',
+						handler: () => {
+							this.isFollowing = false;
+							this.userSettings.unFavoriteTeam(this.team);
+							let toast = this.toastController.create({
+								message: 'Has dejado de seguir a este equipo',
+								duration: 1250,
+								position: 'bottom'
+							});
+							toast.present();
+						}
+					},
+					{ text: 'No' }
+				]
+			});
+			confirm.present();
+		} else {
+			this.isFollowing = true;
+			this.userSettings.favoriteTeam(this.team);
+			let toast = this.toastController.create({
+				message: 'Has empezado a seguir a este equipo',
+				duration: 1250,
+				position: 'bottom'
+			});
+			toast.present();
+		}
+	}
+
+	dateChange() {
+		if (this.useDateFilter) {
+			this.games = _.filter(this.allGames, g => g.date == moment(this.dateFilter).format('D/M/YYYY'));
+		} else {
+			this.games = this.allGames;
+		}
 	}
 
 	getGoalsDisplay(isTeam1, hostGoals, guestGoals) {

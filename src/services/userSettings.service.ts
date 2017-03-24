@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http/*, Response*/ } from '@angular/http';
 import { AngularFire } from "angularfire2";
+import { Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 //import { Observable } from 'rxjs/Observable';
 //import 'rxjs';
 
@@ -8,37 +10,40 @@ import { AngularFire } from "angularfire2";
 
 export class UserSettings {
 
-	favoriteTeams = [
-		{
-			"name": "CLARET, A.D.",
-			"category": "Regional",
-			"label": "A",
-			"league": "2ª Regional",
-			"leagueId": "reg-seg",
-			"pitch": {
-				"name": "Colegio Claret",
-				"address": "Calle Cruz del Ovejero, 115",
-				"place": "Colegio Chivato Claret",
-				"lati": 28.099270,
-				"long": -15.482702
-			}
-		},
-
-	];
+	favoriteTeams = [];
 
 	favoriteLeagues = [
 		{
-			"name": "División de Honor",
-			"category": "Juvenil",
-			"teams": []
+			"id_league": "reg-pref",
+			"name": "Regional Preferente"
 		}
 
 	];
 
-	constructor(private http: Http, private af: AngularFire) { }
+	constructor(
+		private http: Http,
+		private events: Events,
+		private af: AngularFire,
+		private storage: Storage) { }
+
+	favoriteTeam(team) {
+		this.storage.set(team.id, JSON.stringify(team)).then(() => this.events.publish('favorites:changed'));
+	}
+
+	unFavoriteTeam(team) {
+		this.storage.remove(team.id).then(() => this.events.publish('favorites:changed'));
+	}
+
+    isFavouriteTeam(teamId){
+        return this.storage.get(teamId).then(value => value ? true : false);
+    }
 
 	getFavoriteTeams() {
-		return this.favoriteTeams;
+		let item = [];
+		this.storage.forEach((value, key) => {
+			item.push(JSON.parse(value))
+		});
+		return item;
 	}
 
 	getFavoriteLeagues() {

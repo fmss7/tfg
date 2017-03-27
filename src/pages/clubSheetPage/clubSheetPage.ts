@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { NavController, NavParams, LoadingController, Events } from 'ionic-angular';
 import { LPFutbolService } from '../../services/lp-futbol.service';
+import { FirebaseApp } from 'angularfire2';
 
 @Component({
 	selector: 'clubSheetPage',
@@ -9,6 +10,8 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 export class ClubSheetPage {
 
 	club: any;
+	badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
+	clubBadgeUrl: string;
 	location: any;
 
 	constructor(
@@ -16,20 +19,36 @@ export class ClubSheetPage {
 		public navParams: NavParams,
 		public events: Events,
 		private loadingController: LoadingController,
-		private lPFutbolService: LPFutbolService) {
-		}
+		private lPFutbolService: LPFutbolService,
+		@Inject(FirebaseApp) private firebaseApp: any) {
+		this.club = this.navParams.data;
+
+	}
 
 	ionViewDidLoad() {
-		this.club = this.navParams.data;
+
 		let loader = this.loadingController.create({
 			content: 'Obteniendo club...',
 			spinner: 'bubbles'
 		});
 		loader.present().then(() => {
+			let club = this.club.id_club + ".png";
+			let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + club);
+			storageRefHost.getDownloadURL().then(url => {
+				this.clubBadgeUrl = url;
+				this.events.publish('clubBadge:getted');
+			});
 			this.lPFutbolService.getLocation(this.club.id_location).subscribe(res => {
 				this.location = res;
 			});
-			loader.dismiss();
+			this.events.subscribe('loader:dismiss', () => loader.dismiss());
+		});
+	}
+
+	updateClubBadgeUrl($event) {
+		this.events.subscribe('clubBadge:getted', () => {
+			$event.target.src = this.clubBadgeUrl;
+			this.events.publish('loader:dismiss');
 		});
 	}
 

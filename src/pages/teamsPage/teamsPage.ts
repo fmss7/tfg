@@ -27,7 +27,8 @@ export class TeamsPage {
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			content: 'Obteniendo equipos...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			//cssClass: 'loading-wrapper'
 		});
 		loader.present().then(() => {
 			this.lPFutbolService.getAllClubs().subscribe(res => {

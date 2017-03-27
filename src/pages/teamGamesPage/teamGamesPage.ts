@@ -28,40 +28,33 @@ export class TeamGamesPage {
 		private toastController: ToastController) { }
 
 	ionViewDidLoad() {
-		let loader = this.loadingController.create({
-			content: 'Obteniendo equipos...',
-			spinner: 'bubbles'
-		});
-		loader.present().then(() => {
-			this.events.subscribe('league:getted', (league, team) => {
-				this.team = team;
-				this.games = _.chain(league.games)
-					.filter(g => g.host == this.team.name || g.guest == this.team.name)
-					.map(g => {
-						let isTeam1 = (g.host === this.team.name);
-						let opponentName = isTeam1 ? g.guest : g.host;
-						let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
-						return {
-							fixture: g.fixture,
-							id_host: g.id_host,
-							host: g.host,
-							hostGoals: g.hostGoals,
-							guestGoals: g.guestGoals,
-							guest: g.guest,
-							id_guest: g.id_guest,
-							opponent: opponentName,
-							date: g.date,
-							time: g.time,
-							pitch: g.pitch,
-							id_location: g.id_location,
-							goalsDisplay: goalsDisplay,
-						}
-					})
-					.value();
-				this.allGames = this.games;
-				this.userSettings.isFavouriteTeam(this.team.id).then(value => this.isFollowing = value);
-				loader.dismiss();
-			});
+		this.events.subscribe('league:getted', (league, team) => {
+			this.team = team;
+			this.userSettings.isFavouriteTeam(this.team.id).then(value => this.isFollowing = value);
+			this.games = _.chain(league.games)
+				.filter(g => g.host == this.team.name || g.guest == this.team.name)
+				.map(g => {
+					let isTeam1 = (g.host === this.team.name);
+					let opponentName = isTeam1 ? g.guest : g.host;
+					let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
+					return {
+						fixture: g.fixture,
+						id_host: g.id_host,
+						host: g.host,
+						hostGoals: g.hostGoals,
+						guestGoals: g.guestGoals,
+						guest: g.guest,
+						id_guest: g.id_guest,
+						opponent: opponentName,
+						date: g.date,
+						time: g.time,
+						pitch: g.pitch,
+						id_location: g.id_location,
+						goalsDisplay: goalsDisplay,
+					}
+				})
+				.value();
+			this.allGames = this.games;
 		});
 	}
 
@@ -122,7 +115,7 @@ export class TeamGamesPage {
 			}
 			return winIndicator;
 		} else {
-			return "";
+			return "Por disputar";
 		}
 	}
 

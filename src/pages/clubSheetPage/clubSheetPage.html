@@ -4,11 +4,16 @@
 	</ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
 	<ion-list>
-		<p>{{club?.information}}</p>
+		<ion-row>
+			<ion-col text-center width-75>
+				<p style="text-align: justify;">{{club?.information}}</p>
+			</ion-col>
+			<ion-col width-25>
+				<ion-avatar><img name="clubBadge" [alt]="club.name" [src]='clubBadgeUrl' (error)="updateClubBadgeUrl($event)" /></ion-avatar>
+			</ion-col>
+		</ion-row>
 		<ion-item-group>
 			<ion-item>
 				<ion-label>Sede: </ion-label>
@@ -28,5 +33,4 @@
 			</ion-item>
 		</ion-item-group>
 	</ion-list>
-
 </ion-content>

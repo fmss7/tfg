@@ -9,16 +9,16 @@
 		<ion-slides>
 			<ion-slide *ngFor="let fixture of fixtures; let i = index;">
 				<p>Jornada {{i+1}}</p>
-				<ion-row *ngFor="let game of fixture">
-					<ion-col>
+				<ion-row *ngFor="let game of fixture" (click)="gameTapped($event, game)">
+					<ion-col width-40>
 						<ion-row>{{game?.date}}</ion-row>
 						<ion-row>{{game?.time}}</ion-row>
 					</ion-col>
-					<ion-col>
+					<ion-col width-50>
 						<ion-row>{{game?.host | customPipe}}</ion-row>
 						<ion-row>{{game?.guest | customPipe}}</ion-row>
 					</ion-col>
-					<ion-col>
+					<ion-col width-10>
 						<ion-row>{{game?.hostGoals}}</ion-row>
 						<ion-row>{{game?.guestGoals}}</ion-row>
 					</ion-col>

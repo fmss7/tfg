@@ -1,6 +1,7 @@
 {
 	"clubs": [
 		{
+			"id_club": "adhuracan",
 			"name": "A.D. Huracán",
 			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
@@ -125,7 +126,7 @@
 			"name": "Regional",
 			"leagues": [
 				{
-					"id": "reg-pref",
+					"id_league": "reg-pref",
 					"name": "Regional Preferente"
 				}
 			]
@@ -134,11 +135,11 @@
 			"name": "Juvenil",
 			"leagues": [
 				{
-					"id": "juv-ddh",
+					"id_league": "juv-ddh",
 					"name": "División de Honor"
 				},
 				{
-					"id": "juv-pref",
+					"id_league": "juv-pref",
 					"name": "Juvenil Preferente"
 				}
 			]
@@ -147,15 +148,15 @@
 			"name": "Cadete",
 			"leagues": [
 				{
-					"id": "cad-pref",
+					"id_league": "cad-pref",
 					"name": "Cadete Preferente"
 				},
 				{
-					"id": "cad-priG1",
+					"id_league": "cad-priG1",
 					"name": "Primera Cadete G1"
 				},
 				{
-					"id": "cad-priG2",
+					"id_league": "cad-priG2",
 					"name": "Primera Cadete G2"
 				}
 			]
@@ -164,11 +165,11 @@
 			"name": "Infantil",
 			"leagues": [
 				{
-					"id": "inf-prefG1",
+					"id_league": "inf-prefG1",
 					"name": "Infantil Preferente G1"
 				},
 				{
-					"id": "inf-prefG2",
+					"id_league": "inf-prefG2",
 					"name": "Infantil Preferente G2"
 				}
 			]
@@ -177,11 +178,11 @@
 			"name": "Alevín",
 			"leagues": [
 				{
-					"id": "ale-prefG1",
+					"id_league": "ale-prefG1",
 					"name": "Alevín Preferente G1"
 				},
 				{
-					"id": "ale-prefG2",
+					"id_league": "ale-prefG2",
 					"name": "Alevín Preferente G2"
 				}
 			]

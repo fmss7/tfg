@@ -1,9 +1,10 @@
 teamsPage{
+
 	.item-accordion {
-		line-height: 38px;
 		padding-top: 0;
 		padding-bottom: 0;
-		transition: 0.09s all linear;
+		//transition: 0.09s all linear;
+		transition: height linear 2s;
 	}
 	.item-accordion.ng-hide {
 		line-height: 0px;
@@ -12,7 +13,17 @@ teamsPage{
 		display: block !important;
 	}
 
+	.loading-wrapper{
+		width: 250px;
+		height: 75px;
+		opacity: 0.85;
+		border-radius: 5px;
+	}
+
 	#showIcon{
 		float: right;
+		margin-right: 2%;
+		font-size: 1.75em;
 	}
+
 }

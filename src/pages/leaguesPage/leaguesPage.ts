@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
-
 import { LeagueHomePage }  from '../../pages/pages';
-
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
 @Component({
@@ -21,7 +19,6 @@ export class LeaguesPage {
 		private lPFutbolService: LPFutbolService) { }
 
 	ionViewDidLoad() {
-
 		let loader = this.loadingController.create({
 			content: 'Obteniendo categorías...',
 			spinner: 'bubbles'

@@ -26,6 +26,7 @@ export class GamePage {
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService,
 		@Inject(FirebaseApp) private firebaseApp: any) {
+		this.game = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
@@ -34,7 +35,6 @@ export class GamePage {
 			spinner: 'bubbles'
 		});
 		loader.present().then(() => {
-			this.game = this.navParams.data;
 			let host = this.game.id_host.substring(0, this.game.id_host.indexOf('@')) + ".png";
 			let guest = this.game.id_guest.substring(0, this.game.id_guest.indexOf('@')) + ".png";
 			let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
@@ -47,7 +47,7 @@ export class GamePage {
 				this.guestBadgeUrl = url;
 				this.events.publish('guestImg:getted');
 			});
-			this.events.subscribe('hostImg:getted', () => loader.dismiss());
+			this.events.subscribe('loader:dismiss', () => loader.dismiss());
 		});
 	}
 

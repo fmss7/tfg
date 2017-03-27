@@ -24,20 +24,26 @@ export class TeamHomePage {
 	}
 
 	ionViewDidLoad() {
-		this.team = this.navParams.data;
 		let loader = this.loadingController.create({
 			content: 'Obteniendo equipos...',
 			spinner: 'bubbles'
 		});
-		this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
-			this.league = res;
-			this.events.publish('league:getted', this.league, this.team);
+		loader.present().then(() => {
+			this.team = this.navParams.data;
+			this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
+				this.league = res;
+				this.events.publish('league:getted', this.league, this.team);
+			});
+			loader.dismiss();
 		});
-		loader.dismiss();
 	}
 
 	goHome() {
-		this.navCtrl.popToRoot();
+		this.navCtrl.popToRoot(
+			{
+				animate: true,
+				animation: "wp-transition",
+				direction: "back",
+			});
 	}
-
 }

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { LoadingController, NavController, NavParams, Events } from 'ionic-angular';
-
 import { LPFutbolService } from '../../services/lp-futbol.service';
-
+import { GamePage } from '../pages';
 import * as _ from 'lodash';
 
 @Component({
@@ -22,9 +21,9 @@ export class FixturesPage {
 	}
 
 	ionViewDidLoad() {
-		this.events.subscribe('league:getted', games => {
+		this.events.subscribe('league:getted', league => {
 			this.fixtures =
-				_.chain(games)
+				_.chain(league.games)
 					.groupBy("fixture")
 					.toPairs()
 					.map(g => {
@@ -32,6 +31,10 @@ export class FixturesPage {
 					})
 					.value();
 		});
+	}
+
+	gameTapped($event, game) {
+		this.navCtrl.parent.parent.push(GamePage, game);
 	}
 
 }

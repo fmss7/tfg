@@ -4,31 +4,29 @@
 	</ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-	<ion-label>{{league?.name}}</ion-label>
 	<ion-row>
-		<ion-col text-left width-5>Pos</ion-col>
-		<ion-col text-left width-50>Equipo</ion-col>
-		<ion-col text-left width-5>PJ</ion-col>
-		<ion-col text-left width-5>PG</ion-col>
-		<ion-col text-left width-5>PE</ion-col>
-		<ion-col text-left width-5>PP</ion-col>
-		<ion-col text-left width-5>GF</ion-col>
-		<ion-col text-left width-5>GC</ion-col>
-		<ion-col text-left width-5>DG</ion-col>
-		<ion-col text-left width-5>P</ion-col>
+		<ion-col width-5></ion-col>
+		<ion-col width-50>Equipo</ion-col>
+		<ion-col width-5>PJ</ion-col>
+		<ion-col width-5>PG</ion-col>
+		<ion-col width-5>PE</ion-col>
+		<ion-col width-5>PP</ion-col>
+		<ion-col width-5>GF</ion-col>
+		<ion-col width-5>GC</ion-col>
+		<ion-col width-5>DG</ion-col>
+		<ion-col width-5>P</ion-col>
 	</ion-row>
 	<ion-row *ngFor="let team of leagueTable; let i = index;">
-		<ion-col text-left width-5>{{i+1}}</ion-col>
-		<ion-col text-left width-50>{{team?.name | customPipe}}</ion-col>
-		<ion-col text-left width-5>{{team?.wins + team.draws + team.losses}}</ion-col>
-		<ion-col text-left width-5>{{team?.wins}}</ion-col>
-		<ion-col text-left width-5>{{team?.draws}}</ion-col>
-		<ion-col text-left width-5>{{team?.losses}}</ion-col>
-		<ion-col text-left width-5>{{team?.goalsFor}}</ion-col>
-		<ion-col text-left width-5>{{team?.goalsAgainst}}</ion-col>
-		<ion-col text-left width-5>{{team?.goalsDiff}}</ion-col>
-		<ion-col text-left width-5>{{team?.points}}</ion-col>
+			<ion-col width-5>{{i+1}}</ion-col>
+			<ion-col width-50>{{team?.name | customPipe}}</ion-col>
+			<ion-col width-5>{{team?.wins + team.draws + team.losses}}</ion-col>
+			<ion-col width-5>{{team?.wins}}</ion-col>
+			<ion-col width-5>{{team?.draws}}</ion-col>
+			<ion-col width-5>{{team?.losses}}</ion-col>
+			<ion-col width-5>{{team?.goalsFor}}</ion-col>
+			<ion-col width-5>{{team?.goalsAgainst}}</ion-col>
+			<ion-col width-5>{{team?.goalsDiff}}</ion-col>
+			<ion-col width-5><ion-badge color="dark">{{team?.points}}</ion-badge></ion-col>
 	</ion-row>
 </ion-content>

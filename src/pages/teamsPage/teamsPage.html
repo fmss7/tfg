@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content>
-	<ion-list>
+	<ion-list *ngIf="filteredClubs">
 		<ion-item-group *ngFor="let club of clubs">
 			<ion-item-divider class="item-stable" color="secondary">
 				<span (click)="clubTapped($event, club)">{{club?.name}}</span>
@@ -25,4 +25,5 @@
 			</ion-item>
 		</ion-item-group>
 	</ion-list>
+	<ion-item *ngIf="!filteredClubs" color="warning"><p text-center>Ningún club encontrado</p></ion-item>
 </ion-content>

@@ -115,7 +115,7 @@ export class TeamGamesPage {
 			}
 			return winIndicator;
 		} else {
-			return "Por disputar";
+			return '';
 		}
 	}
 

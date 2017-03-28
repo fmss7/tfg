@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { LoadingController, NavController, NavParams } from 'ionic-angular';
-
 import { TeamHomePage, ClubHomePage } from '../pages';
-
 import { LPFutbolService } from '../../services/lp-futbol.service';
-
+import * as _ from 'lodash';
 
 @Component({
 	selector: 'teamsPage',
@@ -13,10 +11,11 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 
 export class TeamsPage {
 
-	aux: boolean = true;
 	clubsShow: boolean[];
 	clubs: any[];
+	allClubs: any[];
 	queryText: string = '';
+	filteredClubs: boolean = true;
 
 	constructor(
 		public navCtrl: NavController,
@@ -36,6 +35,7 @@ export class TeamsPage {
 				for (let club of this.clubs) {
 					club["showTeams"] = false;
 				}
+				this.allClubs = this.clubs;
 				loader.dismiss();
 			});
 		});
@@ -56,9 +56,24 @@ export class TeamsPage {
 	toogleShowTeams(club) {
 		club.showTeams = !club.showTeams;
 	}
+
 	showTeams(club) {
 		return club.showTeams;
 	}
 
+	updateTeams() {
+		if (this.queryText.length > 2) {
+			let queryTextLower = this.queryText.toLowerCase();
+			this.clubs = _.filter(this.allClubs, c => c.name.toLowerCase().includes(queryTextLower));
+			if(this.clubs.length == 0){
+				this.filteredClubs = false;
+			}else{
+				this.filteredClubs = true;
+			}
+		} else {
+			this.clubs = this.allClubs;
+			this.filteredClubs = true;
+		}
+	}
 
 }

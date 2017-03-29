@@ -8,11 +8,13 @@ import * as _ from 'lodash';
 	selector: 'fixturesPage',
 	templateUrl: 'fixturesPage.html'
 })
+
 export class FixturesPage {
 	@ViewChild(Slides) slides: Slides;
 	fixtures: any;
 	mySlideOptions: any = {
 		initialSlide: 0,
+		speed: 3000,
 		loop: true,
 		pager: true
 	};
@@ -25,7 +27,6 @@ export class FixturesPage {
 		private lPFutbolService: LPFutbolService) {
 	}
 
-
 	ionViewDidLoad() {
 		this.events.subscribe('league:getted', league => {
 			this.fixtures =
@@ -36,7 +37,7 @@ export class FixturesPage {
 						return g[1];
 					})
 					.value();
-			let x = 1;
+			let x = 0;
 			_.forEach(this.fixtures, f => {
 				_.forEach(f, game => {
 					if (game.hostGoals >= 0 && game.guestGoals >= 0) {
@@ -46,11 +47,6 @@ export class FixturesPage {
 				x++;
 			});
 		});
-	}
-
-	goToSlide() {
-		console.log("silde: ", this);
-		this.slides.slideTo(12, 500);
 	}
 
 	gameTapped($event, game) {

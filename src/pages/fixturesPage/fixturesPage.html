@@ -6,8 +6,8 @@
 
 <ion-content>
 	<ion-item>
-		<ion-slides initialSlide=5>
-			<ion-slide *ngFor="let fixture of fixtures; let i = index;">
+		<ion-slides *ngIf="fixtures?.length" [initialSlide]="mySlideOptions.initialSlide">
+			<ion-slide *ngFor="let fixture of fixtures; let i=index;">
 				<p>Jornada {{i+1}}</p>
 				<ion-row *ngFor="let game of fixture" (click)="gameTapped($event, game)">
 					<ion-col width-40>

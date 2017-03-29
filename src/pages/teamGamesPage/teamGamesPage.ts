@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController, AlertController, ToastController, Events } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, LoadingController, AlertController, ToastController, Events, Content } from 'ionic-angular';
 import { GamePage } from '../../pages/pages';
 import { UserSettings } from '../../services/userSettings.service';
 import * as _ from 'lodash';
@@ -10,7 +10,7 @@ import * as moment from 'moment';
 	templateUrl: 'teamGamesPage.html'
 })
 export class TeamGamesPage {
-
+	@ViewChild(Content) content: Content;
 	team: any;
 	games: any;
 	allGames: any;
@@ -55,6 +55,7 @@ export class TeamGamesPage {
 				})
 				.value();
 			this.allGames = this.games;
+			this.content.scrollTo(0, 500, 250);
 		});
 	}
 

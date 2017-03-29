@@ -25,14 +25,15 @@ export class TeamHomePage {
 
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
-			content: 'Obteniendo equipos...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			content: 'Obteniendo partidos...',
+			cssClass: 'loadingwrapper'
 		});
 		loader.present().then(() => {
 			this.team = this.navParams.data;
 			this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
 				this.league = res;
-				this.events.publish('league:getted', this.league, this.team);
+				this.events.publish('league(Team):getted', this.league, this.team);
 			});
 			loader.dismiss();
 		});

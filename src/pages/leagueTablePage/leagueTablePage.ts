@@ -53,7 +53,7 @@ export class LeagueTablePage {
 		this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
 		_.forEach(this.teams, team => this.leagueTable.push(team));
 		/*
-		this.events.subscribe('league:getted', league => {
+		this.events.subscribe('league(League):getted', league => {
 			this.league = league;
 		});
 		*/

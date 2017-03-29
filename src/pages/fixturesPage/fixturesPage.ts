@@ -28,7 +28,7 @@ export class FixturesPage {
 	}
 
 	ionViewDidLoad() {
-		this.events.subscribe('league:getted', league => {
+		this.events.subscribe('league(League):getted', league => {
 			this.fixtures =
 				_.chain(league.games)
 					.groupBy("fixture")

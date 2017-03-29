@@ -15,6 +15,7 @@ export class TeamGamesPage {
 	games: any;
 	allGames: any;
 	dateFilter: string;
+	scrollIndex: string;
 	isFollowing: boolean = false;
 	useDateFilter = false;
 
@@ -28,7 +29,7 @@ export class TeamGamesPage {
 		private toastController: ToastController) { }
 
 	ionViewDidLoad() {
-		this.events.subscribe('league:getted', (league, team) => {
+		this.events.subscribe('league(Team):getted', (league, team) => {
 			this.team = team;
 			this.userSettings.isFavouriteTeam(this.team.id).then(value => this.isFollowing = value);
 			this.games = _.chain(league.games)
@@ -55,8 +56,25 @@ export class TeamGamesPage {
 				})
 				.value();
 			this.allGames = this.games;
-			this.content.scrollTo(0, 500, 250);
+			let i = -4;
+			_.forEach(this.allGames, game => {
+				if (game.hostGoals >= 0 && game.guestGoals >= 0) {
+					i++;
+				} else {
+					return false;
+				}
+			});
+			this.scrollIndex = i.toString();
+
 		});
+	}
+
+	ngAfterViewChecked() {
+		if (document.getElementById(this.scrollIndex)) {
+			let verticalOffset = document.getElementById(this.scrollIndex).offsetTop;
+			this.content.scrollTo(0, verticalOffset);
+		}
+
 	}
 
 	toggleFollow() {

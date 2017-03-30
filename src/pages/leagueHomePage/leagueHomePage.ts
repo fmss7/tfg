@@ -26,8 +26,8 @@ export class LeagueHomePage {
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			spinner: 'bubbles',
-			dismissOnPageChange: true,
-			content: 'Obteniendo datos...'
+			content: 'Obteniendo datos...',
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			this.lPFutbolService.getLeagueData(this.id_league).subscribe(res => {

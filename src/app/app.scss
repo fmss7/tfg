@@ -14,3 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.loadingController .loading-wrapper{
+	width: 77% !important;
+	height: 15% !important;
+	color: black !important;
+	font-size: 1.25em !important;
+	background-color: aliceblue !important;
+	border-radius: 10px !important;
+}

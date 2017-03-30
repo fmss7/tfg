@@ -29,7 +29,8 @@ export class ClubSheetPage {
 
 		let loader = this.loadingController.create({
 			content: 'Obteniendo club...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			let club = this.club.id_club + ".png";

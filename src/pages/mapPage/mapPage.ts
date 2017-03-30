@@ -24,7 +24,8 @@ export class MapPage {
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			content: 'Obteniendo coordenadas...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			this.lPFutbolService.getLocation(this.navParams.data).subscribe(res => {

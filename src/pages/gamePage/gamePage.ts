@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { NavController, NavParams, LoadingController, Events } from 'ionic-angular';
 import { FirebaseApp } from 'angularfire2';
-import { MapPage } from '../../pages/pages';
+import { MapPage, TeamHomePage } from '../../pages/pages';
 import { LPFutbolService } from '../../services/lp-futbol.service';
 
 declare var window: any;
@@ -32,7 +32,8 @@ export class GamePage {
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			content: 'Obteniendo datos...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			let host = this.game.id_host.substring(0, this.game.id_host.indexOf('@')) + ".png";
@@ -68,6 +69,12 @@ export class GamePage {
 		if (this.urls == 2) {
 			this.events.publish('loader:dismiss');
 		}
+	}
+
+	teamTapped(id_team) {
+		let league = this.lPFutbolService.getCurrentLeague();
+		let team = league.teams.find(t => t.id_team === id_team);
+		this.navCtrl.push(TeamHomePage, team);
 	}
 
 	goToMap() {

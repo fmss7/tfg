@@ -27,7 +27,7 @@ export class TeamsPage {
 		let loader = this.loadingController.create({
 			content: 'Obteniendo equipos...',
 			spinner: 'bubbles',
-			//cssClass: 'loading-wrapper'
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			this.lPFutbolService.getAllClubs().subscribe(res => {

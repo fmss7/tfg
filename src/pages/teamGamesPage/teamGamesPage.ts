@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, LoadingController, AlertController, ToastController, Events, Content } from 'ionic-angular';
+import { NavController, NavParams, AlertController, ToastController, Events, Content } from 'ionic-angular';
 import { GamePage } from '../../pages/pages';
 import { UserSettings } from '../../services/userSettings.service';
 import * as _ from 'lodash';
@@ -24,14 +24,13 @@ export class TeamGamesPage {
 		public navParams: NavParams,
 		public events: Events,
 		private userSettings: UserSettings,
-		private loadingController: LoadingController,
 		private alertController: AlertController,
 		private toastController: ToastController) { }
 
 	ionViewDidLoad() {
 		this.events.subscribe('league(Team):getted', (league, team) => {
 			this.team = team;
-			this.userSettings.isFavouriteTeam(this.team.id).then(value => this.isFollowing = value);
+			this.userSettings.isFavouriteTeam(this.team.id_team).then(value => this.isFollowing = value);
 			this.games = _.chain(league.games)
 				.filter(g => g.host == this.team.name || g.guest == this.team.name)
 				.map(g => {

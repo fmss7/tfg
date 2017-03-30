@@ -21,7 +21,8 @@ export class LeaguesPage {
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			content: 'Obteniendo categorías...',
-			spinner: 'bubbles'
+			spinner: 'bubbles',
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
 			this.lPFutbolService.getAllCategories().subscribe(res => this.categories = res);

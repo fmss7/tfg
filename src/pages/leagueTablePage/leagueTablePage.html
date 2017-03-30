@@ -17,7 +17,7 @@
 		<ion-col width-5>DG</ion-col>
 		<ion-col width-5>P</ion-col>
 	</ion-row>
-	<ion-row *ngFor="let team of leagueTable; let i = index;">
+	<ion-row *ngFor="let team of leagueTable; let i = index;" (click)="teamTapped(team.id_team)">
 			<ion-col width-5>{{i+1}}</ion-col>
 			<ion-col width-50>{{team?.name | customPipe}}</ion-col>
 			<ion-col width-5>{{team?.wins + team.draws + team.losses}}</ion-col>

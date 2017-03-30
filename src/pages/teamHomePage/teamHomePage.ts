@@ -21,16 +21,16 @@ export class TeamHomePage {
 		public events: Events,
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
+		this.team = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
 		let loader = this.loadingController.create({
 			spinner: 'bubbles',
 			content: 'Obteniendo partidos...',
-			cssClass: 'loadingwrapper'
+			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
-			this.team = this.navParams.data;
 			this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
 				this.league = res;
 				this.events.publish('league(Team):getted', this.league, this.team);

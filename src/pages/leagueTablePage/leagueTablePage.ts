@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
+import { TeamHomePage } from '../../pages/pages';
 import { UserSettings } from '../../services/userSettings.service';
+import { LPFutbolService } from '../../services/lp-futbol.service';
 import * as _ from 'lodash';
 
 @Component({
@@ -18,6 +20,7 @@ export class LeagueTablePage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private events: Events,
+		private lPFutbolService: LPFutbolService,
 		private userSettings: UserSettings) {
 	}
 
@@ -25,7 +28,7 @@ export class LeagueTablePage {
 		this.league = this.userSettings.getLeagueData();
 		this.league.teams.forEach(element => {
 			let team = element.name;
-			this.teams[team] = {"name": team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
+			this.teams[team] = { "name": team, "id_team": element.id_team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
 		});
 		_.forEach(this.league.games, game => {
 			if (game.hostGoals > game.guestGoals) {
@@ -57,6 +60,12 @@ export class LeagueTablePage {
 			this.league = league;
 		});
 		*/
+	}
+
+	teamTapped(id_team) {
+		let league = this.lPFutbolService.getCurrentLeague();
+		let team = league.teams.find(t => t.id_team === id_team);
+		this.navCtrl.parent.parent.push(TeamHomePage, team);
 	}
 
 }

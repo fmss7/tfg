@@ -57,67 +57,163 @@ export class UserSettings {
 			"teams": [
 				{
 					"name": "U.D. Las Palmas",
-					"id_team": "udlaspalmas@reg-pref"
+					"id_team": "udlp@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.D. Faycán",
-					"id_team": "cdfaycan@reg-pref"
+					"id_team": "cdfaycan@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.E.F. Puertos Las Palmas",
-					"id_team": "cefpuertoslp@reg-pref"
+					"id_team": "cefpuertoslp@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "A.D. Claret",
-					"id_team": "adclaret@reg-pref"
+					"id_team": "adclaret@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
+					"id_team": "adhuracan@reg-pref",
 					"name": "A.D. Huracán",
-					"id_team": "adhuracan@reg-pref"
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "Acodetti C.F.",
-					"id_team": "acodetticf@reg-pref"
+					"id_team": "acodetticf@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "U.D. Telde",
-					"id_team": "udtelde@reg-pref"
+					"id_team": "udtelde@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.F. Unión Viera",
-					"id_team": "cfunionviera@reg-pref"
+					"id_team": "cfunionviera@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.D. Arguineguín",
-					"id_team": "cdarguineguín@reg-pref"
+					"id_team": "cdarguineguín@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.D. Doramas",
-					"id_team": "cddoramas@reg-pref"
+					"id_team": "cddoramas@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "Arucas C.F.",
-					"id_team": "arucascf@reg-pref"
+					"id_team": "arucascf@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.D. Maspalomas",
-					"id_team": "cdmaspalomas@reg-pref"
+					"id_team": "cdmaspalomas@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "R.C. Victoria",
-					"id_team": "rcvictoria@reg-pref"
+					"id_team": "rcvictoria@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "U.D. Teror",
-					"id_team": "udteror@reg-pref"
+					"id_team": "udteror@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "U.D. Valsequillo",
-					"id_team": "udvalsequillo@reg-pref"
+					"id_team": "udvalsequillo@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				},
 				{
 					"name": "C.D. Carnevali",
-					"id_team": "cdcarnevali@reg-pref"
+					"id_team": "cdcarnevali@reg-pref",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
 				}
 			],
 			"games": [

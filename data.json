@@ -879,6 +879,886 @@
 					}
 				}
 			]
+		},
+		{
+			"id_club": "cdarguineguin",
+			"name": "C.D. Arguineguín",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-9",
+			"teams": [
+				{
+					"id_team": "cdarguineguin@reg-pref",
+					"name": "C.D. Arguineguín",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@juv-ddh",
+					"name": "C.D. Arguineguín",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@juv-pref",
+					"name": "C.D. Arguineguín",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@cad-pref",
+					"name": "C.D. Arguineguín",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@cad-primG1",
+					"name": "C.D. Arguineguín",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@cad-primG2",
+					"name": "C.D. Arguineguín",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@inf-prefG1",
+					"name": "C.D. Arguineguín",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@inf-prefG2",
+					"name": "C.D. Arguineguín",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@ale-prefG1",
+					"name": "C.D. Arguineguín",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdarguineguin@ale-prefG2",
+					"name": "C.D. Arguineguín",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "cddoramas",
+			"name": "C.D. Doramas",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-10",
+			"teams": [
+				{
+					"id_team": "cddoramas@reg-pref",
+					"name": "C.D. Doramas",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "cddoramas@juv-ddh",
+					"name": "C.D. Doramas",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "cddoramas@juv-pref",
+					"name": "C.D. Doramas",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "cddoramas@cad-pref",
+					"name": "C.D. Doramas",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "cddoramas@cad-primG1",
+					"name": "C.D. Doramas",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "cddoramas@cad-primG2",
+					"name": "C.D. Doramas",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "cddoramas@inf-prefG1",
+					"name": "C.D. Doramas",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "cddoramas@inf-prefG2",
+					"name": "C.D. Doramas",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "cddoramas@ale-prefG1",
+					"name": "C.D. Doramas",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "cddoramas@ale-prefG2",
+					"name": "C.D. Doramas",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "arucascf",
+			"name": "Arucas C.F.",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-11",
+			"teams": [
+				{
+					"id_team": "arucascf@reg-pref",
+					"name": "Arucas C.F.",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "arucascf@juv-ddh",
+					"name": "Arucas C.F.",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "arucascf@juv-pref",
+					"name": "Arucas C.F.",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "arucascf@cad-pref",
+					"name": "Arucas C.F.",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "arucascf@cad-primG1",
+					"name": "Arucas C.F.",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "arucascf@cad-primG2",
+					"name": "Arucas C.F.",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "arucascf@inf-prefG1",
+					"name": "Arucas C.F.",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "arucascf@inf-prefG2",
+					"name": "Arucas C.F.",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "arucascf@ale-prefG1",
+					"name": "Arucas C.F.",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "arucascf@ale-prefG2",
+					"name": "Arucas C.F.",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "cdmaspalomas",
+			"name": "C.D. Maspalomas",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-12",
+			"teams": [
+				{
+					"id_team": "cdmaspalomas@reg-pref",
+					"name": "C.D. Maspalomas",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@juv-ddh",
+					"name": "C.D. Maspalomas",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@juv-pref",
+					"name": "C.D. Maspalomas",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@cad-pref",
+					"name": "C.D. Maspalomas",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@cad-primG1",
+					"name": "C.D. Maspalomas",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@cad-primG2",
+					"name": "C.D. Maspalomas",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@inf-prefG1",
+					"name": "C.D. Maspalomas",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@inf-prefG2",
+					"name": "C.D. Maspalomas",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@ale-prefG1",
+					"name": "C.D. Maspalomas",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdmaspalomas@ale-prefG2",
+					"name": "C.D. Maspalomas",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "rcvictoria",
+			"name": "R.C. Victoria",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-13",
+			"teams": [
+				{
+					"id_team": "rcvictoria@reg-pref",
+					"name": "R.C. Victoria",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "rcvictoria@juv-ddh",
+					"name": "R.C. Victoria",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "rcvictoria@juv-pref",
+					"name": "R.C. Victoria",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "rcvictoria@cad-pref",
+					"name": "R.C. Victoria",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "rcvictoria@cad-primG1",
+					"name": "R.C. Victoria",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "rcvictoria@cad-primG2",
+					"name": "R.C. Victoria",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "rcvictoria@inf-prefG1",
+					"name": "R.C. Victoria",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "rcvictoria@inf-prefG2",
+					"name": "R.C. Victoria",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "rcvictoria@ale-prefG1",
+					"name": "R.C. Victoria",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "rcvictoria@ale-prefG2",
+					"name": "R.C. Victoria",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "udteror",
+			"name": "U.D. Teror",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-14",
+			"teams": [
+				{
+					"id_team": "udteror@reg-pref",
+					"name": "U.D. Teror",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "udteror@juv-ddh",
+					"name": "U.D. Teror",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "udteror@juv-pref",
+					"name": "U.D. Teror",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "udteror@cad-pref",
+					"name": "U.D. Teror",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "udteror@cad-primG1",
+					"name": "U.D. Teror",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "udteror@cad-primG2",
+					"name": "U.D. Teror",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "udteror@inf-prefG1",
+					"name": "U.D. Teror",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "udteror@inf-prefG2",
+					"name": "U.D. Teror",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "udteror@ale-prefG1",
+					"name": "U.D. Teror",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "udteror@ale-prefG2",
+					"name": "U.D. Teror",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "udvalsequillo",
+			"name": "U.D. Valsequillo",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-15",
+			"teams": [
+				{
+					"id_team": "udvalsequillo@reg-pref",
+					"name": "U.D. Valsequillo",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@juv-ddh",
+					"name": "U.D. Valsequillo",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@juv-pref",
+					"name": "U.D. Valsequillo",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@cad-pref",
+					"name": "U.D. Valsequillo",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@cad-primG1",
+					"name": "U.D. Valsequillo",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@cad-primG2",
+					"name": "U.D. Valsequillo",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@inf-prefG1",
+					"name": "U.D. Valsequillo",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@inf-prefG2",
+					"name": "U.D. Valsequillo",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@ale-prefG1",
+					"name": "U.D. Valsequillo",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "udvalsequillo@ale-prefG2",
+					"name": "U.D. Valsequillo",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
+		},
+		{
+			"id_club": "cdcarnevali",
+			"name": "C.D. Carnevali",
+			"information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis velit ligula. Nam vitae condimentum dolor, a interdum massa. Quisque id venenatis lacus. Sed pretium magna eu enim eleifend tincidunt id nec diam.",
+			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
+			"phone_number": "+34928555555",
+			"id_location": "loc-16",
+			"teams": [
+				{
+					"id_team": "cdcarnevali@reg-pref",
+					"name": "C.D. Carnevali",
+					"category": "Regional",
+					"label": "",
+					"league": {
+						"id_league": "reg-pref",
+						"name": "Regional Preferente"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@juv-ddh",
+					"name": "C.D. Carnevali",
+					"category": "Juvenil",
+					"label": "A",
+					"league": {
+						"id_league": "juv-ddh",
+						"name": "Juvenil División de Honor"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@juv-pref",
+					"name": "C.D. Carnevali",
+					"category": "Juvenil",
+					"label": "B",
+					"league": {
+						"id_league": "juv-pref",
+						"name": "Juvenil Preferente"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@cad-pref",
+					"name": "C.D. Carnevali",
+					"category": "Cadete",
+					"label": "A",
+					"league": {
+						"id_league": "cad-pref",
+						"name": "Cadete Preferente"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@cad-primG1",
+					"name": "C.D. Carnevali",
+					"category": "Cadete",
+					"label": "B",
+					"league": {
+						"id_league": "cad-primG1",
+						"name": "Cadete Primera G1"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@cad-primG2",
+					"name": "C.D. Carnevali",
+					"category": "Cadete",
+					"label": "C",
+					"league": {
+						"id_league": "cad-primG2",
+						"name": "Cadete Primera G2"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@inf-prefG1",
+					"name": "C.D. Carnevali",
+					"category": "Infantil",
+					"label": "A",
+					"league": {
+						"id_league": "inf-prefG1",
+						"name": "Infantil Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@inf-prefG2",
+					"name": "C.D. Carnevali",
+					"category": "Infantil",
+					"label": "B",
+					"league": {
+						"id_league": "inf-prefG2",
+						"name": "Infantil Preferente G2"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@ale-prefG1",
+					"name": "C.D. Carnevali",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "cdcarnevali@ale-prefG2",
+					"name": "C.D. Carnevali",
+					"category": "Alevín",
+					"label": "B",
+					"league": {
+						"id_league": "ale-prefG2",
+						"name": "Alevín Preferente G2"
+					}
+				}
+			]
 		}
 	],
 	"categories": [
@@ -29168,6 +30048,3534 @@
 					"guestGoals": null,
 					"guest": "C.D. Faycán",
 					"id_guest": "cdfaycan@inf-prefG2",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				}
+			]
+		},
+		"ale-prefG1": {
+			"name": "Alevín Preferente G1",
+			"category": "Alevín",
+			"teams": [
+				{
+					"name": "U.D. Las Palmas",
+					"id_team": "udlp@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.D. Faycán",
+					"id_team": "cdfaycan@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.E.F. Puertos Las Palmas",
+					"id_team": "cefpuertoslp@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "A.D. Claret",
+					"id_team": "adclaret@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"id_team": "adhuracan@ale-prefG1",
+					"name": "A.D. Huracán",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "Acodetti C.F.",
+					"id_team": "acodetticf@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "U.D. Telde",
+					"id_team": "udtelde@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.F. Unión Viera",
+					"id_team": "cfunionviera@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.D. Arguineguín",
+					"id_team": "cdarguineguín@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.D. Doramas",
+					"id_team": "cddoramas@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "Arucas C.F.",
+					"id_team": "arucascf@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.D. Maspalomas",
+					"id_team": "cdmaspalomas@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "R.C. Victoria",
+					"id_team": "rcvictoria@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "U.D. Teror",
+					"id_team": "udteror@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "U.D. Valsequillo",
+					"id_team": "udvalsequillo@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				},
+				{
+					"name": "C.D. Carnevali",
+					"id_team": "cdcarnevali@ale-prefG1",
+					"category": "Alevín",
+					"label": "A",
+					"league": {
+						"id_league": "ale-prefG1",
+						"name": "Alevín Preferente G1"
+					}
+				}
+			],
+			"games": [
+				{
+					"id_game": 174318473,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 4,
+					"guestGoals": 4,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 135634560,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 5,
+					"guestGoals": 2,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 798957906,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 1,
+					"guestGoals": 3,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 418515336,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 7,
+					"guestGoals": 4,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 523582377,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 3,
+					"guestGoals": 9,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 511643867,
+					"fixture": 1,
+					"date": "16/9/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 2,
+					"guestGoals": 8,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 414706300,
+					"fixture": 1,
+					"date": "17/9/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 9,
+					"guestGoals": 9,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 345197706,
+					"fixture": 1,
+					"date": "18/9/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 1,
+					"guestGoals": 2,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 382389280,
+					"fixture": 2,
+					"date": "27/9/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 4,
+					"guestGoals": 9,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 540162043,
+					"fixture": 2,
+					"date": "23/9/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 6,
+					"guestGoals": 2,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 41764967,
+					"fixture": 2,
+					"date": "23/9/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 5,
+					"guestGoals": 4,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 413017267,
+					"fixture": 2,
+					"date": "23/9/2016",
+					"time": "20:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 6,
+					"guestGoals": 9,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 459715265,
+					"fixture": 2,
+					"date": "23/9/2016",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 3,
+					"guestGoals": 0,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 713484954,
+					"fixture": 2,
+					"date": "23/9/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 9,
+					"guestGoals": 2,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 589604525,
+					"fixture": 2,
+					"date": "24/9/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 9,
+					"guestGoals": 6,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 241028911,
+					"fixture": 2,
+					"date": "25/9/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 0,
+					"guestGoals": 5,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 160430545,
+					"fixture": 3,
+					"date": "30/9/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 8,
+					"guestGoals": 9,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 486009630,
+					"fixture": 3,
+					"date": "30/9/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 1,
+					"guestGoals": 5,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 764696423,
+					"fixture": 3,
+					"date": "30/9/2016",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 1,
+					"guestGoals": 5,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 768059741,
+					"fixture": 3,
+					"date": "30/9/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 9,
+					"guestGoals": 9,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 976044456,
+					"fixture": 3,
+					"date": "30/9/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 9,
+					"guestGoals": 7,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 643078194,
+					"fixture": 3,
+					"date": "1/10/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 1,
+					"guestGoals": 8,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 33256560,
+					"fixture": 3,
+					"date": "2/10/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 3,
+					"guestGoals": 9,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 789792759,
+					"fixture": 3,
+					"date": "2/10/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 3,
+					"guestGoals": 0,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 4668562,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 0,
+					"guestGoals": 6,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 15779010,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 0,
+					"guestGoals": 0,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 844700052,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 8,
+					"guestGoals": 0,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 664757754,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 0,
+					"guestGoals": 5,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 757347363,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 3,
+					"guestGoals": 5,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 193307323,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 6,
+					"guestGoals": 6,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 395644834,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 9,
+					"guestGoals": 3,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 178542519,
+					"fixture": 4,
+					"date": "7/10/2016",
+					"time": "20:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 8,
+					"guestGoals": 2,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 444044289,
+					"fixture": 5,
+					"date": "14/10/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 3,
+					"guestGoals": 2,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 886662640,
+					"fixture": 5,
+					"date": "14/10/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 6,
+					"guestGoals": 0,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 247510441,
+					"fixture": 5,
+					"date": "14/10/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 9,
+					"guestGoals": 3,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 343724813,
+					"fixture": 5,
+					"date": "14/10/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 1,
+					"guestGoals": 1,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 821367667,
+					"fixture": 5,
+					"date": "14/10/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 0,
+					"guestGoals": 5,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 907025376,
+					"fixture": 5,
+					"date": "15/10/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 285528564,
+					"fixture": 5,
+					"date": "16/10/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 6,
+					"guestGoals": 0,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 209185062,
+					"fixture": 5,
+					"date": "16/10/2016",
+					"time": "12:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 9,
+					"guestGoals": 1,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 799753587,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 8,
+					"guestGoals": 3,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 144819858,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 6,
+					"guestGoals": 8,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 771490921,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 5,
+					"guestGoals": 1,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 716718921,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 8,
+					"guestGoals": 8,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 578301929,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "20:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 2,
+					"guestGoals": 2,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 442351377,
+					"fixture": 6,
+					"date": "21/10/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 5,
+					"guestGoals": 5,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 744624595,
+					"fixture": 6,
+					"date": "22/10/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 2,
+					"guestGoals": 0,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 730018185,
+					"fixture": 6,
+					"date": "23/10/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 451740701,
+					"fixture": 7,
+					"date": "31/10/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 0,
+					"guestGoals": 2,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 786515791,
+					"fixture": 7,
+					"date": "28/10/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 7,
+					"guestGoals": 1,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 1920450,
+					"fixture": 7,
+					"date": "28/10/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 8,
+					"guestGoals": 2,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 751335537,
+					"fixture": 7,
+					"date": "28/10/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 7,
+					"guestGoals": 8,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 123926219,
+					"fixture": 7,
+					"date": "28/10/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 4,
+					"guestGoals": 9,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 135085079,
+					"fixture": 7,
+					"date": "28/10/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 5,
+					"guestGoals": 6,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 534655902,
+					"fixture": 7,
+					"date": "29/10/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 2,
+					"guestGoals": 1,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 890922122,
+					"fixture": 7,
+					"date": "30/10/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 0,
+					"guestGoals": 6,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 834114996,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 7,
+					"guestGoals": 6,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 901644488,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 170854590,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "20:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 5,
+					"guestGoals": 4,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 572586077,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 0,
+					"guestGoals": 6,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 822485861,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 9,
+					"guestGoals": 9,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 811504545,
+					"fixture": 8,
+					"date": "4/11/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 4,
+					"guestGoals": 2,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 25776232,
+					"fixture": 8,
+					"date": "5/11/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 5,
+					"guestGoals": 2,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 957387254,
+					"fixture": 8,
+					"date": "21/12/2016",
+					"time": "20:30",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 6,
+					"guestGoals": 5,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 638199146,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 8,
+					"guestGoals": 5,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 995967609,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 1,
+					"guestGoals": 4,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 550982993,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 3,
+					"guestGoals": 8,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 951029559,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 6,
+					"guestGoals": 2,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 140281830,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 9,
+					"guestGoals": 3,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 363684876,
+					"fixture": 9,
+					"date": "11/11/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 3,
+					"guestGoals": 4,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 846052860,
+					"fixture": 9,
+					"date": "12/11/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 0,
+					"guestGoals": 1,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 544891502,
+					"fixture": 9,
+					"date": "13/11/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 6,
+					"guestGoals": 5,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 552194110,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 7,
+					"guestGoals": 3,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 909122552,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 1,
+					"guestGoals": 8,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 842062014,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 161389864,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "20:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 2,
+					"guestGoals": 7,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 185975422,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 4,
+					"guestGoals": 3,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 616772897,
+					"fixture": 10,
+					"date": "18/11/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 2,
+					"guestGoals": 2,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 173543518,
+					"fixture": 10,
+					"date": "19/11/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 5,
+					"guestGoals": 9,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 685253041,
+					"fixture": 10,
+					"date": "20/11/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 2,
+					"guestGoals": 6,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 268214665,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 0,
+					"guestGoals": 9,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 399902830,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 1,
+					"guestGoals": 1,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 784454146,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 0,
+					"guestGoals": 6,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 345471978,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 5,
+					"guestGoals": 3,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 309917509,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 5,
+					"guestGoals": 7,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 541808431,
+					"fixture": 11,
+					"date": "25/11/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 8,
+					"guestGoals": 2,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 301462565,
+					"fixture": 11,
+					"date": "26/11/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 4,
+					"guestGoals": 2,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 283346754,
+					"fixture": 11,
+					"date": "27/11/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 1,
+					"guestGoals": 4,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 915073588,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 1,
+					"guestGoals": 6,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 205659856,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 7,
+					"guestGoals": 1,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 168057744,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 2,
+					"guestGoals": 2,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 94902724,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 1,
+					"guestGoals": 2,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 237820200,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 3,
+					"guestGoals": 0,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 106649397,
+					"fixture": 12,
+					"date": "2/12/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 3,
+					"guestGoals": 6,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 281246094,
+					"fixture": 12,
+					"date": "3/12/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 8,
+					"guestGoals": 5,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 410086463,
+					"fixture": 12,
+					"date": "4/12/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 6,
+					"guestGoals": 2,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 145202795,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 3,
+					"guestGoals": 0,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 367070895,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 7,
+					"guestGoals": 5,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 494579739,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 4,
+					"guestGoals": 3,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 58404915,
+					"fixture": 13,
+					"date": "10/12/2016",
+					"time": "16:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 8,
+					"guestGoals": 9,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 836504990,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 6,
+					"guestGoals": 4,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 912092981,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "20:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 8,
+					"guestGoals": 2,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 310537173,
+					"fixture": 13,
+					"date": "9/12/2016",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 9,
+					"guestGoals": 7,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 454221388,
+					"fixture": 13,
+					"date": "11/12/2016",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 6,
+					"guestGoals": 0,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 216961213,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 2,
+					"guestGoals": 7,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 630094439,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 8,
+					"guestGoals": 6,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 811151585,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 6,
+					"guestGoals": 2,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 857269556,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 8,
+					"guestGoals": 3,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 450865540,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 7,
+					"guestGoals": 3,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 715695762,
+					"fixture": 14,
+					"date": "16/12/2016",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 8,
+					"guestGoals": 9,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 248004355,
+					"fixture": 14,
+					"date": "17/12/2016",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 7,
+					"guestGoals": 6,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 45021311,
+					"fixture": 14,
+					"date": "18/12/2016",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 4,
+					"guestGoals": 1,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 201372754,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "16:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 3,
+					"guestGoals": 9,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 871723401,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "18:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 6,
+					"guestGoals": 5,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 729915250,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "19:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 7,
+					"guestGoals": 5,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 105821866,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "19:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 8,
+					"guestGoals": 9,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 586229046,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "19:00",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 3,
+					"guestGoals": 1,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 180113272,
+					"fixture": 15,
+					"date": "7/1/2017",
+					"time": "20:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 8,
+					"guestGoals": 8,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 713242260,
+					"fixture": 15,
+					"date": "8/1/2017",
+					"time": "20:00",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 4,
+					"guestGoals": 6,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 670483783,
+					"fixture": 15,
+					"date": "8/1/2017",
+					"time": "12:20",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 1,
+					"guestGoals": 2,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 736319428,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 7,
+					"guestGoals": 9,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 391950429,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 5,
+					"guestGoals": 8,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 991382319,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 9,
+					"guestGoals": 0,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 391580311,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "20:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 0,
+					"guestGoals": 9,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 221115147,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 6,
+					"guestGoals": 2,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 174194221,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 1,
+					"guestGoals": 2,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 751144062,
+					"fixture": 16,
+					"date": "13/1/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 3,
+					"guestGoals": 4,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 616822413,
+					"fixture": 16,
+					"date": "15/1/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 2,
+					"guestGoals": 9,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 407953493,
+					"fixture": 17,
+					"date": "20/1/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 1,
+					"guestGoals": 6,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 133000672,
+					"fixture": 17,
+					"date": "19/1/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 9,
+					"guestGoals": 6,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 663935206,
+					"fixture": 17,
+					"date": "19/1/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 5,
+					"guestGoals": 6,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 481246618,
+					"fixture": 17,
+					"date": "20/1/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 3,
+					"guestGoals": 2,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 770821977,
+					"fixture": 17,
+					"date": "20/1/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 9,
+					"guestGoals": 6,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 105731074,
+					"fixture": 17,
+					"date": "20/1/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 2,
+					"guestGoals": 5,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 620908246,
+					"fixture": 17,
+					"date": "21/1/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 0,
+					"guestGoals": 2,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 537381331,
+					"fixture": 17,
+					"date": "22/1/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 2,
+					"guestGoals": 0,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 357864135,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 9,
+					"guestGoals": 2,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 407363,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "20:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 0,
+					"guestGoals": 9,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 272258566,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 5,
+					"guestGoals": 4,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 662106704,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 9,
+					"guestGoals": 0,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 165577471,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 0,
+					"guestGoals": 4,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 688874631,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 2,
+					"guestGoals": 6,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 595224973,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 8,
+					"guestGoals": 0,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 912393571,
+					"fixture": 18,
+					"date": "27/1/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 9,
+					"guestGoals": 8,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 460707941,
+					"fixture": 19,
+					"date": "3/2/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 7,
+					"guestGoals": 7,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 946290949,
+					"fixture": 19,
+					"date": "3/2/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 9,
+					"guestGoals": 6,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 369099787,
+					"fixture": 19,
+					"date": "3/2/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 8,
+					"guestGoals": 0,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 578517670,
+					"fixture": 19,
+					"date": "3/2/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 9,
+					"guestGoals": 1,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 395820388,
+					"fixture": 19,
+					"date": "3/2/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 216411275,
+					"fixture": 19,
+					"date": "4/2/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 7,
+					"guestGoals": 7,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 828155813,
+					"fixture": 19,
+					"date": "5/2/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 6,
+					"guestGoals": 8,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 722719340,
+					"fixture": 19,
+					"date": "5/2/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 9,
+					"guestGoals": 5,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 278125663,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 7,
+					"guestGoals": 4,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 892638504,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 0,
+					"guestGoals": 3,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 636328193,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 6,
+					"guestGoals": 6,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 317440344,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": 8,
+					"guestGoals": 0,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 301644162,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 8,
+					"guestGoals": 0,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 304859683,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 0,
+					"guestGoals": 2,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 509174468,
+					"fixture": 20,
+					"date": "10/2/2017",
+					"time": "20:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 3,
+					"guestGoals": 3,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 456158941,
+					"fixture": 20,
+					"date": "12/2/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 4,
+					"guestGoals": 5,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 892778964,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": 3,
+					"guestGoals": 0,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 565622576,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": 2,
+					"guestGoals": 0,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 146370155,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": 3,
+					"guestGoals": 2,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 829660042,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 7,
+					"guestGoals": 1,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 936184577,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": 2,
+					"guestGoals": 8,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 643024131,
+					"fixture": 21,
+					"date": "17/2/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": 5,
+					"guestGoals": 2,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 12940459,
+					"fixture": 21,
+					"date": "18/2/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": 2,
+					"guestGoals": 9,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 629183838,
+					"fixture": 21,
+					"date": "19/2/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": 2,
+					"guestGoals": 3,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 340313464,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "20:00",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": 5,
+					"guestGoals": 9,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 765693251,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": 9,
+					"guestGoals": 5,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 741671718,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": 2,
+					"guestGoals": 1,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 236795235,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": 0,
+					"guestGoals": 5,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 769462641,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": 6,
+					"guestGoals": 9,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 597342458,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": 7,
+					"guestGoals": 3,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 257532090,
+					"fixture": 22,
+					"date": "24/2/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": 1,
+					"guestGoals": 7,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 701260515,
+					"fixture": 22,
+					"date": "26/2/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": 2,
+					"guestGoals": 9,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 817446660,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 565388174,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 130399024,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 303624505,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 905491925,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 979017120,
+					"fixture": 23,
+					"date": "3/3/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 553557874,
+					"fixture": 23,
+					"date": "2/3/2017",
+					"time": "21:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 10403693,
+					"fixture": 23,
+					"date": "5/3/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 639290224,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 686436111,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 21982900,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 218530034,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 203500429,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 357758353,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 149711278,
+					"fixture": 24,
+					"date": "10/3/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 563215068,
+					"fixture": 24,
+					"date": "12/3/2017",
+					"time": "20:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 265112282,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 800646288,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 82741239,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 203752824,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 886810958,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 174207601,
+					"fixture": 25,
+					"date": "17/3/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 505835097,
+					"fixture": 25,
+					"date": "18/3/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 463681701,
+					"fixture": 25,
+					"date": "19/3/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 278238912,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 396809550,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "20:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 629313606,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 754517622,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 917642247,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 998776900,
+					"fixture": 26,
+					"date": "24/3/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 364930265,
+					"fixture": 26,
+					"date": "25/3/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 471264870,
+					"fixture": 26,
+					"date": "26/3/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 417504107,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "20:30",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 301475538,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 821095634,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 129395137,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 418200417,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 312057935,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 585055794,
+					"fixture": 27,
+					"date": "31/3/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-1",
+					"pitch": "Anexo G.C."
+				},
+				{
+					"id_game": 150885014,
+					"fixture": 27,
+					"date": "2/4/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 700010495,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "20:30",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 346985382,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 208156552,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 630225139,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 883212309,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "21:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 790456559,
+					"fixture": 28,
+					"date": "7/4/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 319218749,
+					"fixture": 28,
+					"date": "8/4/2017",
+					"time": "20:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 87312167,
+					"fixture": 28,
+					"date": "9/4/2017",
+					"time": "16:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 468860182,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "20:00",
+					"id_host": "adhuracan@ale-prefG1",
+					"host": "A.D. Huracán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.E.F. Puertos Las Palmas",
+					"id_guest": "cefpuertoslp@ale-prefG1",
+					"id_location": "loc-5",
+					"pitch": "Pepe Gonçalves"
+				},
+				{
+					"id_game": 347087376,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "21:00",
+					"id_host": "arucascf@ale-prefG1",
+					"host": "Arucas C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Doramas",
+					"id_guest": "cddoramas@ale-prefG1",
+					"id_location": "loc-11",
+					"pitch": "Tonono"
+				},
+				{
+					"id_game": 617845684,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "21:00",
+					"id_host": "cdmaspalomas@ale-prefG1",
+					"host": "C.D. Maspalomas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Carnevali",
+					"id_guest": "cdcarnevali@ale-prefG1",
+					"id_location": "loc-12",
+					"pitch": "Maspalomas"
+				},
+				{
+					"id_game": 871804929,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "21:00",
+					"id_host": "udteror@ale-prefG1",
+					"host": "U.D. Teror",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Acodetti C.F.",
+					"id_guest": "acodetticf@ale-prefG1",
+					"id_location": "loc-14",
+					"pitch": "El Pino"
+				},
+				{
+					"id_game": 467019429,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "21:00",
+					"id_host": "adclaret@ale-prefG1",
+					"host": "A.D. Claret",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "R.C. Victoria",
+					"id_guest": "rcvictoria@ale-prefG1",
+					"id_location": "loc-4",
+					"pitch": "Colegio Claret"
+				},
+				{
+					"id_game": 394426478,
+					"fixture": 29,
+					"date": "21/4/2017",
+					"time": "21:00",
+					"id_host": "cdarguineguin@ale-prefG1",
+					"host": "C.D. Arguineguín",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Telde",
+					"id_guest": "udtelde@ale-prefG1",
+					"id_location": "loc-9",
+					"pitch": "Arguineguín"
+				},
+				{
+					"id_game": 858125115,
+					"fixture": 29,
+					"date": "22/4/2017",
+					"time": "19:00",
+					"id_host": "udvalsequillo@ale-prefG1",
+					"host": "U.D. Valsequillo",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Las Palmas",
+					"id_guest": "udlp@ale-prefG1",
+					"id_location": "loc-15",
+					"pitch": "Valsequillo"
+				},
+				{
+					"id_game": 313979332,
+					"fixture": 29,
+					"date": "23/4/2017",
+					"time": "11:30",
+					"id_host": "cfunionviera@ale-prefG1",
+					"host": "C.F. Unión Viera",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Faycán",
+					"id_guest": "cdfaycan@ale-prefG1",
+					"id_location": "loc-8",
+					"pitch": "Alfonso Silva"
+				},
+				{
+					"id_game": 24731755,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "cdcarnevali@ale-prefG1",
+					"host": "C.D. Carnevali",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Teror",
+					"id_guest": "udteror@ale-prefG1",
+					"id_location": "loc-16",
+					"pitch": "La Mayordomia 2"
+				},
+				{
+					"id_game": 616948327,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "rcvictoria@ale-prefG1",
+					"host": "R.C. Victoria",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Arguineguín",
+					"id_guest": "cdarguineguin@ale-prefG1",
+					"id_location": "loc-13",
+					"pitch": "Jorge Pulido"
+				},
+				{
+					"id_game": 273749983,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "udtelde@ale-prefG1",
+					"host": "U.D. Telde",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "U.D. Valsequillo",
+					"id_guest": "udvalsequillo@ale-prefG1",
+					"id_location": "loc-7",
+					"pitch": "Pablo Hernández"
+				},
+				{
+					"id_game": 855031686,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "acodetticf@ale-prefG1",
+					"host": "Acodetti C.F.",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "Arucas C.F.",
+					"id_guest": "arucascf@ale-prefG1",
+					"id_location": "loc-6",
+					"pitch": "La Mayordomia 1"
+				},
+				{
+					"id_game": 451505655,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "20:00",
+					"id_host": "cefpuertoslp@ale-prefG1",
+					"host": "C.E.F. Puertos Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.F. Unión Viera",
+					"id_guest": "cfunionviera@ale-prefG1",
+					"id_location": "loc-3",
+					"pitch": "Junta de Obras"
+				},
+				{
+					"id_game": 387431755,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "cddoramas@ale-prefG1",
+					"host": "C.D. Doramas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Claret",
+					"id_guest": "adclaret@ale-prefG1",
+					"id_location": "loc-10",
+					"pitch": "Cruce Arinaga"
+				},
+				{
+					"id_game": 51781180,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "cdfaycan@ale-prefG1",
+					"host": "C.D. Faycán",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "C.D. Maspalomas",
+					"id_guest": "cdmaspalomas@ale-prefG1",
+					"id_location": "loc-2",
+					"pitch": "Manuel Martín Naño"
+				},
+				{
+					"id_game": 405930238,
+					"fixture": 30,
+					"date": "5/5/2017",
+					"time": "21:00",
+					"id_host": "udlp@ale-prefG1",
+					"host": "U.D. Las Palmas",
+					"hostGoals": null,
+					"guestGoals": null,
+					"guest": "A.D. Huracán",
+					"id_guest": "adhuracan@ale-prefG1",
 					"id_location": "loc-1",
 					"pitch": "Anexo G.C."
 				}

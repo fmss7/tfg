@@ -33,6 +33,7 @@ export class LeagueHomePage {
 			this.lPFutbolService.getLeagueData(this.id_league).subscribe(res => {
 				this.league = res;
 				this.events.publish('league(League):getted', this.league);
+				this.events.publish('league(League):getted', this.league);
 				loader.dismiss();
 			});
 		});

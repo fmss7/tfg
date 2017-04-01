@@ -20,46 +20,45 @@ export class LeagueTablePage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private events: Events,
-		private lPFutbolService: LPFutbolService,
-		private userSettings: UserSettings) {
+		private userSettings: UserSettings,
+		private lPFutbolService: LPFutbolService) {
 	}
 
 	ionViewDidLoad() {
-		this.league = this.userSettings.getLeagueData();
-		this.league.teams.forEach(element => {
-			let team = element.name;
-			this.teams[team] = { "name": team, "id_team": element.id_team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
-		});
-		_.forEach(this.league.games, game => {
-			if (game.hostGoals > game.guestGoals) {
-				this.teams[game.host].wins++;
-				this.teams[game.host].points += 3;
-				this.teams[game.guest].losses++;
-			} else if (game.hostGoals < game.guestGoals) {
-				this.teams[game.host].losses++;
-				this.teams[game.guest].wins++;
-				this.teams[game.guest].points += 3;
-			} else {
-				this.teams[game.host].draws++;
-				this.teams[game.guest].points++;
-				this.teams[game.guest].draws++;
-				this.teams[game.guest].points++;
-			}
-			this.teams[game.host].goalsFor += game.hostGoals
-			this.teams[game.host].goalsAgainst += game.guestGoals;
-			this.teams[game.host].goalsDiff += game.hostGoals - game.guestGoals;
-			this.teams[game.guest].goalsFor += game.guestGoals
-			this.teams[game.guest].goalsAgainst += game.hostGoals;
-			this.teams[game.guest].goalsDiff += game.guestGoals - game.hostGoals;
-		});
-
-		this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
-		_.forEach(this.teams, team => this.leagueTable.push(team));
-		/*
-		this.events.subscribe('league(League):getted', league => {
-			this.league = league;
-		});
-		*/
+		//this.events.subscribe('league(League):getted', league => {
+			//this.league = league;
+			this.league = this.userSettings.getLeagueData();
+			this.league.teams.forEach(element => {
+				let team = element.name;
+				this.teams[team] = { "name": team, "id_team": element.id_team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
+			});
+			_.forEach(this.league.games, game => {
+				if (game.hostGoals > game.guestGoals) {
+					this.teams[game.host].wins++;
+					this.teams[game.host].points += 3;
+					this.teams[game.guest].losses++;
+				} else if (game.hostGoals < game.guestGoals) {
+					this.teams[game.host].losses++;
+					this.teams[game.guest].wins++;
+					this.teams[game.guest].points += 3;
+				} else {
+					this.teams[game.host].draws++;
+					this.teams[game.guest].points++;
+					this.teams[game.guest].draws++;
+					this.teams[game.guest].points++;
+				}
+				if (game.hostGoals >= 0 && game.guestGoals >= 0){
+					this.teams[game.host].goalsFor += game.hostGoals
+					this.teams[game.host].goalsAgainst += game.guestGoals;
+					this.teams[game.host].goalsDiff += game.hostGoals - game.guestGoals;
+					this.teams[game.guest].goalsFor += game.guestGoals
+					this.teams[game.guest].goalsAgainst += game.hostGoals;
+					this.teams[game.guest].goalsDiff += game.guestGoals - game.hostGoals;
+				}
+			});
+			this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
+			_.forEach(this.teams, team => this.leagueTable.push(team));
+		//});
 	}
 
 	teamTapped(id_team) {

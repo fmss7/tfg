@@ -8,7 +8,7 @@
 	<ion-list>
 		<ion-row>
 			<ion-col text-center width-75>
-				<p style="text-align: justify;">{{club?.information}}</p>
+				<h5 style="text-align: justify;">{{club?.information}}</h5>
 			</ion-col>
 			<ion-col width-25>
 				<ion-avatar><img name="clubBadge" [alt]="club.name" [src]='clubBadgeUrl' (error)="updateClubBadgeUrl($event)" /></ion-avatar>
@@ -16,20 +16,20 @@
 		</ion-row>
 		<ion-item-group>
 			<ion-item>
-				<ion-label>Sede: </ion-label>
-				<p>{{club?.head_office}}</p>
+				<h3>Sede:</h3>
+				<h2>{{club?.head_office}}</h2>
 			</ion-item>
 			<ion-item>
-				<!--<ion-label>Teléfono: </ion-label>-->
-				<p>{{club?.phone_number}}</p>
+				<h3>Teléfono:</h3>
+				<h2>{{club?.phone_number}}</h2>
 			</ion-item>
 			<ion-item>
-				<!--<ion-label>Campo de fútbol: </ion-label>-->
-				<p>{{location?.name}}</p>
+				<h3>Campo de fútbol:</h3>
+				<h2>{{location?.name}}</h2>
 			</ion-item>
 			<ion-item>
-				<!--<ion-label>Lugar: </ion-label>-->
-				<p>{{location?.addres}} {{location?.place}}</p>
+				<h3>Lugar:</h3>
+				<h2>{{location?.addres}} {{location?.place}}</h2>
 			</ion-item>
 		</ion-item-group>
 	</ion-list>

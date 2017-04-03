@@ -13,6 +13,7 @@ import * as _ from 'lodash';
 export class LeagueTablePage {
 
 	league: any;
+	id_league: any;
 	teams: any = {};
 	leagueTable: any[] = [];
 
@@ -22,12 +23,14 @@ export class LeagueTablePage {
 		private events: Events,
 		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService) {
+		this.id_league = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
 		//this.events.subscribe('league(League):getted', league => {
-			//this.league = league;
-			this.league = this.userSettings.getLeagueData();
+		this.lPFutbolService.getLeagueData(this.id_league).subscribe(league => {
+			this.league = league;
+			//this.league = this.userSettings.getLeagueData();
 			this.league.teams.forEach(element => {
 				let team = element.name;
 				this.teams[team] = { "name": team, "id_team": element.id_team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
@@ -47,7 +50,7 @@ export class LeagueTablePage {
 					this.teams[game.guest].draws++;
 					this.teams[game.guest].points++;
 				}
-				if (game.hostGoals >= 0 && game.guestGoals >= 0){
+				if (game.hostGoals >= 0 && game.guestGoals >= 0) {
 					this.teams[game.host].goalsFor += game.hostGoals
 					this.teams[game.host].goalsAgainst += game.guestGoals;
 					this.teams[game.host].goalsDiff += game.hostGoals - game.guestGoals;
@@ -58,7 +61,7 @@ export class LeagueTablePage {
 			});
 			this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
 			_.forEach(this.teams, team => this.leagueTable.push(team));
-		//});
+		});
 	}
 
 	teamTapped(id_team) {

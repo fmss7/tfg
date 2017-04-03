@@ -11,5 +11,5 @@
 
 <ion-tabs>
 	<ion-tab tabTitle="Partidos" [root]="teamGamesTab" [rootParams]="team" tabIcon="football"></ion-tab>
-	<ion-tab tabTitle="Clasificación" [root]="" [rootParams]="team" tabIcon="podium"></ion-tab>
+	<ion-tab tabTitle="Clasificación" [root]="leagueTableTab" [rootParams]="team.league.id_league" tabIcon="podium"></ion-tab>
 </ion-tabs>

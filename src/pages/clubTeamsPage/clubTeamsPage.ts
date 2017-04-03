@@ -14,7 +14,6 @@ export class ClubTeamsPage {
 
 	ionViewDidLoad() {
 		this.teams = this.navParams.data.teams;
-		console.log(this.teams);
 	}
 
 	teamTapped($event, team) {

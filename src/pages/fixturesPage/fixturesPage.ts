@@ -10,8 +10,10 @@ import * as _ from 'lodash';
 })
 
 export class FixturesPage {
+
 	@ViewChild(Slides) slides: Slides;
 	fixtures: any;
+	id_league: any;
 	mySlideOptions: any = {
 		initialSlide: 0,
 		speed: 3000,
@@ -25,10 +27,11 @@ export class FixturesPage {
 		public events: Events,
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
+		this.id_league = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
-		this.events.subscribe('league(League):getted', league => {
+		this.lPFutbolService.getLeagueData(this.id_league).subscribe(league => {
 			this.fixtures =
 				_.chain(league.games)
 					.groupBy("fixture")

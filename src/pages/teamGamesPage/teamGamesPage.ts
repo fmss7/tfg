@@ -86,7 +86,7 @@ export class TeamGamesPage {
 						text: 'Si',
 						handler: () => {
 							this.isFollowing = false;
-							this.userSettings.unFavoriteTeam(this.team);
+							this.userSettings.unFavoriteTeam(this.team.id_team);
 							let toast = this.toastController.create({
 								message: 'Has dejado de seguir a este equipo',
 								duration: 1250,

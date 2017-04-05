@@ -11,7 +11,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 export class TeamHomePage {
 
 	team: any;
-	league: any;
+	data: any;
 	teamGamesTab = TeamGamesPage;
 	leagueTableTab = LeagueTablePage;
 
@@ -22,7 +22,10 @@ export class TeamHomePage {
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
 		this.team = this.navParams.data;
-		console.log(this.team);
+		this.data = {
+			"id_league": this.team.league.id_league,
+			"id_team": this.team.id_team
+		}
 	}
 
 	ionViewDidLoad() {
@@ -32,9 +35,8 @@ export class TeamHomePage {
 			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(res => {
-				this.league = res;
-				this.events.publish('league(Team):getted', this.league, this.team);
+			this.lPFutbolService.getLeagueData(this.team.league.id_league).subscribe(league => {
+				this.events.publish('league(Team):getted', league);
 			});
 			loader.dismiss();
 		});

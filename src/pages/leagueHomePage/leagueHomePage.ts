@@ -10,17 +10,20 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 export class LeagueHomePage {
 
 	league: any;
-	id_league: any;
 	fixturesTab = FixturesPage;
 	leagueTableTab = LeagueTablePage;
-
+	data: any;
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public events: Events,
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
-		this.id_league = this.navParams.data.id_league;
+		this.league = this.navParams.data;
+		this.data = {
+			"id_league": this.league.id_league,
+			"id_team": ""
+		}
 	}
 
 	ionViewDidLoad() {
@@ -30,9 +33,8 @@ export class LeagueHomePage {
 			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getLeagueData(this.id_league).subscribe(res => {
-				this.league = res;
-				this.events.publish('league(League):getted', this.league);
+			this.lPFutbolService.getLeagueData(this.league.id_league).subscribe(league => {
+				this.events.publish('league(League):getted', league);
 				loader.dismiss();
 			});
 		});

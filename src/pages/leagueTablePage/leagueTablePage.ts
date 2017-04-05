@@ -14,6 +14,7 @@ export class LeagueTablePage {
 
 	league: any;
 	id_league: any;
+	id_team: any;
 	teams: any = {};
 	leagueTable: any[] = [];
 
@@ -23,7 +24,8 @@ export class LeagueTablePage {
 		private events: Events,
 		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService) {
-		this.id_league = this.navParams.data;
+		this.id_league = this.navParams.data.id_league;
+		this.id_team = this.navParams.data.id_team;
 	}
 
 	ionViewDidLoad() {
@@ -62,6 +64,17 @@ export class LeagueTablePage {
 			this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
 			_.forEach(this.teams, team => this.leagueTable.push(team));
 		});
+	}
+
+	color(id_team) {
+		if (id_team == this.id_team) {
+			return 'cornflowerblue';
+		}
+	}
+	fontWeight(id_team) {
+		if (id_team == this.id_team) {
+			return 'bold';
+		}
 	}
 
 	teamTapped(id_team) {

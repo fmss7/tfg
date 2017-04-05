@@ -12,13 +12,7 @@ export class UserSettings {
 
 	favoriteTeams = [];
 
-	favoriteLeagues = [
-		{
-			"id_league": "reg-pref",
-			"name": "Regional Preferente"
-		}
-
-	];
+	favoriteLeagues = [];
 
 	constructor(
 		private http: Http,
@@ -29,25 +23,41 @@ export class UserSettings {
 	favoriteTeam(team) {
 		this.storage.set(team.id_team, JSON.stringify(team)).then(() => this.events.publish('favorites:changed'));
 	}
+	favoriteLeague(league) {
+		this.storage.set(league.id_league, JSON.stringify(league)).then(() => this.events.publish('favorites:changed'));
+	}
+
 
 	unFavoriteTeam(id_team) {
 		this.storage.remove(id_team).then(() => this.events.publish('favorites:changed'));
 	}
+	unFavoriteLeague(id_league) {
+		this.storage.remove(id_league).then(() => this.events.publish('favorites:changed'));
+	}
 
-	isFavouriteTeam(id_team) {
-		return this.storage.get(id_team).then(value => value ? true : false);
+	isFavourite(id) {
+		return this.storage.get(id).then(value => value ? true : false);
 	}
 
 	getFavoriteTeams() {
 		let item = [];
 		this.storage.forEach((value, key) => {
-			item.push(JSON.parse(value))
+			if (key.indexOf('@') != -1) {
+				item.push(JSON.parse(value));
+			}
 		});
 		return item;
 	}
 
 	getFavoriteLeagues() {
-		return this.favoriteLeagues;
+		let item = [];
+		this.storage.forEach((value, key) => {
+			if (key.indexOf('@') == -1) {
+				item.push(JSON.parse(value));
+			}
+			
+		});
+		return item;
 	}
 
 }

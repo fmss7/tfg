@@ -11,8 +11,8 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 })
 export class HomePage {
 
-	myFavoriteTeams: any[];
-	myFavoriteLeagues: any[];
+	myFavoriteTeams = [];
+	myFavoriteLeagues = [];
 
 	constructor(
 		public navCtrl: NavController,

@@ -5,6 +5,24 @@
 </ion-header>
 
 <ion-content>
+	<ion-card>
+		<ion-card-content>
+			<ion-row>
+				<ion-col width-45>
+					<h2>{{league?.name}}</h2>
+				</ion-col>
+				<ion-col width-55 text-right>
+					<button ion-button (click)="toggleFollow()" *ngIf="!isFollowing">
+						Seguir
+                    </button>
+					<button ion-button (click)="toggleFollow()" *ngIf="isFollowing">
+                        <ion-icon name="star"></ion-icon>
+						Siguiendo
+                    </button>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
 	<ion-item>
 		<ion-slides *ngIf="fixtures?.length" [initialSlide]="mySlideOptions.initialSlide">
 			<ion-slide *ngFor="let fixture of fixtures; let i=index;">

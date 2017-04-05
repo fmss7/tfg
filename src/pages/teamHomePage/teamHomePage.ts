@@ -22,6 +22,7 @@ export class TeamHomePage {
 		private loadingController: LoadingController,
 		private lPFutbolService: LPFutbolService) {
 		this.team = this.navParams.data;
+		console.log(this.team);
 	}
 
 	ionViewDidLoad() {

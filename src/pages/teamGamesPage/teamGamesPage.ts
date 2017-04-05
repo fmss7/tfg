@@ -30,7 +30,7 @@ export class TeamGamesPage {
 	ionViewDidLoad() {
 		this.events.subscribe('league(Team):getted', (league, team) => {
 			this.team = team;
-			this.userSettings.isFavouriteTeam(this.team.id_team).then(value => this.isFollowing = value);
+			this.userSettings.isFavourite(this.team.id_team).then(value => this.isFollowing = value);
 			this.games = _.chain(league.games)
 				.filter(g => g.host == this.team.name || g.guest == this.team.name)
 				.map(g => {

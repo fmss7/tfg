@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { LoadingController, NavController, NavParams, Events, Slides } from 'ionic-angular';
+import { LoadingController, NavController, NavParams, Events, Slides, AlertController, ToastController } from 'ionic-angular';
 import { LPFutbolService } from '../../services/lp-futbol.service';
+import { UserSettings } from '../../services/userSettings.service';
 import { GamePage } from '../pages';
 import * as _ from 'lodash';
 
@@ -14,6 +15,8 @@ export class FixturesPage {
 	@ViewChild(Slides) slides: Slides;
 	fixtures: any;
 	id_league: any;
+	league: any;
+	isFollowing: boolean = false;
 	mySlideOptions: any = {
 		initialSlide: 0,
 		speed: 3000,
@@ -25,13 +28,22 @@ export class FixturesPage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public events: Events,
+		private userSettings: UserSettings,
 		private loadingController: LoadingController,
-		private lPFutbolService: LPFutbolService) {
+		private lPFutbolService: LPFutbolService,
+		private alertController: AlertController,
+		private toastController: ToastController) {
 		this.id_league = this.navParams.data;
 	}
 
 	ionViewDidLoad() {
+		this.userSettings.isFavourite(this.id_league).then(value => this.isFollowing = value);
 		this.lPFutbolService.getLeagueData(this.id_league).subscribe(league => {
+			this.league = {
+				"id_league": this.id_league,
+				"name": league.name,
+				"category": league.category
+			}
 			this.fixtures =
 				_.chain(league.games)
 					.groupBy("fixture")
@@ -54,6 +66,41 @@ export class FixturesPage {
 
 	gameTapped($event, game) {
 		this.navCtrl.parent.parent.push(GamePage, game);
+	}
+
+	toggleFollow() {
+		if (this.isFollowing) {
+			let confirm = this.alertController.create({
+				title: this.league.name,
+				message: '¿Quieres dejar de seguir a esta liga?',
+				buttons: [
+					{
+						text: 'Si',
+						handler: () => {
+							this.userSettings.unFavoriteLeague(this.id_league);
+							this.isFollowing = false;
+							let toast = this.toastController.create({
+								message: 'Has dejado de seguir a esta liga',
+								duration: 1250,
+								position: 'bottom'
+							});
+							toast.present();
+						}
+					},
+					{ text: 'No' }
+				]
+			});
+			confirm.present();
+		} else {
+			this.isFollowing = true;
+			this.userSettings.favoriteLeague(this.league);
+			let toast = this.toastController.create({
+				message: 'Has empezado a seguir a esta liga',
+				duration: 1250,
+				position: 'bottom'
+			});
+			toast.present();
+		}
 	}
 
 }

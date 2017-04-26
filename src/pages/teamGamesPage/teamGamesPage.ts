@@ -12,6 +12,7 @@ import * as moment from 'moment';
 export class TeamGamesPage {
 	@ViewChild(Content) content: Content;
 	team: any;
+	teamPos: number;
 	games: any;
 	allGames: any;
 	scrollIndex: string;
@@ -39,6 +40,7 @@ export class TeamGamesPage {
 					let opponentName = isTeam1 ? g.guest : g.host;
 					let goalsDisplay = this.getGoalsDisplay(isTeam1, g.hostGoals, g.guestGoals);
 					return {
+						id_game: g.id_game,
 						fixture: g.fixture,
 						id_host: g.id_host,
 						host: g.host,
@@ -55,6 +57,7 @@ export class TeamGamesPage {
 					}
 				})
 				.value();
+			this.events.subscribe('position:getted', pos => { this.teamPos = pos+1 });
 			this.allGames = this.games;
 			let i = -4;
 			_.forEach(this.allGames, game => {
@@ -74,7 +77,6 @@ export class TeamGamesPage {
 			let verticalOffset = document.getElementById(this.scrollIndex).offsetTop;
 			//this.content.scrollTo(0, verticalOffset);
 		}
-
 	}
 
 	toggleFollow() {

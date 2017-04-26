@@ -29,10 +29,8 @@ export class LeagueTablePage {
 	}
 
 	ionViewDidLoad() {
-		//this.events.subscribe('league(League):getted', league => {
 		this.lPFutbolService.getLeagueData(this.id_league).subscribe(league => {
 			this.league = league;
-			//this.league = this.userSettings.getLeagueData();
 			this.league.teams.forEach(element => {
 				let team = element.name;
 				this.teams[team] = { "name": team, "id_team": element.id_team, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalsDiff": 0, "points": 0 };
@@ -62,7 +60,8 @@ export class LeagueTablePage {
 				}
 			});
 			this.teams = _.orderBy(this.teams, ['points', 'goalsDiff'], ['desc', 'desc']);
-			_.forEach(this.teams, team => this.leagueTable.push(team));
+			_.forEach(this.teams, (team, index) => { this.leagueTable.push(team) });
+			this.events.publish('position:getted', _.findIndex(this.leagueTable, team => { return team.id_team == this.id_team }));
 		});
 	}
 

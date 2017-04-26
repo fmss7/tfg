@@ -19,7 +19,7 @@ export const firebaseConfig = {
     storageBucket: "lp-futbol-cfeff.appspot.com",
     messagingSenderId: "679651523148"
 };
-const myFirebaseAuthConfig = {
+export const myFirebaseAuthConfig = {
 	provider: AuthProviders.Password,
 	method: AuthMethods.Password
 };

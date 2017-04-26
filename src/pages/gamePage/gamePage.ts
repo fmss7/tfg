@@ -14,10 +14,10 @@ export class GamePage {
 
 	game: any;
 	storage: any;
-	badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
+	//badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
 	hostBadgeUrl: string;
 	guestBadgeUrl: string;
-	urls: number = 0;
+	//urls: number = 0;
 
 	constructor(
 		public navCtrl: NavController,
@@ -38,36 +38,65 @@ export class GamePage {
 		loader.present().then(() => {
 			let host = this.game.id_host.substring(0, this.game.id_host.indexOf('@')) + ".png";
 			let guest = this.game.id_guest.substring(0, this.game.id_guest.indexOf('@')) + ".png";
-			let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
+			//let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
+			this.hostBadgeUrl = "/assets/escudos/" + host;
+			this.guestBadgeUrl = "/assets/escudos/" + guest;
+			/*
 			storageRefHost.getDownloadURL().then(url => {
 				this.hostBadgeUrl = url;
 				this.events.publish('hostImg:getted');
 			});
+			
 			let storageRefGuest = this.firebaseApp.storage().ref().child('escudos/' + guest);
 			storageRefGuest.getDownloadURL().then(url => {
 				this.guestBadgeUrl = url;
 				this.events.publish('guestImg:getted');
 			});
-			this.events.subscribe('loader:dismiss', () => loader.dismiss());
+			*/
+			loader.dismiss();
+			//this.events.subscribe('loader:dismiss', () => loader.dismiss());
 		});
 	}
 
-	updateHostUrl($event) {
-		this.events.subscribe('hostImg:getted', () => {
-			$event.target.src = this.hostBadgeUrl;
+	/*
+		updateHostUrl($event) {
+			this.events.subscribe('hostImg:getted', () => {
+				$event.target.src = this.hostBadgeUrl;
+				this.urls++;
+				if (this.urls == 2) {
+					this.events.publish('loader:dismiss');
+				}
+			});
+		}
+		updateGuestUrl($event) {
+			this.events.subscribe('guestImg:getted', () => {
+				$event.target.src = this.guestBadgeUrl;
+			});
 			this.urls++;
 			if (this.urls == 2) {
 				this.events.publish('loader:dismiss');
 			}
-		});
+		}
+	*/
+
+	addHostGoal() {
+		this.game.hostGoals += 1;
+		this.lPFutbolService.updateGameScore(this.game);
 	}
-	updateGuestUrl($event) {
-		this.events.subscribe('guestImg:getted', () => {
-			$event.target.src = this.guestBadgeUrl;
-		});
-		this.urls++;
-		if (this.urls == 2) {
-			this.events.publish('loader:dismiss');
+	addGuestGoal() {
+		this.game.guestGoals += 1;
+		this.lPFutbolService.updateGameScore(this.game);
+	}
+	removeHostGoal() {
+		if (this.game.hostGoals > 0) {
+			this.game.hostGoals -= 1;
+			this.lPFutbolService.updateGameScore(this.game);
+		}
+	}
+	removeGuestGoal() {
+		if (this.game.guestGoals > 0) {
+			this.game.guestGoals -= 1;
+			this.lPFutbolService.updateGameScore(this.game);
 		}
 	}
 

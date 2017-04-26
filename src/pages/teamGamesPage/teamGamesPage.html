@@ -13,7 +13,7 @@
 			<ion-row>
 				<ion-col width-45>
 					<h2>{{team?.league?.name}}</h2>
-					<p>Posición: 1º</p>
+					<p>Posición: {{teamPos}}º</p>
 				</ion-col>
 				<ion-col width-55 text-right>
 					<button ion-button (click)="toggleFollow()" *ngIf="!isFollowing">

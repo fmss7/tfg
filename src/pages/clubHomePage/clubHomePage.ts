@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { NavController, NavParams} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { ClubSheetPage, ClubTeamsPage } from '../pages';
 
 @Component({
@@ -20,8 +20,7 @@ export class ClubHomePage {
 		this.club = this.navParams.data;
 	}
 
-	ionViewDidLoad() {
-	}
+	ionViewDidLoad() {}
 
 	goHome() {
 		this.navCtrl.popToRoot();

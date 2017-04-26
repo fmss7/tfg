@@ -93,6 +93,8 @@ export class MyApp {
 				</ion-card-content>
 			</ion-card>
 
+			<button color="secondary" ion-button class="submit-btn" (click)="createUser()">CrearUsuario</button>
+
 			<div class="login-box">
 				<form #registerForm="ngForm">
 					<ion-row>
@@ -160,11 +162,16 @@ export class LogIn {
 		this.viewCtrl.dismiss();
 	}
 
+	createUser(email, password) {
+		this.af.auth.createUser({ email: "pepe@hotmail.com", password: "pepepepe" });
+	}
+
 	logIn(email, password) {
 		this.af.auth.login({ email: email.value, password: password.value })
 			.then(success => {
 				this.login = success;
 				console.log(this.login.auth.email);
+				console.log(this.af.auth.getAuth());
 			})
 			.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
 	}

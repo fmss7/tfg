@@ -7,7 +7,9 @@ import { Facebook, TwitterConnect } from 'ionic-native';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
-
+//*********************************************************** */
+import { LPFutbolService } from '../services/lp-futbol.service';
+//*********************************************************** */
 import { HomePage, TeamHomePage, LeagueHomePage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 
@@ -145,7 +147,8 @@ export class LogIn {
 		public viewCtrl: ViewController,
 		private userSettings: UserSettings,
 		private af: AngularFire,
-		private auth: AngularFireAuth) {
+		private auth: AngularFireAuth,
+		private lPFutbolService: LPFutbolService) {
 		this.zone = new NgZone({});
 		firebase.auth().onAuthStateChanged(user => {
 			this.zone.run(() => {
@@ -169,9 +172,13 @@ export class LogIn {
 	logIn(email, password) {
 		this.af.auth.login({ email: email.value, password: password.value })
 			.then(success => {
+				this.lPFutbolService.getAllClubs().subscribe(res => {
+					console.log(res);
+				});
 				this.login = success;
 				console.log(this.login.auth.email);
 				console.log(this.af.auth.getAuth());
+				console.log(success);
 			})
 			.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
 	}

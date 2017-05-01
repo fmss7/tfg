@@ -64,7 +64,7 @@ export class LPFutbolService {
 		});
 		delete game.goalsDisplay;
 		delete game.opponent;
-		this.af.database.list('/leagues-data/' + this.currentLeagueId + "/games").update(index.toString(), game);
+		this.af.database.list(`/leagues-data/${this.currentLeagueId}/games`).update(index.toString(), game);
 	}
 
 	createUser(email, password): any {
@@ -75,7 +75,9 @@ export class LPFutbolService {
 				let newUser = {
 					"uid": success.uid,
 					"email": email,
-					"role-value": 2
+					"role-value": 2,
+					"favorite-teams": [],
+					"favorite-leagues": []
 				};
 				this.af.database.object(`/users/${success.uid}`);
 				this.af.database.list('/users/').update(success.uid, newUser);
@@ -94,7 +96,9 @@ export class LPFutbolService {
 					let user = {
 						"uid": uid,
 						"email": email,
-						"role-value": 2
+						"role-value": 2,
+						"favorite-teams": [],
+						"favorite-leagues": []
 					}
 					this.af.database.object('/users/' + user.uid);
 					this.af.database.list('/users/').update(user.uid, user);
@@ -102,5 +106,10 @@ export class LPFutbolService {
 			});
 	}
 
+/*
+	addFavoriteTeam(team){
+		this.af.database.list(`/users/${this.currentLeagueId}/games`).update(index.toString(), game);
+	}
+*/
 }
 

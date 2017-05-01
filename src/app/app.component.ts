@@ -1,10 +1,6 @@
-import { Component, ViewChild, NgZone } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { Nav, Platform, LoadingController, ModalController, ViewController, Events } from 'ionic-angular';
-import firebase from 'firebase';
-import { AngularFire, AngularFireAuth } from "angularfire2";
-import { Facebook, TwitterConnect } from 'ionic-native';
-import { GooglePlus } from '@ionic-native/google-plus';
+import { Nav, Platform, LoadingController, ModalController, ViewController, Events, ToastController} from 'ionic-angular';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
 import { HomePage, TeamHomePage, LeagueHomePage, SignInPage } from '../pages/pages';
@@ -137,27 +133,11 @@ export class MyApp {
 
 export class LogIn {
 
-	login: any;
-	userProfile: any = null;
-	error: any;
-	zone: NgZone;
-
 	constructor(
 		public viewCtrl: ViewController,
 		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService,
-		private af: AngularFire,
-		private auth: AngularFireAuth) {
-		this.zone = new NgZone({});
-		firebase.auth().onAuthStateChanged(user => {
-			this.zone.run(() => {
-				if (user) {
-					this.userProfile = user;
-				} else {
-					this.userProfile = null;
-				}
-			});
-		});
+		private toastController: ToastController) {
 	}
 
 	closeModal() {
@@ -165,65 +145,59 @@ export class LogIn {
 	}
 
 	logIn(email, password) {
-		this.af.auth.login({ email: email.value, password: password.value })
-			.then(success => {
-				this.login = success;
-			})
-			.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
+		let success = this.userSettings.logIn(email, password);
+		if (success) {
+			this.viewCtrl.dismiss();
+		}else{
+			let toast = this.toastController.create({
+				message: 'Error al acceder...',
+				duration: 2000,
+				position: 'bottom'
+			});
+			toast.present();
+		}
 	}
 
 	loginWithGoogle() {
-		GooglePlus.login({
-			'webClientId': "679651523148-i663pj9qdb53c8a94qlu6inbnnp4542j.apps.googleusercontent.com",
-			'offline': true
-		}).then(res => {
-			firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
-				.then(success => {
-					this.userProfile = success;
-					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
-				})
-				.catch(error => {
-					console.log("Firebase failure: " + JSON.stringify(error));
-					this.error = error;
-				});
-		}).catch(err => {
-			console.error("Error: ", err)
-			this.error = err;
-		});
+		let success = this.userSettings.loginWithGoogle();
+		if (success) {
+			this.viewCtrl.dismiss();
+		}else{
+			let toast = this.toastController.create({
+				message: 'Error al acceder...',
+				duration: 2000,
+				position: 'bottom'
+			});
+			toast.present();
+		}
 	}
 
 	loginWithFacebook() {
-		Facebook.login(['email']).then((response) => {
-			const facebookCredential = firebase.auth.FacebookAuthProvider.credential(response.authResponse.accessToken);
-			firebase.auth().signInWithCredential(facebookCredential)
-				.then((success) => {
-					console.log("Firebase success: " + JSON.stringify(success));
-					this.userProfile = success;
-					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
-				})
-				.catch((error) => {
-					console.log("Firebase failure: " + JSON.stringify(error));
-				});
-
-		}).catch((error) => { console.log(error) });
+		let success = this.userSettings.loginWithFacebook();
+		if (success) {
+			this.viewCtrl.dismiss();
+		}else{
+			let toast = this.toastController.create({
+				message: 'Error al acceder...',
+				duration: 2000,
+				position: 'bottom'
+			});
+			toast.present();
+		}
 	}
 
 	loginWithTwitter() {
-		TwitterConnect.login().then(response => {
-			const twitterCredential = firebase.auth.TwitterAuthProvider.credential(response.token, response.secret);
-
-			firebase.auth().signInWithCredential(twitterCredential)
-				.then((success) => {
-					console.log("Firebase success: " + JSON.stringify(success));
-					this.userProfile = success;
-					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
-				})
-				.catch((error) => {
-					console.log("Firebase failure: " + JSON.stringify(error));
-				});
-		}, error => {
-			console.log("Error connecting to twitter: ", error);
-		});
+		let success = this.userSettings.loginWithTwitter();
+		if (success) {
+			this.viewCtrl.dismiss();
+		}else{
+			let toast = this.toastController.create({
+				message: 'Error al acceder...',
+				duration: 2000,
+				position: 'bottom'
+			});
+			toast.present();
+		}
 	}
 
 }

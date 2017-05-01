@@ -93,7 +93,7 @@ export class FixturesPage {
 			confirm.present();
 		} else {
 			this.isFollowing = true;
-			this.userSettings.favoriteLeague(this.league);
+			this.userSettings.addFavoriteLeague(this.league);
 			let toast = this.toastController.create({
 				message: 'Has empezado a seguir a esta liga',
 				duration: 1250,

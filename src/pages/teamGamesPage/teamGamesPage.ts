@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, AlertController, ToastController, Events, Content } from 'ionic-angular';
 import { GamePage } from '../../pages/pages';
+import { LPFutbolService } from '../../services/lp-futbol.service';
 import { UserSettings } from '../../services/userSettings.service';
 import * as _ from 'lodash';
 import * as moment from 'moment';
@@ -24,6 +25,7 @@ export class TeamGamesPage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public events: Events,
+		private lPFutbolService: LPFutbolService,
 		private userSettings: UserSettings,
 		private alertController: AlertController,
 		private toastController: ToastController) {
@@ -57,7 +59,7 @@ export class TeamGamesPage {
 					}
 				})
 				.value();
-			this.events.subscribe('position:getted', pos => { this.teamPos = pos+1 });
+			this.events.subscribe('position:getted', pos => { this.teamPos = pos + 1 });
 			this.allGames = this.games;
 			let i = -4;
 			_.forEach(this.allGames, game => {
@@ -104,7 +106,8 @@ export class TeamGamesPage {
 			confirm.present();
 		} else {
 			this.isFollowing = true;
-			this.userSettings.favoriteTeam(this.team);
+			this.userSettings.addFavoriteTeam(this.team);
+			//this.lPFutbolService.addFavoriteTeam(this.team);
 			let toast = this.toastController.create({
 				message: 'Has empezado a seguir a este equipo',
 				duration: 1250,

@@ -6,7 +6,7 @@ import { Storage } from '@ionic/storage';
 import { MyApp, LogIn } from './app.component';
 import {
 	HomePage, TeamsPage, TeamHomePage, GamePage, LeaguesPage, ClubHomePage, ClubSheetPage, ClubTeamsPage,
-	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage } from '../pages/pages';
+	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage, SignInPage } from '../pages/pages';
 import { CustomPipe } from '../pages/fixturesPage/customPipe.pipe';
 
 import { UserSettings } from '../services/userSettings.service';
@@ -42,7 +42,8 @@ export const myFirebaseAuthConfig = {
 		FixturesPage,
 		CustomPipe,
 		GamePage,
-		MapPage
+		MapPage,
+		SignInPage
 	],
 	imports: [
 		IonicModule.forRoot(MyApp),
@@ -65,7 +66,8 @@ export const myFirebaseAuthConfig = {
 		LeagueTablePage,
 		FixturesPage,
 		GamePage,
-		MapPage
+		MapPage,
+		SignInPage
 	],
 	providers:
 	[{ provide: ErrorHandler, useClass: IonicErrorHandler },

@@ -7,6 +7,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 	selector: 'leaguesPage',
 	templateUrl: 'leaguesPage.html'
 })
+
 export class LeaguesPage {
 
 	categories: any;

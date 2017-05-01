@@ -7,10 +7,8 @@ import { Facebook, TwitterConnect } from 'ionic-native';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
-//*********************************************************** */
+import { HomePage, TeamHomePage, LeagueHomePage, SignInPage } from '../pages/pages';
 import { LPFutbolService } from '../services/lp-futbol.service';
-//*********************************************************** */
-import { HomePage, TeamHomePage, LeagueHomePage } from '../pages/pages';
 import { UserSettings } from '../services/userSettings.service';
 
 @Component({
@@ -72,6 +70,9 @@ export class MyApp {
 		let logInModal = this.modalCtrl.create(LogIn);
 		logInModal.present();
 	}
+	signInTapped() {
+		this.nav.push(SignInPage);
+	}
 }
 
 @Component({
@@ -95,18 +96,16 @@ export class MyApp {
 				</ion-card-content>
 			</ion-card>
 
-			<button color="secondary" ion-button class="submit-btn" (click)="createUser()">CrearUsuario</button>
-
 			<div class="login-box">
 				<form #registerForm="ngForm">
 					<ion-row>
 						<ion-col>
 							<ion-list inset>
 								<ion-item>
-									<ion-input type="email" placeholder="Usuario" name="userName" #email required></ion-input>
+									<ion-input type="email" placeholder="email" name="userEmail" #email required></ion-input>
 								</ion-item>
 								<ion-item>
-									<ion-input type="password" placeholder="Contraseña" name="userPassword" #password required></ion-input>
+									<ion-input type="password" placeholder="contraseña" name="userPassword" #password required></ion-input>
 								</ion-item>
 							</ion-list>
 						</ion-col>
@@ -146,9 +145,9 @@ export class LogIn {
 	constructor(
 		public viewCtrl: ViewController,
 		private userSettings: UserSettings,
+		private lPFutbolService: LPFutbolService,
 		private af: AngularFire,
-		private auth: AngularFireAuth,
-		private lPFutbolService: LPFutbolService) {
+		private auth: AngularFireAuth) {
 		this.zone = new NgZone({});
 		firebase.auth().onAuthStateChanged(user => {
 			this.zone.run(() => {
@@ -165,20 +164,10 @@ export class LogIn {
 		this.viewCtrl.dismiss();
 	}
 
-	createUser(email, password) {
-		this.af.auth.createUser({ email: "pepe@hotmail.com", password: "pepepepe" });
-	}
-
 	logIn(email, password) {
 		this.af.auth.login({ email: email.value, password: password.value })
 			.then(success => {
-				this.lPFutbolService.getAllClubs().subscribe(res => {
-					console.log(res);
-				});
 				this.login = success;
-				console.log(this.login.auth.email);
-				console.log(this.af.auth.getAuth());
-				console.log(success);
 			})
 			.catch((error) => console.log("Firebase failure: " + JSON.stringify(error)));
 	}
@@ -190,8 +179,8 @@ export class LogIn {
 		}).then(res => {
 			firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
 				.then(success => {
-					console.log("Firebase success: " + JSON.stringify(success));
 					this.userProfile = success;
+					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
 				})
 				.catch(error => {
 					console.log("Firebase failure: " + JSON.stringify(error));
@@ -210,6 +199,7 @@ export class LogIn {
 				.then((success) => {
 					console.log("Firebase success: " + JSON.stringify(success));
 					this.userProfile = success;
+					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
 				})
 				.catch((error) => {
 					console.log("Firebase failure: " + JSON.stringify(error));
@@ -226,6 +216,7 @@ export class LogIn {
 				.then((success) => {
 					console.log("Firebase success: " + JSON.stringify(success));
 					this.userProfile = success;
+					this.lPFutbolService.writeUser(this.userProfile.uid, this.userProfile.email);
 				})
 				.catch((error) => {
 					console.log("Firebase failure: " + JSON.stringify(error));

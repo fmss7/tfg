@@ -12,3 +12,4 @@ export * from './fixturesPage/fixturesPage';
 export * from './fixturesPage/customPipe.pipe';
 export * from './gamePage/gamePage';
 export * from './mapPage/mapPage';
+export * from './signInPage/signInPage';

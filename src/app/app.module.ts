@@ -6,24 +6,24 @@ import { Storage } from '@ionic/storage';
 import { MyApp, LogIn } from './app.component';
 import {
 	HomePage, TeamsPage, TeamHomePage, GamePage, LeaguesPage, ClubHomePage, ClubSheetPage, ClubTeamsPage,
-	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage, SignInPage } from '../pages/pages';
+	LeagueHomePage, FixturesPage, LeagueTablePage, TeamGamesPage, MapPage, SignInPage
+} from '../pages/pages';
 import { CustomPipe } from '../pages/fixturesPage/customPipe.pipe';
 
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyC1LaYV7V3YafjF5SIMbGbSBxFazR22dbM",
-    authDomain: "lp-futbol-cfeff.firebaseapp.com",
-    databaseURL: "https://lp-futbol-cfeff.firebaseio.com",
-    storageBucket: "lp-futbol-cfeff.appspot.com",
-    messagingSenderId: "679651523148"
+	apiKey: "AIzaSyC1LaYV7V3YafjF5SIMbGbSBxFazR22dbM",
+	authDomain: "lp-futbol-cfeff.firebaseapp.com",
+	databaseURL: "https://lp-futbol-cfeff.firebaseio.com",
+	storageBucket: "lp-futbol-cfeff.appspot.com",
+	messagingSenderId: "679651523148"
 };
 export const myFirebaseAuthConfig = {
 	provider: AuthProviders.Password,
 	method: AuthMethods.Password
 };
-
 
 @NgModule({
 	declarations: [
@@ -67,7 +67,7 @@ export const myFirebaseAuthConfig = {
 		FixturesPage,
 		GamePage,
 		MapPage,
-		SignInPage
+		SignInPage,
 	],
 	providers:
 	[{ provide: ErrorHandler, useClass: IonicErrorHandler },

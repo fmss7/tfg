@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Events} from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 
 import { TeamsPage, TeamHomePage, LeaguesPage, LeagueHomePage } from '../pages';
 import { UserSettings } from '../../services/userSettings.service';
@@ -24,6 +24,15 @@ export class HomePage {
 	ionViewDidLoad() {
 		this.refreshFavorites();
 		this.events.subscribe('favorites:changed', () => this.refreshFavorites());
+	}
+
+	ionViewDidEnter(){
+		/*
+		this.userSettings.getLoggedUser();
+		this.events.subscribe("user::getted", user => {
+			console.log(user);
+		});
+		*/
 	}
 
 	refreshFavorites() {

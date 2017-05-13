@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
-import { LPFutbolService } from '../../services/lp-futbol.service';
+import { NavController, NavParams, ToastController, Events } from 'ionic-angular';
+import { UserSettings } from '../../services/userSettings.service';
 import { AngularFire } from "angularfire2";
 
 @Component({
 	selector: 'signInPage',
 	templateUrl: 'signInPage.html'
 })
+
 export class SignInPage {
 
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
-		private lPFutbolService: LPFutbolService,
+		private userSettings: UserSettings,
 		private toastController: ToastController,
+		private events: Events,
 		private af: AngularFire) { }
 
 	signIn(email, password1, password2) {
@@ -64,18 +66,20 @@ export class SignInPage {
 			return false;
 		}
 
-		let success = this.lPFutbolService.createUser(email.value, password1.value);
-		if (success) {
-			this.navCtrl.popToRoot();
-		} else {
-			let toast = this.toastController.create({
-				message: 'Error al crear el usuario, puede que ya exista',
-				duration: 2000,
-				position: 'bottom'
-			});
-			toast.present();
-			return false;
-		}
+		this.userSettings.createUser(email.value, password1.value);
+		this.events.subscribe("user::created", boolean => {
+			if (boolean) {
+				this.navCtrl.popToRoot();
+			} else {
+				let toast = this.toastController.create({
+					message: 'Error al crear el usuario, puede que ya exista',
+					duration: 2000,
+					position: 'bottom'
+				});
+				toast.present();
+				return false;
+			}
+		});
 	}
 
 	goHome() {

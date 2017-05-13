@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { Nav, Platform, LoadingController, ModalController, ViewController, Events, ToastController} from 'ionic-angular';
+import {
+	Nav, Platform, LoadingController, ModalController,
+	ViewController, Events, ToastController, AlertController
+} from 'ionic-angular';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
 import { HomePage, TeamHomePage, LeagueHomePage, SignInPage } from '../pages/pages';
@@ -16,6 +19,7 @@ export class MyApp {
 
 	favoriteTeams: any[];
 	favoriteLeagues: any[];
+	user: any;
 	rootPage: any = HomePage;
 
 	constructor(
@@ -23,6 +27,8 @@ export class MyApp {
 		private userSettings: UserSettings,
 		private events: Events,
 		private loadingController: LoadingController,
+		private toastController: ToastController,
+		private alertController: AlertController,
 		public modalCtrl: ModalController) {
 		this.initializeApp();
 
@@ -34,14 +40,25 @@ export class MyApp {
 			Splashscreen.hide();
 		});
 		this.refreshFavorites();
-		this.events.subscribe('favorites:changed', () => this.refreshFavorites());
+		this.events.subscribe("favorites:changed", () => this.refreshFavorites());
+		this.events.subscribe("user:changed", () => this.refreshUser());
 		this.favoriteTeams = this.userSettings.getFavoriteTeams();
 		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
+		this.userSettings.getLoggedUser();
+		this.events.subscribe("user::getted", user => {
+			this.user = user;
+		});
 	}
 
 	refreshFavorites() {
 		this.favoriteTeams = this.userSettings.getFavoriteTeams();
 		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
+	}
+	refreshUser() {
+		this.userSettings.getLoggedUser();
+		this.events.subscribe("user::getted", user => {
+			this.user = user;
+		});
 	}
 
 	teamTapped($event, fav) {
@@ -65,6 +82,34 @@ export class MyApp {
 	logInTapped() {
 		let logInModal = this.modalCtrl.create(LogIn);
 		logInModal.present();
+	}
+	logOutTapped() {
+		let confirm = this.alertController.create({
+			title: "LogOut",
+			message: `¿Seguro que quieres salir?`,
+			buttons: [
+				{
+					text: 'Si',
+					handler: () => {
+						this.userSettings.logOut();
+						this.events.subscribe("logIn::done", success => {
+							if (success) {
+								//Code here
+							} else {
+								let toast = this.toastController.create({
+									message: 'Error al salir...',
+									duration: 2000,
+									position: 'bottom'
+								});
+								toast.present();
+							}
+						});
+					}
+				},
+				{ text: 'No' }
+			]
+		});
+		confirm.present();
 	}
 	signInTapped() {
 		this.nav.push(SignInPage);
@@ -137,7 +182,8 @@ export class LogIn {
 		public viewCtrl: ViewController,
 		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService,
-		private toastController: ToastController) {
+		private toastController: ToastController,
+		private events: Events) {
 	}
 
 	closeModal() {
@@ -145,59 +191,67 @@ export class LogIn {
 	}
 
 	logIn(email, password) {
-		let success = this.userSettings.logIn(email, password);
-		if (success) {
-			this.viewCtrl.dismiss();
-		}else{
-			let toast = this.toastController.create({
-				message: 'Error al acceder...',
-				duration: 2000,
-				position: 'bottom'
-			});
-			toast.present();
-		}
+		this.userSettings.logIn(email, password);
+		this.events.subscribe("logIn::done", success => {
+			if (success) {
+				this.viewCtrl.dismiss();
+			} else {
+				let toast = this.toastController.create({
+					message: 'Error al acceder...',
+					duration: 2000,
+					position: 'bottom'
+				});
+				toast.present();
+			}
+		});
+
 	}
 
 	loginWithGoogle() {
-		let success = this.userSettings.loginWithGoogle();
-		if (success) {
-			this.viewCtrl.dismiss();
-		}else{
-			let toast = this.toastController.create({
-				message: 'Error al acceder...',
-				duration: 2000,
-				position: 'bottom'
-			});
-			toast.present();
-		}
+		this.userSettings.loginWithGoogle();
+		this.events.subscribe("loginWithGoogle::done", success => {
+			if (success) {
+				this.viewCtrl.dismiss();
+			} else {
+				let toast = this.toastController.create({
+					message: 'Error al acceder...',
+					duration: 2000,
+					position: 'bottom'
+				});
+				toast.present();
+			}
+		});
 	}
 
 	loginWithFacebook() {
-		let success = this.userSettings.loginWithFacebook();
-		if (success) {
-			this.viewCtrl.dismiss();
-		}else{
-			let toast = this.toastController.create({
-				message: 'Error al acceder...',
-				duration: 2000,
-				position: 'bottom'
-			});
-			toast.present();
-		}
+		this.userSettings.loginWithFacebook();
+		this.events.subscribe("loginWithFacebook::done", success => {
+			if (success) {
+				this.viewCtrl.dismiss();
+			} else {
+				let toast = this.toastController.create({
+					message: 'Error al acceder...',
+					duration: 2000,
+					position: 'bottom'
+				});
+				toast.present();
+			}
+		});
 	}
 
 	loginWithTwitter() {
-		let success = this.userSettings.loginWithTwitter();
-		if (success) {
-			this.viewCtrl.dismiss();
-		}else{
-			let toast = this.toastController.create({
-				message: 'Error al acceder...',
-				duration: 2000,
-				position: 'bottom'
-			});
-			toast.present();
-		}
+		this.userSettings.loginWithTwitter();
+		this.events.subscribe("loginWithTwitter::done", success => {
+			if (success) {
+				this.viewCtrl.dismiss();
+			} else {
+				let toast = this.toastController.create({
+					message: 'Error al acceder...',
+					duration: 2000,
+					position: 'bottom'
+				});
+				toast.present();
+			}
+		});
 	}
-
 }

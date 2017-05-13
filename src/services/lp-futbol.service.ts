@@ -23,7 +23,7 @@ export class LPFutbolService {
 	}
 
 	getAllClubs(): Observable<any> {
-		return this.af.database.list(this.baseUrl + '/clubs');
+		return this.af.database.list(`${this.baseUrl}/clubs`);
 	}
 
 	getLeagueData(id_league): Observable<any> {
@@ -64,52 +64,16 @@ export class LPFutbolService {
 		});
 		delete game.goalsDisplay;
 		delete game.opponent;
-		this.af.database.list(`/leagues-data/${this.currentLeagueId}/games`).update(index.toString(), game);
+		this.af.database.list(this.baseUrl + `/leagues-data/${this.currentLeagueId}/games`).update(index.toString(), game);
 	}
 
-	createUser(email, password): any {
-		let boolean = false;
-		this.af.auth.createUser({ email: email, password: password })
-			.then(
-			(success) => {
-				let newUser = {
-					"uid": success.uid,
-					"email": email,
-					"role-value": 2,
-					"favorite-teams": [],
-					"favorite-leagues": []
-				};
-				this.af.database.object(`/users/${success.uid}`);
-				this.af.database.list('/users/').update(success.uid, newUser);
-				boolean = true;
-			}).catch(
-			(err) => {
-				console.log(err);
-			});
-		return boolean;
+	obtenerTodasLasLigas(): Observable<any> {
+		return this.af.database.list(`${this.baseUrl}/leagues-data`);
+	}
+	escribirTodasLasLigas(ligas){
+		console.log(ligas);
+		return this.af.database.list(`${this.baseUrl}`).update("leagues-data", ligas);
 	}
 
-	writeUser(uid, email) {
-		this.af.database.object(`users/${uid}`)
-			.subscribe(data => {
-				if (data.$value == null) {
-					let user = {
-						"uid": uid,
-						"email": email,
-						"role-value": 2,
-						"favorite-teams": [],
-						"favorite-leagues": []
-					}
-					this.af.database.object('/users/' + user.uid);
-					this.af.database.list('/users/').update(user.uid, user);
-				}
-			});
-	}
-
-/*
-	addFavoriteTeam(team){
-		this.af.database.list(`/users/${this.currentLeagueId}/games`).update(index.toString(), game);
-	}
-*/
 }
 

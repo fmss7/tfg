@@ -90,8 +90,31 @@ export class UserSettings {
 			if (key.indexOf('@') != -1) {
 				item.push(JSON.parse(value));
 			}
+			this.events.publish("storageTeams::getted", item);
 		});
-		return item;
+
+		this.events.subscribe("storageTeams::getted", item => {
+			if (item.length == 0) {
+				this.storage.get("user").then(user => {
+					if (user) {
+						this.af.database.list(`/users/${user.uid}/favoriteTeams`)
+							.subscribe(favoriteTeams => {
+								item = [];
+								_.forIn(favoriteTeams, (value, key) => {
+									if (value.$value != 0) {
+										item.push(value);
+										this.storage.set(value.id_team, JSON.stringify(value));
+									}
+								});
+								this.events.publish("favoriteTeams:getted", item);
+							});
+					}
+				});
+			} else {
+				this.events.publish("favoriteTeams:getted", item);
+			}
+		});
+
 	}
 
 	getFavoriteLeagues() {
@@ -100,9 +123,30 @@ export class UserSettings {
 			if (key.indexOf('@') == -1 && key != "user") {
 				item.push(JSON.parse(value));
 			}
-
+			this.events.publish("storageLeagues::getted", item);
 		});
-		return item;
+
+		this.events.subscribe("storageLeagues::getted", item => {
+			if (item.length == 0) {
+				this.storage.get("user").then(user => {
+					if (user) {
+						this.af.database.list(`/users/${user.uid}/favoriteLeagues`)
+							.subscribe(favoriteLeagues => {
+								item = [];
+								_.forIn(favoriteLeagues, (value, key) => {
+									if (value.$value != 0) {
+										item.push(value);
+										this.storage.set(value.id_team, JSON.stringify(value));
+									}
+								});
+								this.events.publish("favoriteLeagues:getted", item);
+							});
+					}
+				});
+			} else {
+				this.events.publish("favoriteLeagues:getted", item);
+			}
+		});
 	}
 
 	createUser(email, password): any {

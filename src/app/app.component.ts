@@ -39,20 +39,38 @@ export class MyApp {
 			StatusBar.styleDefault();
 			Splashscreen.hide();
 		});
+
 		this.refreshFavorites();
 		this.events.subscribe("favorites:changed", () => this.refreshFavorites());
+		this.refreshUser();
 		this.events.subscribe("user:changed", () => this.refreshUser());
-		this.favoriteTeams = this.userSettings.getFavoriteTeams();
-		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
-		this.userSettings.getLoggedUser();
+
+		/*this.userSettings.getFavoriteTeams();
+		this.events.subscribe("favoriteTeams:getted", favoriteTeams => {
+			this.favoriteTeams = favoriteTeams;
+		});*/
+
+		/*this.userSettings.getFavoriteLeagues();
+		this.events.subscribe("favoriteLeagues:getted", favoriteLeagues => {
+			this.favoriteLeagues = favoriteLeagues;
+		});*/
+
+		/*this.userSettings.getLoggedUser();
 		this.events.subscribe("user::getted", user => {
 			this.user = user;
-		});
+		});*/
 	}
 
 	refreshFavorites() {
-		this.favoriteTeams = this.userSettings.getFavoriteTeams();
-		this.favoriteLeagues = this.userSettings.getFavoriteLeagues();
+		this.userSettings.getFavoriteTeams();
+		this.events.subscribe("favoriteTeams:getted", favoriteTeams => {
+			this.favoriteTeams = favoriteTeams;
+		});
+
+		this.userSettings.getFavoriteLeagues();
+		this.events.subscribe("favoriteLeagues:getted", favoriteLeagues => {
+			this.favoriteLeagues = favoriteLeagues;
+		});
 	}
 	refreshUser() {
 		this.userSettings.getLoggedUser();

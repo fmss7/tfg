@@ -16,10 +16,10 @@
 		<ion-list>
 			<ion-list-header>Favoritos</ion-list-header>
 			<button menuClose ion-item *ngFor="let fav of favoriteTeams" (click)="teamTapped($event, fav)">
-				{{fav.name}} {{fav.label}} <p>{{fav.league.name}}</p>
+				{{fav?.name}} {{fav.label}} <p>{{fav.league.name}}</p>
 			</button>
 			<button menuClose ion-item *ngFor="let fav of favoriteLeagues" (click)="leagueTapped($event, fav)">
-				{{fav.name}} <p>{{fav.category}}</p>
+				{{fav?.name}} <p>{{fav.category}}</p>
 			</button>
 		</ion-list>
 

@@ -68,10 +68,11 @@ export class LPFutbolService {
 	}
 
 	obtenerTodasLasLigas(): Observable<any> {
+		console.log("moc? ");
 		return this.af.database.list(`${this.baseUrl}/leagues-data`);
 	}
 	escribirTodasLasLigas(ligas){
-		console.log(ligas);
+		console.log("moc? ", ligas);
 		return this.af.database.list(`${this.baseUrl}`).update("leagues-data", ligas);
 	}
 

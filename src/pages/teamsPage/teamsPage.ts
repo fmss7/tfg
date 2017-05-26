@@ -31,8 +31,12 @@ export class TeamsPage {
 			duration: 3000
 		});
 		loader.present().then(() => {
-			this.lPFutbolService.getAllClubs().subscribe(res => {
-				this.clubs = res;
+			this.lPFutbolService.getAllClubs().subscribe(clubs => {
+				let aux = [];
+				_.forEach(clubs, club =>{
+					aux.push(club);
+				});
+				this.clubs = aux;
 				for (let club of this.clubs) {
 					club["showTeams"] = false;
 				}

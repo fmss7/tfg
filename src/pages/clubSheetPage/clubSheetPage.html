@@ -5,10 +5,18 @@
 </ion-header>
 
 <ion-content padding>
+	<button ion-button (click)="editInformation()" *ngIf="!edition && user?.id_club==club?.id_club">
+		Editar Info<ion-icon icon-right name="build" style="margin-left: 2%"></ion-icon>
+	</button>
+	<button ion-button (click)="saveInformation()" *ngIf="edition">
+		Guardar Info<ion-icon icon-right name="create" style="margin-left: 2%"></ion-icon>
+	</button>
 	<ion-list>
 		<ion-row>
 			<ion-col text-center width-75>
-				<h5 style="text-align: justify;">{{club?.information}}</h5>
+				<h5 style="text-align: justify;" *ngIf="!edition">{{club.information}}</h5>
+				<!--<ion-input type="text" [value]="club?.information" style="text-align: justify;" *ngIf="edition"></ion-input>-->
+				<ion-textarea [(ngModel)]="club.information" *ngIf="edition"></ion-textarea>
 			</ion-col>
 			<ion-col width-25>
 				<ion-avatar><img name="clubBadge" [alt]="club.name" [src]='clubBadgeUrl' (error)="updateClubBadgeUrl($event)" /></ion-avatar>
@@ -17,20 +25,25 @@
 		<ion-item-group>
 			<ion-item>
 				<h3>Sede:</h3>
-				<h2>{{club?.head_office}}</h2>
+				<h2 *ngIf="!edition">{{club.head_office}}</h2>
+				<ion-input type="text" [(ngModel)]="club.head_office" *ngIf="edition"></ion-input>
 			</ion-item>
 			<ion-item>
 				<h3>Teléfono:</h3>
-				<h2>{{club?.phone_number}}</h2>
+				<h2 *ngIf="!edition">{{club.phone_number}}</h2>
+				<ion-input type="text" [(ngModel)]="club.phone_number" *ngIf="edition"></ion-input>
 			</ion-item>
 			<ion-item>
 				<h3>Campo de fútbol:</h3>
 				<h2>{{location?.name}}</h2>
+				<!--<ion-input type="text" [(ngModel)]="location.name" *ngIf="edition"></ion-input>-->
 			</ion-item>
 			<ion-item>
 				<h3>Lugar:</h3>
-				<h2>{{location?.addres}} {{location?.place}}</h2>
+				<h2>{{address_place}}</h2>
+				<!--<ion-input type="text" [(ngModel)]="address_place" *ngIf="edition"></ion-input>-->
 			</ion-item>
 		</ion-item-group>
 	</ion-list>
+
 </ion-content>

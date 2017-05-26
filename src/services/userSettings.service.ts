@@ -34,6 +34,45 @@ export class UserSettings {
 	addFavoriteTeam(team) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				let teamKey;
+				let teamCat = team.id_team.substring(team.id_team.indexOf('@') + 1);
+				switch (teamCat) {
+					case "reg-pref":
+						teamKey = "0";
+						break;
+					case "juv-ddh":
+						teamKey = "1";
+						break;
+					case "juv-pref":
+						teamKey = "2";
+						break;
+					case "cad-pref":
+						teamKey = "3";
+						break;
+					case "cad-priG1":
+						teamKey = "4";
+						break;
+					case "cad-priG2":
+						teamKey = "5";
+						break;
+					case "inf-prefG1":
+						teamKey = "6";
+						break;
+					case "inf-prefG2":
+						teamKey = "7";
+						break;
+					case "ale-prefG1":
+						teamKey = "8";
+						break;
+					case "ale-prefG2":
+						teamKey = "9";
+						break;
+					default:
+						break;
+				}
+				let id_club = team.id_team.substring(0, team.id_team.indexOf('@'));
+				this.af.database.object(`/clubs/${id_club}/teams/${teamKey}/followers/${user.uid}`);
+				this.af.database.list(`/clubs/${id_club}/teams/${teamKey}/followers`).update(user.uid, user);
 				this.af.database.object(`/users/${user.uid}/favoriteTeams/${team.id_team}`);
 				this.af.database.list(`/users/${user.uid}/favoriteTeams`).update(team.id_team, team)
 					.then(() => {
@@ -60,6 +99,44 @@ export class UserSettings {
 	unFavoriteTeam(id_team) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				let teamKey;
+				let teamCat = id_team.substring(id_team.indexOf('@') + 1);
+				switch (teamCat) {
+					case "reg-pref":
+						teamKey = "0";
+						break;
+					case "juv-ddh":
+						teamKey = "1";
+						break;
+					case "juv-pref":
+						teamKey = "2";
+						break;
+					case "cad-pref":
+						teamKey = "3";
+						break;
+					case "cad-priG1":
+						teamKey = "4";
+						break;
+					case "cad-priG2":
+						teamKey = "5";
+						break;
+					case "inf-prefG1":
+						teamKey = "6";
+						break;
+					case "inf-prefG2":
+						teamKey = "7";
+						break;
+					case "ale-prefG1":
+						teamKey = "8";
+						break;
+					case "ale-prefG2":
+						teamKey = "9";
+						break;
+					default:
+						break;
+				}
+				let id_club = id_team.substring(0, id_team.indexOf('@'));
+				this.af.database.list(`/clubs/${id_club}/teams/${teamKey}/followers`).remove(user.uid)
 				this.af.database.list(`/users/${user.uid}/favoriteTeams`).remove(id_team)
 					.then(() => {
 						this.getUserFromFB(user.uid);
@@ -136,7 +213,7 @@ export class UserSettings {
 								_.forIn(favoriteLeagues, (value, key) => {
 									if (value.$value != 0) {
 										item.push(value);
-										this.storage.set(value.id_team, JSON.stringify(value));
+										this.storage.set(value.id_league, JSON.stringify(value));
 									}
 								});
 								this.events.publish("favoriteLeagues:getted", item);
@@ -272,9 +349,8 @@ export class UserSettings {
 					let user = {
 						"uid": uid,
 						"email": email,
-						"roleValue": 2,
-						"favoriteTeams": [0],
-						"favoriteLeagues": [0]
+						"roleValue": 1,
+						"id_club": "adclaret"
 					}
 					this.af.database.object(`/users/${user.uid}`);
 					this.af.database.list('/users/').update(user.uid, user);
@@ -285,13 +361,9 @@ export class UserSettings {
 	getUserFromFB(uid): Observable<any> {
 		return this.af.database.list(`${this.baseUrl}/users/${uid}`)
 			.map(user => {
-				this.userProfile = {
-					"email": user[0].$value,
-					"favoriteLeagues": user[1],
-					"favoriteTeams": user[2],
-					"roleValue": user[3].$value,
-					"uid": user[4].$value
-				}
+				_.forEach(user, value => {
+					value.$value ? this.userProfile[value.$key] = value.$value : this.userProfile[value.$key] = value;
+				});
 				this.storage.set("user", this.userProfile).then(() => {
 					this.events.publish('user:changed');
 				});

@@ -27,29 +27,24 @@ export class LPFutbolService {
 	}
 
 	getLeagueData(id_league): Observable<any> {
-		return this.af.database.list(this.baseUrl + '/leagues-data/' + id_league)
+		return this.af.database.list(`${this.baseUrl}/leagues-data/${id_league}`)
 			.map(res => {
-				this.currentLeague = {
-					"category": res[0].$value,
-					"games": res[1],
-					"name": res[2].$value,
-					"teams": res[3]
-				}
+				_.forEach(res, value => {
+					value.$value ? this.currentLeague[value.$key] = value.$value : this.currentLeague[value.$key] = value;
+				});
 				this.currentLeagueId = id_league;
 				return this.currentLeague;
 			});
 	};
 
 	getLocation(id_location): Observable<any> {
-		return this.af.database.list(this.baseUrl + '/locations/' + id_location)
+		return this.af.database.list(`${this.baseUrl}/locations/${id_location}`)
 			.map(res => {
-				return {
-					"address": res[0].$value,
-					"lati": res[1].$value,
-					"long": res[2].$value,
-					"name": res[3].$value,
-					"place": res[4].$value
-				};
+				let location = {};
+				_.forEach(res, value => {
+					value.$value ? location[value.$key] = value.$value : location[value.$key] = value;
+				});
+				return location;
 			});
 	}
 
@@ -57,21 +52,28 @@ export class LPFutbolService {
 		return this.currentLeague;
 	}
 
-	updateGameScore(game) {
+	updateGameScore(game){
 		let index: number;
 		index = _.findIndex(this.currentLeague.games, g => {
 			return g.id_game == game.id_game;
 		});
 		delete game.goalsDisplay;
 		delete game.opponent;
-		this.af.database.list(this.baseUrl + `/leagues-data/${this.currentLeagueId}/games`).update(index.toString(), game);
+		this.af.database.list(this.baseUrl + `/leagues-data/${this.currentLeagueId}/games`).update(index.toString(), game)
+		.then(() => {
+			this.events.publish("game::updated");
+		});
+	}
+
+	editClub(club){
+		this.af.database.list(this.baseUrl + `/clubs/`).update(club.$key, club);
 	}
 
 	obtenerTodasLasLigas(): Observable<any> {
 		console.log("moc? ");
 		return this.af.database.list(`${this.baseUrl}/leagues-data`);
 	}
-	escribirTodasLasLigas(ligas){
+	escribirTodasLasLigas(ligas) {
 		console.log("moc? ", ligas);
 		return this.af.database.list(`${this.baseUrl}`).update("leagues-data", ligas);
 	}

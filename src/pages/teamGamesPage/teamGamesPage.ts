@@ -44,6 +44,7 @@ export class TeamGamesPage {
 					return {
 						id_game: g.id_game,
 						fixture: g.fixture,
+						id_hostClub: g.id_hostClub,
 						id_host: g.id_host,
 						host: g.host,
 						hostGoals: g.hostGoals,
@@ -107,7 +108,6 @@ export class TeamGamesPage {
 		} else {
 			this.isFollowing = true;
 			this.userSettings.addFavoriteTeam(this.team);
-			//this.lPFutbolService.addFavoriteTeam(this.team);
 			let toast = this.toastController.create({
 				message: 'Has empezado a seguir a este equipo',
 				duration: 1250,

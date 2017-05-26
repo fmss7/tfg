@@ -66,8 +66,9 @@
 			"name": "Alevín"
 		}
 	],
-	"clubs": [
+	"clubs": 
 		{
+		"adhuracan": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "adhuracan",
 			"id_location": "loc-5",
@@ -177,7 +178,7 @@
 				}
 			]
 		},
-		{
+		"cefpuertoslp": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cefpuertoslp",
 			"id_location": "loc-3",
@@ -287,7 +288,7 @@
 				}
 			]
 		},
-		{
+		"udlp": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "udlp",
 			"id_location": "loc-1",
@@ -397,7 +398,7 @@
 				}
 			]
 		},
-		{
+		"adclaret": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "adclaret",
 			"id_location": "loc-4",
@@ -507,7 +508,7 @@
 				}
 			]
 		},
-		{
+		"cdfaycan": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cdfaycan",
 			"id_location": "loc-2",
@@ -617,7 +618,7 @@
 				}
 			]
 		},
-		{
+		"acodetticf": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "acodetticf",
 			"id_location": "loc-6",
@@ -727,7 +728,7 @@
 				}
 			]
 		},
-		{
+		"udtelde": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "udtelde",
 			"id_location": "loc-7",
@@ -837,7 +838,7 @@
 				}
 			]
 		},
-		{
+		"cfunionviera": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cfunionviera",
 			"id_location": "loc-8",
@@ -947,7 +948,7 @@
 				}
 			]
 		},
-		{
+		"cdarguineguin": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cdarguineguin",
 			"id_location": "loc-9",
@@ -1057,7 +1058,7 @@
 				}
 			]
 		},
-		{
+		"cddoramas": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cddoramas",
 			"id_location": "loc-10",
@@ -1167,7 +1168,7 @@
 				}
 			]
 		},
-		{
+		"arucascf": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "arucascf",
 			"id_location": "loc-11",
@@ -1277,7 +1278,7 @@
 				}
 			]
 		},
-		{
+		"cdmaspalomas": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cdmaspalomas",
 			"id_location": "loc-12",
@@ -1387,7 +1388,7 @@
 				}
 			]
 		},
-		{
+		"rcvictoria": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "rcvictoria",
 			"id_location": "loc-13",
@@ -1497,7 +1498,7 @@
 				}
 			]
 		},
-		{
+		"udteror": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "udteror",
 			"id_location": "loc-14",
@@ -1607,7 +1608,7 @@
 				}
 			]
 		},
-		{
+		"udvalsequillo": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "udvalsequillo",
 			"id_location": "loc-15",
@@ -1717,7 +1718,7 @@
 				}
 			]
 		},
-		{
+		"cdcarnevali": {
 			"head_office": "Calle Elm 74, Las Palmas de Gran Canaria",
 			"id_club": "cdcarnevali",
 			"id_location": "loc-16",
@@ -1827,7 +1828,7 @@
 				}
 			]
 		}
-	],
+	},
 	"leagues-data": {
 		"ale-prefG1": {
 			"category": "Alevín",

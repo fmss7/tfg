@@ -3,6 +3,7 @@ import { NavController, NavParams, LoadingController, Events } from 'ionic-angul
 import { FirebaseApp } from 'angularfire2';
 import { MapPage, TeamHomePage } from '../../pages/pages';
 import { LPFutbolService } from '../../services/lp-futbol.service';
+import { UserSettings } from '../../services/userSettings.service';
 
 declare var window: any;
 
@@ -14,16 +15,19 @@ export class GamePage {
 
 	game: any;
 	storage: any;
+	startedGame: boolean;
 	//badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
 	hostBadgeUrl: string;
 	guestBadgeUrl: string;
 	//urls: number = 0;
+	user: any;
 
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private events: Events,
 		private loadingController: LoadingController,
+		private userSettings: UserSettings,
 		private lPFutbolService: LPFutbolService,
 		@Inject(FirebaseApp) private firebaseApp: any) {
 		this.game = this.navParams.data;
@@ -36,11 +40,12 @@ export class GamePage {
 			cssClass: 'loadingController'
 		});
 		loader.present().then(() => {
+			this.game.hostGoals >= 0 || this.game.guestGoals >= 0 ? this.startedGame = true : this.startedGame = false;
 			let host = this.game.id_host.substring(0, this.game.id_host.indexOf('@')) + ".png";
 			let guest = this.game.id_guest.substring(0, this.game.id_guest.indexOf('@')) + ".png";
 			//let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
-			this.hostBadgeUrl = "/assets/escudos/" + host;
-			this.guestBadgeUrl = "/assets/escudos/" + guest;
+			this.hostBadgeUrl = `/assets/escudos/${host}`;
+			this.guestBadgeUrl = `/assets/escudos/${guest}`;
 			/*
 			storageRefHost.getDownloadURL().then(url => {
 				this.hostBadgeUrl = url;
@@ -53,8 +58,13 @@ export class GamePage {
 				this.events.publish('guestImg:getted');
 			});
 			*/
+			this.userSettings.getLoggedUser();
+			this.events.subscribe("user::getted", user => {
+				this.user = user;
+			});
+
 			loader.dismiss();
-			//this.events.subscribe('loader:dismiss', () => loader.dismiss());
+			//this.events.subscribe('loader::dismiss', () => loader.dismiss());
 		});
 	}
 
@@ -64,7 +74,7 @@ export class GamePage {
 				$event.target.src = this.hostBadgeUrl;
 				this.urls++;
 				if (this.urls == 2) {
-					this.events.publish('loader:dismiss');
+					this.events.publish('loader::dismiss');
 				}
 			});
 		}
@@ -78,6 +88,15 @@ export class GamePage {
 			}
 		}
 	*/
+
+	startGame(){
+		this.game.hostGoals = 0;
+		this.game.guestGoals = 0;
+		this.lPFutbolService.updateGameScore(this.game);
+		this.events.subscribe("game::updated", () => {
+			this.startedGame = true;
+		});
+	}
 
 	addHostGoal() {
 		this.game.hostGoals += 1;

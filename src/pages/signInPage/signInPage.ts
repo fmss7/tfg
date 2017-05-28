@@ -40,7 +40,7 @@ export class SignInPage {
 		}
 		if (password1.value.length < 6) {
 			let toast = this.toastController.create({
-				message: 'La contraseña debe tener más de 4 caracteres',
+				message: 'La contraseña debe tener más de 5 caracteres',
 				duration: 1500,
 				position: 'bottom'
 			});
@@ -67,8 +67,9 @@ export class SignInPage {
 		}
 
 		this.userSettings.createUser(email.value, password1.value);
-		this.events.subscribe("user::created", boolean => {
+		this.events.subscribe("user::created", boolean=> {
 			if (boolean) {
+				this.userSettings.logIn(email.value, password1.value);
 				this.navCtrl.popToRoot();
 			} else {
 				let toast = this.toastController.create({

@@ -9,6 +9,7 @@
 		<ion-list>
 			<ion-list-header>Cuenta</ion-list-header>
 			<button menuClose ion-item (click)="logInTapped()" *ngIf="!user"><ion-icon name="log-in"></ion-icon> Entra</button>
+			<button menuClose ion-item (click)="userTapped()" *ngIf="user"><ion-icon name="contact"></ion-icon> Perfil</button>
 			<button menuClose ion-item (click)="logOutTapped()" *ngIf="user"><ion-icon name="log-out"></ion-icon> Salir</button>
 			<button menuClose ion-item (click)="signInTapped()" *ngIf="!user"><ion-icon name="person-add"></ion-icon> Regístrate</button>
 		</ion-list>

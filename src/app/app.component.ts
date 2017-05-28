@@ -6,7 +6,7 @@ import {
 } from 'ionic-angular';
 import { Splashscreen } from '@ionic-native/splashscreen';
 import { StatusBar } from '@ionic-native/statusbar';
-import { HomePage, TeamHomePage, LeagueHomePage, SignInPage } from '../pages/pages';
+import { HomePage, TeamHomePage, LeagueHomePage, SignInPage, UserPage } from '../pages/pages';
 import { LPFutbolService } from '../services/lp-futbol.service';
 import { UserSettings } from '../services/userSettings.service';
 
@@ -100,6 +100,9 @@ export class MyApp {
 	logInTapped() {
 		let logInModal = this.modalCtrl.create(LogIn);
 		logInModal.present();
+	}
+	userTapped(){
+		this.nav.push(UserPage, this.user);
 	}
 	logOutTapped() {
 		let confirm = this.alertController.create({
@@ -209,7 +212,7 @@ export class LogIn {
 	}
 
 	logIn(email, password) {
-		this.userSettings.logIn(email, password);
+		this.userSettings.logIn(email.value, password.value);
 		this.events.subscribe("logIn::done", success => {
 			if (success) {
 				this.viewCtrl.dismiss();

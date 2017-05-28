@@ -1,0 +1,55 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+		<ion-title>Perfil de Usuario</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+		<ion-item-group>
+
+			<ion-item>
+				<h3>email:</h3>
+				<h2>{{user.email}}</h2>
+				<!--<ion-input type="text" [value]="user.email"></ion-input>-->
+			</ion-item>
+			<ion-input [(ngModel)]="newEmail" type="email" placeholder="Nueva dirección de correo" *ngIf="changingEmail"></ion-input>
+			<ion-input [(ngModel)]="password" type="password" placeholder="Tu contraseña" *ngIf="changingEmail"></ion-input>
+			<ion-input [(ngModel)]="password" type="password" placeholder="Tu contraseña" *ngIf="changingPassword"></ion-input>
+			<ion-input [(ngModel)]="newPassword1" type="password" placeholder="Nueva contraseña" *ngIf="changingPassword"></ion-input>
+			<ion-input [(ngModel)]="newPassword2" type="password" placeholder="Nueva contraseña" *ngIf="changingPassword"></ion-input>
+			<button ion-button (click)="changeEmail()" *ngIf="!changingEmail && !changingPassword">Cambiar Email</button>
+			<button ion-button (click)="changePassword()" *ngIf="!changingPassword && !changingEmail">Cambiar Contraseña</button>
+			<button ion-button (click)="saveEmail()" *ngIf="changingEmail">Guardar Email</button>
+			<button ion-button (click)="cancelEmail()" *ngIf="changingEmail">Cancelar</button>
+			<button ion-button (click)="savePassword()" *ngIf="changingPassword">Guardar Contraseña</button>
+			<button ion-button (click)="cancelPassword()" *ngIf="changingPassword">Cancelar</button>
+
+			<ion-card>
+				<ion-card-header>Equipos Favoritos:</ion-card-header>
+				<ion-card-content>
+					<ion-item *ngFor="let favTeam of favoriteTeams; let i = index">
+						<h2>{{favTeam?.name}} {{favTeam?.label}}</h2>
+						<h3>{{favTeam?.league.name}}</h3>
+					</ion-item>
+				</ion-card-content>
+			</ion-card>
+
+			<ion-card>
+				<ion-card-header>Ligas Favoritas:</ion-card-header>
+				<ion-card-content>
+					<ion-item *ngFor="let favLeague of favoriteLeagues; let i = index">
+						<h2>{{favLeague?.name}}</h2>
+					</ion-item>
+				</ion-card-content>
+			</ion-card>
+
+		</ion-item-group>
+	</ion-list>
+
+</ion-content>

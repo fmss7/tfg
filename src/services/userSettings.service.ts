@@ -9,6 +9,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { LPFutbolService } from '../services/lp-futbol.service';
 import { Observable } from 'rxjs/Observable';
 import * as _ from 'lodash';
+import { Md5 } from 'ts-md5/dist/md5';
 //import 'rxjs';
 
 @Injectable()
@@ -76,7 +77,7 @@ export class UserSettings {
 				this.af.database.object(`/users/${user.uid}/favoriteTeams/${team.id_team}`);
 				this.af.database.list(`/users/${user.uid}/favoriteTeams`).update(team.id_team, team)
 					.then(() => {
-						this.getUserFromFB(user.uid);
+						this.getUserFromFB(user.uid, user.password);
 					});
 			}
 		});
@@ -89,7 +90,7 @@ export class UserSettings {
 				this.af.database.object(`/users/${user.uid}/favoriteLeagues/${league.id_league}`);
 				this.af.database.list(`/users/${user.uid}/favoriteLeagues`).update(league.id_league, league)
 					.then(() => {
-						this.getUserFromFB(user.uid);
+						this.getUserFromFB(user.uid, user.password);
 					});
 			}
 		});
@@ -136,10 +137,10 @@ export class UserSettings {
 						break;
 				}
 				let id_club = id_team.substring(0, id_team.indexOf('@'));
-				this.af.database.list(`/clubs/${id_club}/teams/${teamKey}/followers`).remove(user.uid)
+				this.af.database.list(`/clubs/${id_club}/teams/${teamKey}/followers`).remove(user.uid);
 				this.af.database.list(`/users/${user.uid}/favoriteTeams`).remove(id_team)
 					.then(() => {
-						this.getUserFromFB(user.uid);
+						this.getUserFromFB(user.uid, user.password);
 					});
 			}
 		});
@@ -150,7 +151,7 @@ export class UserSettings {
 			if (user) {
 				this.af.database.list(`/users/${user.uid}/favoriteLeagues`).remove(id_league)
 					.then(() => {
-						this.getUserFromFB(user.uid);
+						this.getUserFromFB(user.uid, user.password);
 					});
 			}
 		});
@@ -226,14 +227,18 @@ export class UserSettings {
 		});
 	}
 
-	createUser(email, password): any {
+	createUser(email, password) {
 		let boolean = false;
 		this.af.auth.createUser({ email: email, password: password })
 			.then(
 			(success) => {
 				boolean = true;
-				this.writeUser(success.uid, email);
-				this.events.publish("user::created", boolean);
+				this.writeUser(success.uid, email).then(writen => {
+					if (writen) {
+						this.events.publish("user::created", boolean);
+					}
+				});
+
 			}).catch(
 			(err) => {
 				console.log(err);
@@ -243,10 +248,10 @@ export class UserSettings {
 
 	logIn(email, password) {
 		let boolean = false;
-		this.af.auth.login({ email: email.value, password: password.value })
+		this.af.auth.login({ email: email, password: password })
 			.then(success => {
 				boolean = true;
-				this.getUserFromFB(success.uid).subscribe(() => {
+				this.getUserFromFB(success.uid, password).subscribe(() => {
 					this.events.publish("logIn::done", boolean);
 				});
 
@@ -343,27 +348,26 @@ export class UserSettings {
 	}
 
 	writeUser(uid, email): any {
-		this.af.database.object(`users/${uid}`)
-			.subscribe(data => {
-				if (data.$value == null) {
-					let user = {
-						"uid": uid,
-						"email": email,
-						"roleValue": 1,
-						"id_club": "adclaret"
-					}
-					this.af.database.object(`/users/${user.uid}`);
-					this.af.database.list('/users/').update(user.uid, user);
-				}
-			});
+		let user = {
+			"uid": uid,
+			"email": email,
+			"roleValue": 2,
+			"id_club": ""
+		}
+		this.af.database.object(`users/${uid}`);
+		this.af.database.list('/users').update(uid, user).then(() => {
+			return true;
+		});
+
 	}
 
-	getUserFromFB(uid): Observable<any> {
+	getUserFromFB(uid, password?): Observable<any> {
 		return this.af.database.list(`${this.baseUrl}/users/${uid}`)
 			.map(user => {
 				_.forEach(user, value => {
 					value.$value ? this.userProfile[value.$key] = value.$value : this.userProfile[value.$key] = value;
 				});
+				this.userProfile["password"] = Md5.hashStr(password);
 				this.storage.set("user", this.userProfile).then(() => {
 					this.events.publish('user:changed');
 				});
@@ -374,6 +378,38 @@ export class UserSettings {
 	getLoggedUser() {
 		this.storage.get("user").then(user => {
 			this.events.publish("user::getted", user);
+		});
+	}
+
+	updateEmail(newEmail) {
+		let boolean = false;
+		this.af.auth.getAuth().auth.updateEmail(newEmail)
+			.then(() => {
+				boolean = true;
+				let email = {
+					"email": newEmail
+				}
+				this.af.database.list(`/users`).update(this.af.auth.getAuth().uid, email).then(() => {
+					this.events.publish("userEmail::updated", boolean);
+				});
+
+			})
+			.catch(e => {
+				console.error(e);
+				this.events.publish("userEmail::updated", boolean);
+			});
+	}
+
+	updatePassword(newPassword) {
+		this.af.auth.getAuth().auth.updatePassword(newPassword).then(() => {
+			this.storage.get("user").then(user => {
+				this.userProfile = user;
+				this.userProfile["password"] = Md5.hashStr(newPassword);
+				this.storage.set("user", this.userProfile).then(() => {
+					this.events.publish('user:changed');
+					this.events.publish("password::updated", true);
+				});
+			})
 		});
 	}
 

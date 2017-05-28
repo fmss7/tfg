@@ -247,6 +247,7 @@ export class UserSettings {
 	}
 
 	logIn(email, password) {
+		//sd
 		let boolean = false;
 		this.af.auth.login({ email: email, password: password })
 			.then(success => {

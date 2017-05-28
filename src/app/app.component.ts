@@ -113,9 +113,9 @@ export class MyApp {
 					text: 'Si',
 					handler: () => {
 						this.userSettings.logOut();
-						this.events.subscribe("logIn::done", success => {
+						this.events.subscribe("logOut::done", success => {
 							if (success) {
-								//Code here
+								console.log("Hacer algo...?")
 							} else {
 								let toast = this.toastController.create({
 									message: 'Error al salir...',
@@ -214,6 +214,7 @@ export class LogIn {
 	logIn(email, password) {
 		this.userSettings.logIn(email.value, password.value);
 		this.events.subscribe("logIn::done", success => {
+			console.log(success);
 			if (success) {
 				this.viewCtrl.dismiss();
 			} else {
@@ -225,7 +226,6 @@ export class LogIn {
 				toast.present();
 			}
 		});
-
 	}
 
 	loginWithGoogle() {

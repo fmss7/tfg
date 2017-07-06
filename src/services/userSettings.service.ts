@@ -11,6 +11,7 @@ import { Observable } from 'rxjs/Observable';
 import * as _ from 'lodash';
 import { Md5 } from 'ts-md5/dist/md5';
 //import 'rxjs';
+import { Push, PushToken } from '@ionic/cloud-angular';
 
 @Injectable()
 
@@ -30,11 +31,15 @@ export class UserSettings {
 		private af: AngularFire,
 		private auth: AngularFireAuth,
 		private storage: Storage,
-		private lPFutbolService: LPFutbolService) { }
+		private lPFutbolService: LPFutbolService,
+		public push: Push) { }
 
 	addFavoriteTeam(team) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				user = JSON.parse(user);
+				if(user.favoriteTeams && user.favoriteTeams.$key) delete user.favoriteTeams.$key;
+				if(user.password) delete user.password;
 				let teamKey;
 				let teamCat = team.id_team.substring(team.id_team.indexOf('@') + 1);
 				switch (teamCat) {
@@ -87,6 +92,7 @@ export class UserSettings {
 	addFavoriteLeague(league) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				user = JSON.parse(user);
 				this.af.database.object(`/users/${user.uid}/favoriteLeagues/${league.id_league}`);
 				this.af.database.list(`/users/${user.uid}/favoriteLeagues`).update(league.id_league, league)
 					.then(() => {
@@ -100,6 +106,7 @@ export class UserSettings {
 	unFavoriteTeam(id_team) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				user = JSON.parse(user);
 				let teamKey;
 				let teamCat = id_team.substring(id_team.indexOf('@') + 1);
 				switch (teamCat) {
@@ -149,6 +156,7 @@ export class UserSettings {
 	unFavoriteLeague(id_league) {
 		this.storage.get("user").then(user => {
 			if (user) {
+				user = JSON.parse(user);
 				this.af.database.list(`/users/${user.uid}/favoriteLeagues`).remove(id_league)
 					.then(() => {
 						this.getUserFromFB(user.uid, user.password);
@@ -173,7 +181,8 @@ export class UserSettings {
 
 		this.events.subscribe("storageTeams::getted", item => {
 			if (item.length == 0) {
-				this.storage.get("user").then(user => {
+				this.storage.get("user").then(usuario => {
+					let user = JSON.parse(usuario);
 					if (user) {
 						this.af.database.list(`/users/${user.uid}/favoriteTeams`)
 							.subscribe(favoriteTeams => {
@@ -206,7 +215,8 @@ export class UserSettings {
 
 		this.events.subscribe("storageLeagues::getted", item => {
 			if (item.length == 0) {
-				this.storage.get("user").then(user => {
+				this.storage.get("user").then(usuario => {
+					let user = JSON.parse(usuario);
 					if (user) {
 						this.af.database.list(`/users/${user.uid}/favoriteLeagues`)
 							.subscribe(favoriteLeagues => {
@@ -247,7 +257,6 @@ export class UserSettings {
 	}
 
 	logIn(email, password) {
-		//sd
 		let boolean = false;
 		this.af.auth.login({ email: email, password: password })
 			.then(success => {
@@ -255,7 +264,6 @@ export class UserSettings {
 				this.getUserFromFB(success.uid, password).subscribe(() => {
 					this.events.publish("logIn::done", boolean);
 				});
-
 			})
 			.catch((error) => {
 				console.log("Firebase failure: " + error);
@@ -353,7 +361,7 @@ export class UserSettings {
 			"uid": uid,
 			"email": email,
 			"roleValue": 2,
-			"id_club": ""
+			"id_club": "-"
 		}
 		this.af.database.object(`users/${uid}`);
 		this.af.database.list('/users').update(uid, user).then(() => {
@@ -363,13 +371,21 @@ export class UserSettings {
 	}
 
 	getUserFromFB(uid, password?): Observable<any> {
+		this.push.register().then((t: PushToken) => {
+			//this.af.database.object(`users/${uid}/userToken`);
+			this.af.database.list(`/users/`).update(uid, {token: t.token});
+			return this.push.saveToken(t);
+		}).then((t: PushToken) => {
+			console.log('Token saved:', t);
+		});
+		
 		return this.af.database.list(`${this.baseUrl}/users/${uid}`)
 			.map(user => {
 				_.forEach(user, value => {
 					value.$value ? this.userProfile[value.$key] = value.$value : this.userProfile[value.$key] = value;
 				});
 				this.userProfile["password"] = Md5.hashStr(password);
-				this.storage.set("user", this.userProfile).then(() => {
+				this.storage.set("user", JSON.stringify(this.userProfile)).then(() => {
 					this.events.publish('user:changed');
 				});
 				return this.userProfile;
@@ -378,7 +394,7 @@ export class UserSettings {
 
 	getLoggedUser() {
 		this.storage.get("user").then(user => {
-			this.events.publish("user::getted", user);
+			this.events.publish("user::getted", JSON.parse(user));
 		});
 	}
 

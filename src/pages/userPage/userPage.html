@@ -15,7 +15,7 @@
 
 			<ion-item>
 				<h3>email:</h3>
-				<h2>{{user.email}}</h2>
+				<h2>{{user?.email}}</h2>
 				<!--<ion-input type="text" [value]="user.email"></ion-input>-->
 			</ion-item>
 			<ion-input [(ngModel)]="newEmail" type="email" placeholder="Nueva dirección de correo" *ngIf="changingEmail"></ion-input>
@@ -35,7 +35,7 @@
 				<ion-card-content>
 					<ion-item *ngFor="let favTeam of favoriteTeams; let i = index">
 						<h2>{{favTeam?.name}} {{favTeam?.label}}</h2>
-						<h3>{{favTeam?.league.name}}</h3>
+						<h3>{{favTeam?.league?.name}}</h3>
 					</ion-item>
 				</ion-card-content>
 			</ion-card>
@@ -48,7 +48,6 @@
 					</ion-item>
 				</ion-card-content>
 			</ion-card>
-
 		</ion-item-group>
 	</ion-list>
 

@@ -9,6 +9,7 @@ import { LPFutbolService } from '../../services/lp-futbol.service';
 	selector: 'homePage',
 	templateUrl: 'homePage.html'
 })
+
 export class HomePage {
 
 	favoriteTeams = [];
@@ -58,16 +59,8 @@ export class HomePage {
 		});
 	}
 
-	goToAllTeams() {
-		this.navCtrl.push(TeamsPage);
-	}
-
 	teamTapped($event, team) {
 		this.navCtrl.push(TeamHomePage, team);
-	}
-
-	goToAllLeagues() {
-		this.navCtrl.push(LeaguesPage);
 	}
 
 	leagueTapped($event, league) {

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, Events } from 'ionic-angular';
 import { UserSettings } from '../../services/userSettings.service';
-import { AngularFire } from "angularfire2";
 
 @Component({
 	selector: 'signInPage',
@@ -15,8 +14,7 @@ export class SignInPage {
 		public navParams: NavParams,
 		private userSettings: UserSettings,
 		private toastController: ToastController,
-		private events: Events,
-		private af: AngularFire) { }
+		private events: Events) { }
 
 	signIn(email, password1, password2) {
 		var regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

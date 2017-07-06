@@ -4,11 +4,12 @@ import {
 	Nav, Platform, LoadingController, ModalController,
 	ViewController, Events, ToastController, AlertController
 } from 'ionic-angular';
-import { Splashscreen } from '@ionic-native/splashscreen';
-import { StatusBar } from '@ionic-native/statusbar';
-import { HomePage, TeamHomePage, LeagueHomePage, SignInPage, UserPage } from '../pages/pages';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { HomePage, TeamsPage, LeaguesPage, TeamHomePage, LeagueHomePage, SignInPage, UserPage } from '../pages/pages';
 import { LPFutbolService } from '../services/lp-futbol.service';
 import { UserSettings } from '../services/userSettings.service';
+import { Push, PushToken } from '@ionic/cloud-angular';
 
 @Component({
 	templateUrl: 'app.html', providers: [UserSettings, HttpModule]
@@ -24,42 +25,74 @@ export class MyApp {
 
 	constructor(
 		public platform: Platform,
+		public statusBar: StatusBar,
+		public splashScreen: SplashScreen,
 		private userSettings: UserSettings,
 		private events: Events,
 		private loadingController: LoadingController,
 		private toastController: ToastController,
 		private alertController: AlertController,
-		public modalCtrl: ModalController) {
+		public modalCtrl: ModalController,
+		public push: Push
+	) {
 		this.initializeApp();
-
+		//this.pushSetup();
 	}
 
 	initializeApp() {
 		this.platform.ready().then(() => {
-			StatusBar.styleDefault();
-			Splashscreen.hide();
+			this.statusBar.styleDefault();
+			this.splashScreen.hide();
 		});
+		this.push.rx.notification()
+			.subscribe((notification: any) => {
+				if (notification.additionalData.foreground) {
+					let alert = this.alertController.create({
+						title: 'New Push notification',
+						message: notification.message
+					});
+					alert.present();
+				}
+			});
 
 		this.refreshFavorites();
 		this.events.subscribe("favorites:changed", () => this.refreshFavorites());
 		this.refreshUser();
 		this.events.subscribe("user:changed", () => this.refreshUser());
-
-		/*this.userSettings.getFavoriteTeams();
-		this.events.subscribe("favoriteTeams:getted", favoriteTeams => {
-			this.favoriteTeams = favoriteTeams;
-		});*/
-
-		/*this.userSettings.getFavoriteLeagues();
-		this.events.subscribe("favoriteLeagues:getted", favoriteLeagues => {
-			this.favoriteLeagues = favoriteLeagues;
-		});*/
-
-		/*this.userSettings.getLoggedUser();
-		this.events.subscribe("user::getted", user => {
-			this.user = user;
-		});*/
 	}
+	/*
+	pushSetup() {
+		const options: PushOptions = {
+			android: {
+				senderID: '679651523148'
+			},
+			ios: {
+				alert: 'true',
+				badge: true,
+				sound: 'false'
+			},
+			windows: {}
+		};
+
+		const pushObject: PushObject = this.push.init(options);
+
+		pushObject.on('notification').subscribe((notification: any) => {
+			if (notification.additionalData.foreground) {
+				let alert = this.alertController.create({
+					title: 'New Push notification',
+					message: notification.message
+				});
+				alert.present();
+			}
+		});
+		
+				pushObject.on('registration').subscribe((registration: any) => {
+					//do whatever you want with the registration ID
+				});
+		
+		pushObject.on('error').subscribe(error => alert('Error with Push plugin' + error));
+	}
+*/
 
 	refreshFavorites() {
 		this.userSettings.getFavoriteTeams();
@@ -77,6 +110,14 @@ export class MyApp {
 		this.events.subscribe("user::getted", user => {
 			this.user = user;
 		});
+	}
+
+	goToAllTeams() {
+		this.nav.push(TeamsPage);
+	}
+
+	goToAllLeagues() {
+		this.nav.push(LeaguesPage);
 	}
 
 	teamTapped($event, fav) {
@@ -101,7 +142,7 @@ export class MyApp {
 		let logInModal = this.modalCtrl.create(LogIn);
 		logInModal.present();
 	}
-	userTapped(){
+	userTapped() {
 		this.nav.push(UserPage, this.user);
 	}
 	logOutTapped() {
@@ -214,7 +255,6 @@ export class LogIn {
 	logIn(email, password) {
 		this.userSettings.logIn(email.value, password.value);
 		this.events.subscribe("logIn::done", success => {
-			console.log(success);
 			if (success) {
 				this.viewCtrl.dismiss();
 			} else {

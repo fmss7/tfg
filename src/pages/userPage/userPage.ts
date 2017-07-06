@@ -36,8 +36,8 @@ export class UserPage {
 			this.favoriteTeams.push(favTeam);
 		});
 
-		_.forEach(this.user.favoriteLeagues, favLeagues => {
-			this.favoriteLeagues.push(favLeagues);
+		_.forEach(this.user.favoriteLeagues, favLeague => {
+			this.favoriteLeagues.push(favLeague);
 		});
 	}
 

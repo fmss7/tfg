@@ -9,52 +9,41 @@
 </ion-header>
 
 <ion-content>
-	<ion-toolbar color="secondary">
-		<ion-title>Mis Equipos y Ligas</ion-title>
-	</ion-toolbar>
-	<ion-card *ngIf="favoriteTeams.length>0">
-		<ion-list>
-			<ion-list-header>Equipos Favoritos</ion-list-header>
-			<button ion-item *ngFor="let team of favoriteTeams" (click)="teamTapped($event, team)">
-					<ion-icon name="star"></ion-icon>
-					{{team?.name}} {{team?.label}}
-					<p>{{team?.league?.name}}</p>
-				</button>
-		</ion-list>
-		<button full ion-button (click)="goToAllTeams()">
-				Equipos <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
-			</button>
-	</ion-card>
-	<ion-card *ngIf="favoriteTeams.length==0">
-		<ion-card-header>Equipos Favoritos</ion-card-header>
-		<ion-card-content>
-			<h3>Actualmente no sigues a ningún equipo</h3>
-			<button full ion-button (click)="goToAllTeams()">
-				Equipos <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
-			</button>
-		</ion-card-content>
-	</ion-card>
-
-	<ion-card *ngIf="favoriteLeagues.length>0">
-		<ion-list>
-			<ion-list-header>Ligas Favoritas</ion-list-header>
-			<button ion-item *ngFor="let league of favoriteLeagues" (click)="leagueTapped($event, league)">
-				<ion-icon name="star"></ion-icon>
-				{{league?.name}}
-				<p>{{league?.category}}</p>
-			</button>
-		</ion-list>
-		<button full ion-button (click)="goToAllLeagues()">
-				Ligas <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
+	<ion-list *ngIf="favoriteTeams.length>0">
+		<ion-item-divider icon-right color="light">	
+			Equipos Favoritos
+		</ion-item-divider>
+		<button ion-item icon-left *ngFor="let team of favoriteTeams" (click)="teamTapped($event, team)">
+			<ion-icon name="star"></ion-icon>
+			{{team?.name}} {{team?.label}}
+			<p>{{team?.league?.name}}</p>
 		</button>
-	</ion-card>
+	</ion-list>
+		<ion-card *ngIf="favoriteTeams.length==0">
+			<ion-card-header>Equipos Favoritos</ion-card-header>
+			<ion-card-content>
+				<h3>Actualmente no sigues a ningún equipo</h3>
+			</ion-card-content>
+		</ion-card>
+
+	<ion-list *ngIf="favoriteLeagues.length>0">
+		<ion-item-divider color="light">	
+			Ligas Favoritas
+			
+		</ion-item-divider>
+		<button ion-item icon-left *ngFor="let league of favoriteLeagues" (click)="leagueTapped($event, league)">
+			<ion-icon name="star"></ion-icon> 
+			{{league?.name}}
+			<p>{{league?.category}}</p>
+		</button>
+	</ion-list>
 	<ion-card *ngIf="favoriteLeagues.length==0">
 		<ion-card-header>Ligas Favoritas</ion-card-header>
 		<ion-card-content>
 			<h3>Actualmente no sigues a ninguna liga</h3>
-			<button full ion-button (click)="goToAllLeagues()">
+			<!--<button full ion-button (click)="goToAllLeagues()">
 				Ligas <ion-icon icon-right name="search" style="margin-left: 2%"></ion-icon>
-			</button>
+			</button>-->
 		</ion-card-content>
 	</ion-card>
 	

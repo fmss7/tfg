@@ -1,5 +1,9 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AngularFireModule, AuthProviders, AuthMethods } from "angularfire2";
 import { Storage } from '@ionic/storage';
@@ -12,6 +16,25 @@ import { CustomPipe } from '../pages/fixturesPage/customPipe.pipe';
 
 import { UserSettings } from '../services/userSettings.service';
 import { LPFutbolService } from '../services/lp-futbol.service';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+export const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'f346b93e'
+  },
+  'push': {
+    'sender_id': '679651523148',
+    'pluginConfig': {
+      'ios': {
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
+  }
+};
 
 export const firebaseConfig = {
 	apiKey: "AIzaSyC1LaYV7V3YafjF5SIMbGbSBxFazR22dbM",
@@ -47,8 +70,11 @@ export const myFirebaseAuthConfig = {
 		UserPage
 	],
 	imports: [
+		BrowserModule,
+		HttpModule,
 		IonicModule.forRoot(MyApp),
 		AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+		CloudModule.forRoot(cloudSettings),
 		AgmCoreModule.forRoot()
 	],
 	bootstrap: [IonicApp],
@@ -75,7 +101,9 @@ export const myFirebaseAuthConfig = {
 	[{ provide: ErrorHandler, useClass: IonicErrorHandler },
 		UserSettings,
 		LPFutbolService,
-		Storage
+		Storage,
+		StatusBar,
+		SplashScreen
 	]
 })
 export class AppModule { }

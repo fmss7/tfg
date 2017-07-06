@@ -145,7 +145,7 @@ export class TeamGamesPage {
 
 	getGoalsDisplayBadgeClass(game) {
 		if (game.goalsDisplay.indexOf('V') === 0) {
-			return 'secondary';
+			return 'victory';
 		} else if (game.goalsDisplay.indexOf('D') === 0) {
 			return 'danger';
 		} else {

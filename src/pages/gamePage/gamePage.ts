@@ -16,10 +16,10 @@ export class GamePage {
 	game: any;
 	storage: any;
 	startedGame: boolean;
-	//badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
+	badgesUrl: string = 'gs://lp-futbol-cfeff.appspot.com/escudos/';
 	hostBadgeUrl: string;
 	guestBadgeUrl: string;
-	//urls: number = 0;
+	urls: number = 0;
 	user: any;
 
 	constructor(
@@ -43,10 +43,10 @@ export class GamePage {
 			this.game.hostGoals >= 0 || this.game.guestGoals >= 0 ? this.startedGame = true : this.startedGame = false;
 			let host = this.game.id_host.substring(0, this.game.id_host.indexOf('@')) + ".png";
 			let guest = this.game.id_guest.substring(0, this.game.id_guest.indexOf('@')) + ".png";
-			//let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
+			let storageRefHost = this.firebaseApp.storage().ref().child('escudos/' + host);
 			this.hostBadgeUrl = `/assets/escudos/${host}`;
 			this.guestBadgeUrl = `/assets/escudos/${guest}`;
-			/*
+			
 			storageRefHost.getDownloadURL().then(url => {
 				this.hostBadgeUrl = url;
 				this.events.publish('hostImg:getted');
@@ -57,18 +57,18 @@ export class GamePage {
 				this.guestBadgeUrl = url;
 				this.events.publish('guestImg:getted');
 			});
-			*/
+			
 			this.userSettings.getLoggedUser();
 			this.events.subscribe("user::getted", user => {
 				this.user = user;
 			});
 
 			loader.dismiss();
-			//this.events.subscribe('loader::dismiss', () => loader.dismiss());
+			this.events.subscribe('loader::dismiss', () => loader.dismiss());
 		});
 	}
 
-	/*
+	
 		updateHostUrl($event) {
 			this.events.subscribe('hostImg:getted', () => {
 				$event.target.src = this.hostBadgeUrl;
@@ -87,7 +87,7 @@ export class GamePage {
 				this.events.publish('loader:dismiss');
 			}
 		}
-	*/
+	
 
 	startGame(){
 		this.game.hostGoals = 0;

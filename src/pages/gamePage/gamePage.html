@@ -57,12 +57,12 @@
 	</ion-row>
 	<ion-row>
 		<ion-col width-50 text-center>
-			<!--<ion-avatar (click)="teamTapped(game?.id_host)"><img name="hostImg" [alt]="game?.host" [src]='hostBadgeUrl' (error)="updateHostUrl($event)" /></ion-avatar>-->
-			<ion-avatar (click)="teamTapped(game?.id_host)"><img name="hostImg" [alt]="game?.host" [src]='hostBadgeUrl' /></ion-avatar>
+			<ion-avatar (click)="teamTapped(game?.id_host)"><img name="hostImg" [alt]="game?.host" [src]='hostBadgeUrl' (error)="updateHostUrl($event)" /></ion-avatar>
+			<!--<ion-avatar (click)="teamTapped(game?.id_host)"><img name="hostImg" [alt]="game?.host" [src]='hostBadgeUrl' /></ion-avatar>-->
 		</ion-col>
 		<ion-col width-50 text-center>
-			<!--<ion-avatar (click)="teamTapped(game?.id_guest)"><img name="guestImg" [alt]="game?.guest" [src]='guestBadgeUrl' (error)="updateGuestUrl($event)" /></ion-avatar>-->
-			<ion-avatar (click)="teamTapped(game?.id_guest)"><img name="guestImg" [alt]="game?.guest" [src]='guestBadgeUrl' /></ion-avatar>
+			<ion-avatar (click)="teamTapped(game?.id_guest)"><img name="guestImg" [alt]="game?.guest" [src]='guestBadgeUrl' (error)="updateGuestUrl($event)" /></ion-avatar>
+			<!--<ion-avatar (click)="teamTapped(game?.id_guest)"><img name="guestImg" [alt]="game?.guest" [src]='guestBadgeUrl' /></ion-avatar>-->
 		</ion-col>
 	</ion-row>
 
